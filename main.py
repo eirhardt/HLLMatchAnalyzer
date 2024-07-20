@@ -32,7 +32,7 @@ def main() -> None:
     root.withdraw()  # Hide the main window
 
     print("\nPlease select the CSV file you want to parse.")
-    file_path = filedialog.askopenfilename(
+    file_path: str = filedialog.askopenfilename(
         title="Select CSV file to parse",
         filetypes=[("CSV files", "*.csv"), ("All files", "*.*")]
     )
@@ -50,7 +50,7 @@ def main() -> None:
         output_file: str = os.path.join(directory, f'matchAnalysisResults_{int(time.time())}.json')
         with open(output_file, 'w', encoding='utf-8') as f:
             json.dump(parsed_results, f, cls=UnicodeJsonEncoder, ensure_ascii=False, indent=2)
-            
+
         print(f"\nResults have been saved to {output_file}")
 
         open_file_explorer(directory)

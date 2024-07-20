@@ -2,7 +2,7 @@ from typing import Any
 from player_data import PlayerData
 
 class MatchResults:
-    def __init__(self, axis_team_name: str, allies_team_name: str, map_name: str, match_date: str):
+    def __init__(self, axis_team_name: str, allies_team_name: str, map_name: str, match_date: str) -> None:
         self.results: dict[str, Any] = {
             'Axis': self._create_team_dict(axis_team_name),
             'Allies': self._create_team_dict(allies_team_name),
@@ -39,7 +39,7 @@ class MatchResults:
             stats['Players'] = []
         return stats
 
-    def add_player(self, player: PlayerData):
+    def add_player(self, player: PlayerData) -> None:
         if player.side == 'Spectators':
             self.results['Spectators'].append(player.to_dict())
         else:
@@ -50,7 +50,7 @@ class MatchResults:
             self._update_stats(side['Total'], player)
 
     @staticmethod
-    def _update_stats(stats: dict[str, Any], player: PlayerData):
+    def _update_stats(stats: dict[str, Any], player: PlayerData) -> None:
         stats['PlayerCount'] += 1
         stats['Kills'] += player.kills
         stats['Deaths'] += player.deaths
@@ -60,7 +60,7 @@ class MatchResults:
         stats['SupportPoints'] += player.support_points
         stats['MachineGunKills'] += player.machine_gun_kills
 
-    def calculate_kdrs(self):
+    def calculate_kdrs(self) -> None:
         for side in ['Axis', 'Allies']:
             for group in ['Total', 'Infantry', 'Artillery', 'Armor', 'Unknown']:
                 stats = self.results[side][group]
@@ -70,7 +70,7 @@ class MatchResults:
 
     @staticmethod
     def calculate_kdr(kills: int, deaths: int) -> str:
-        denominator = 1 if deaths == 0 else deaths
+        denominator: int = 1 if deaths == 0 else deaths
         return format(kills / denominator, '.2f')
 
     def to_dict(self) -> dict[str, Any]:

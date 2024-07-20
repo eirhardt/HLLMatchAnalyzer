@@ -4,21 +4,21 @@ from typing import Any
 from weapon_data import WeaponData
 
 class PlayerData:
-    def __init__(self, row: list[str], column_indices: dict[str, int]):
-        self.steam_id = row[column_indices['Steam ID']]
-        self.name = row[column_indices['Name']]  # Use the name as-is, without decoding
+    def __init__(self, row: list[str], column_indices: dict[str, int]) -> None:
+        self.steam_id: str = row[column_indices['Steam ID']]
+        self.name: str = row[column_indices['Name']]  # Use the name as-is, without decoding
         self.kills = int(row[column_indices['Kills']])
         self.deaths = int(row[column_indices['Deaths']])
-        self.kdr = self.calculate_kdr()
+        self.kdr: str = self.calculate_kdr()
         self.combat_effectiveness = int(row[column_indices['Combat Effectiveness']])
         self.offensive_points = int(row[column_indices['Offensive Points']])
         self.defensive_points = int(row[column_indices['Defensive Points']])
         self.support_points = int(row[column_indices['Support Points']])
-        self.weapons = self.parse_json_field(row[column_indices['Weapons']])
-        self.death_by_weapons = self.parse_json_field(row[column_indices['Death by Weapons']])
+        self.weapons: dict[str, int] = self.parse_json_field(row[column_indices['Weapons']])
+        self.death_by_weapons: dict[str, int] = self.parse_json_field(row[column_indices['Death by Weapons']])
         self.machine_gun_kills = 0
-        self.side_likelihood = {'Axis': 0, 'Allies': 0}
-        self.group_likelihood = {'Infantry': 0, 'Artillery': 0, 'Armor': 0}
+        self.side_likelihood: dict[str, int] = {'Axis': 0, 'Allies': 0}
+        self.group_likelihood: dict[str, int] = {'Infantry': 0, 'Artillery': 0, 'Armor': 0}
         self.side = 'Spectators'
         self.group = 'Unknown'
 
@@ -32,7 +32,7 @@ class PlayerData:
             return {}
 
     def calculate_kdr(self) -> str:
-        denominator = 1 if self.deaths == 0 else self.deaths
+        denominator: int = 1 if self.deaths == 0 else self.deaths
         return format(self.kills / denominator, '.2f')
 
     def process_weapons(self) -> set[str]:
@@ -67,7 +67,7 @@ class PlayerData:
             self.side = 'Allies' if self.side_likelihood['Allies'] > self.side_likelihood['Axis'] else 'Axis'
         
         if self.group_likelihood:
-            self.group = max(self.group_likelihood, key=lambda k: self.group_likelihood[k])
+            self.group: str = max(self.group_likelihood, key=lambda k: self.group_likelihood[k])
         else:
             self.group = 'Unknown'
 

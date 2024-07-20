@@ -37,7 +37,7 @@ class StatsParser:
             for row in csv_reader:
                 try:
                     player = PlayerData(row, column_indices)
-                    new_unknown_weapons = player.process_weapons()
+                    new_unknown_weapons: set[str] = player.process_weapons()
                     unknown_weapons.update(new_unknown_weapons)
                     player.determine_side_and_group()
 
@@ -64,7 +64,7 @@ class StatsParser:
     def _get_armor_overrides() -> set[str]:
         armor_player_overrides = set()
         while True:
-            armor_player_id = input('Enter the Steam ID of an armor player accidentally being categorized as infantry (leave blank if done entering): ')
+            armor_player_id: str = input('Enter the Steam ID of an armor player accidentally being categorized as infantry (leave blank if done entering): ')
             if not armor_player_id:
                 break
             armor_player_overrides.add(armor_player_id)
