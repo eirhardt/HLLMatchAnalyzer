@@ -4,6 +4,7 @@ import os
 import json
 import time
 from stats_parser import StatsParser
+from typing import Any
 from version import __version__
 
 
@@ -36,7 +37,7 @@ def main():
     directory = os.path.dirname(file_path)
     
     try:
-        parsed_results = StatsParser.parse_stats_file(file_path)
+        parsed_results: dict[str, Any] = StatsParser.parse_stats_file(file_path)
         print(f"Successfully parsed {os.path.basename(file_path)}")
 
         output_file = os.path.join(directory, f'matchAnalysisResults_{int(time.time())}.json')

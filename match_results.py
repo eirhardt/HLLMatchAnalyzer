@@ -65,7 +65,14 @@ class MatchResults:
         for side in ['Axis', 'Allies']:
             for group in ['Total', 'Infantry', 'Artillery', 'Armor', 'Unknown']:
                 stats = self.results[side][group]
-                stats['KDR'] = PlayerData.calculate_kdr(PlayerData({"Kills": stats['Kills'], "Deaths": stats['Deaths']}))
+                kills = stats['Kills']
+                deaths = stats['Deaths']
+                stats['KDR'] = self.calculate_kdr(kills, deaths)
+
+    @staticmethod
+    def calculate_kdr(kills: int, deaths: int) -> str:
+        denominator = 1 if deaths == 0 else deaths
+        return format(kills / denominator, '.2f')
 
     def to_dict(self) -> dict[str, Any]:
         return self.results
