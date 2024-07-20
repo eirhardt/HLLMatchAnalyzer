@@ -3,10 +3,17 @@ import tkinter as tk
 import os
 import json
 import time
+from player_data import PlayerData
 from stats_parser import StatsParser
 from typing import Any
 from version import __version__
 
+class UnicodeJsonEncoder(json.JSONEncoder):
+    def default(self, obj):
+        if isinstance(obj, PlayerData):
+            return obj.to_dict()
+        return super().default(obj)
+    
 
 def open_file_explorer(path):
     if os.name == 'nt':  # For Windows
@@ -41,8 +48,9 @@ def main() -> None:
         print(f"Successfully parsed {os.path.basename(file_path)}")
 
         output_file: str = os.path.join(directory, f'matchAnalysisResults_{int(time.time())}.json')
-        with open(output_file, 'w') as f:
-            json.dump(parsed_results, f, indent=2)
+        with open(output_file, 'w', encoding='utf-8') as f:
+            json.dump(parsed_results, f, cls=UnicodeJsonEncoder, ensure_ascii=False, indent=2)
+            
         print(f"\nResults have been saved to {output_file}")
 
         open_file_explorer(directory)

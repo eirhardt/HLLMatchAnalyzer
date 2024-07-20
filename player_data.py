@@ -6,7 +6,7 @@ from weapon_data import WeaponData
 class PlayerData:
     def __init__(self, row: list[str], column_indices: dict[str, int]):
         self.steam_id = row[column_indices['Steam ID']]
-        self.name = self.decode_unicode(row[column_indices['Name']])
+        self.name = row[column_indices['Name']]  # Use the name as-is, without decoding
         self.kills = int(row[column_indices['Kills']])
         self.deaths = int(row[column_indices['Deaths']])
         self.kdr = self.calculate_kdr()
@@ -22,9 +22,6 @@ class PlayerData:
         self.side = 'Spectators'
         self.group = 'Unknown'
 
-    @staticmethod
-    def decode_unicode(s: str) -> str:
-        return s.encode('latin-1').decode('unicode-escape')
     
     @staticmethod
     def parse_json_field(field: str) -> dict[str, int]:
@@ -89,6 +86,7 @@ class PlayerData:
             'DefensivePoints': self.defensive_points,
             'SupportPoints': self.support_points,
             'Weapons': self.weapons,
+            'DeathByWeapons': self.death_by_weapons,
             'MachineGunKills': self.machine_gun_kills,
             'sideLikelihood': self.side_likelihood,
             'groupLikelihood': self.group_likelihood,
