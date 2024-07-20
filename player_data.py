@@ -5,19 +5,19 @@ from weapon_data import WeaponData
 
 class PlayerData:
     def __init__(self, row: dict[str, str]):
-        self.steam_id = row['Steam ID']
-        self.name: str = row['Name']
-        self.kills = int(row['Kills'])
-        self.deaths = int(row['Deaths'])
-        self.kdr: str = self.calculate_kdr()
-        self.combat_effectiveness = int(row['Combat Effectiveness'])
-        self.offensive_points = int(row['Offensive Points'])
-        self.defensive_points = int(row['Defensive Points'])
-        self.support_points = int(row['Support Points'])
-        self.weapons = row['Weapons']
+        self.steam_id = row['"Steam ID"']  # Note the quotes
+        self.name = row['"Name"']
+        self.kills = int(row['"Kills"'])
+        self.deaths = int(row['"Deaths"'])
+        self.kdr = self.calculate_kdr()
+        self.combat_effectiveness = int(row['"Combat Effectiveness"'])
+        self.offensive_points = int(row['"Offensive Points"'])
+        self.defensive_points = int(row['"Defensive Points"'])
+        self.support_points = int(row['"Support Points"'])
+        self.weapons = row['"Weapons"']
         self.machine_gun_kills = 0
-        self.side_likelihood: dict[str, int] = {'Axis': 0, 'Allies': 0}
-        self.group_likelihood: dict[str, int] = {'Infantry': 0, 'Artillery': 0, 'Armor': 0}
+        self.side_likelihood = {'Axis': 0, 'Allies': 0}
+        self.group_likelihood = {'Infantry': 0, 'Artillery': 0, 'Armor': 0}
         self.side = 'Spectators'
         self.group = 'Unknown'
 

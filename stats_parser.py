@@ -21,23 +21,30 @@ class StatsParser:
 
         with open(file_name, encoding="utf8") as f:
             reader = csv.DictReader(f)
+            
+
             for row in reader:
-                player = PlayerData(row)
-                new_unknown_weapons = player.process_weapons(row['Death by Weapons'])
-                unknown_weapons.update(new_unknown_weapons)
-                player.determine_side_and_group()
+                try:
+                    player = PlayerData(row)
+                    new_unknown_weapons = player.process_weapons(row['"Death by Weapons"'])
+                    unknown_weapons.update(new_unknown_weapons)
+                    player.determine_side_and_group()
 
-                if player.steam_id in armor_player_overrides:
-                    player.group = 'Armor'
-                    print(f"Setting {player.name} to Armor because of override.")
-
-                if player.group == 'Infantry' and player.combat_effectiveness > 300 and player.group_likelihood['Infantry'] < 15:
-                    response = input(f'Is {player.name} actually armor? (y/n): ')
-                    if response.lower() == 'y':
+                    if player.steam_id in armor_player_overrides:
                         player.group = 'Armor'
-                        print('OK, setting this person as Armor')
+                        print(f"Setting {player.name} to Armor because of override.")
 
-                match_results.add_player(player)
+                    if player.group == 'Infantry' and player.combat_effectiveness > 300 and player.group_likelihood['Infantry'] < 15:
+                        response = input(f'Is {player.name} actually armor? (y/n): ')
+                        if response.lower() == 'y':
+                            player.group = 'Armor'
+                            print('OK, setting this person as Armor')
+
+                    match_results.add_player(player)
+                except KeyError as e:
+                    print(f"Error processing row: {e}")
+                    print("Row data:", row)
+                    raise
 
         match_results.calculate_kdrs()
         return match_results.to_dict()
