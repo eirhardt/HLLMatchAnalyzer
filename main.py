@@ -17,6 +17,7 @@ def open_file_explorer(path):
 
 def main():
     print(f"Welcome to the Hell Let Loose Stats Parser version {__version__}!")
+    print("This project was started by -TL- Grekker and has been updated by -TL- JACK.")
     print("This script will parse CSV files produced by CRCON after a Hell Let Loose match.")
 
     root = tk.Tk()
