@@ -37,7 +37,7 @@ class StatsParser:
             for row in csv_reader:
                 try:
                     player = PlayerData(row, column_indices)
-                    new_unknown_weapons = player.process_weapons(row[column_indices['Death by Weapons']])
+                    new_unknown_weapons = player.process_weapons()
                     unknown_weapons.update(new_unknown_weapons)
                     player.determine_side_and_group()
 
