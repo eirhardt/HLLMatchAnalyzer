@@ -16,7 +16,7 @@ def open_file_explorer(path):
     else:
         print(f"Unable to open file explorer for this operating system: {os.name}")
 
-def main():
+def main() -> None:
     print(f"Welcome to the Hell Let Loose Stats Parser version {__version__}!")
     print("This project was started by -TL- Grekker and has been updated by -TL- JACK.")
     print("This script will parse CSV files produced by CRCON after a Hell Let Loose match.")
@@ -34,13 +34,13 @@ def main():
         print("No file selected. Exiting.")
         return
 
-    directory = os.path.dirname(file_path)
+    directory: str = os.path.dirname(file_path)
     
     try:
         parsed_results: dict[str, Any] = StatsParser.parse_stats_file(file_path)
         print(f"Successfully parsed {os.path.basename(file_path)}")
 
-        output_file = os.path.join(directory, f'matchAnalysisResults_{int(time.time())}.json')
+        output_file: str = os.path.join(directory, f'matchAnalysisResults_{int(time.time())}.json')
         with open(output_file, 'w') as f:
             json.dump(parsed_results, f, indent=2)
         print(f"\nResults have been saved to {output_file}")

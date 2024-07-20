@@ -1,5 +1,5 @@
 import json
-from typing import Any, Literal
+from typing import Any
 
 from weapon_data import WeaponData
 

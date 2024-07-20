@@ -1,10 +1,9 @@
 from typing import Any
-
 from player_data import PlayerData
 
 class MatchResults:
     def __init__(self, axis_team_name: str, allies_team_name: str, map_name: str, match_date: str):
-        self.results = {
+        self.results: dict[str, Any] = {
             'Axis': self._create_team_dict(axis_team_name),
             'Allies': self._create_team_dict(allies_team_name),
             'Spectators': [],
@@ -25,7 +24,7 @@ class MatchResults:
 
     @staticmethod
     def _create_stats_dict(include_players: bool = True) -> dict[str, Any]:
-        stats = {
+        stats: dict[str, Any] = {
             'PlayerCount': 0,
             'Kills': 0,
             'Deaths': 0,

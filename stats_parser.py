@@ -1,5 +1,4 @@
 import csv
-import os
 from typing import Any
 from player_data import PlayerData
 from match_results import MatchResults
