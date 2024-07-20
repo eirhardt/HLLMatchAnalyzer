@@ -1,12 +1,16 @@
 # This is a Python script that parses the CSV file produced by CRCON that has the stats after a Hell Let Loose match.
 # Its purpose is to extract specific details from multiple log files, combining them into one file, for easier comparison of key values
-# To use, select one or more JSON files produced by GW2EI and drag and drop them onto this script file using your file explorer
 
-import csv, json, sys, pandas, time, os
+import csv
+import json
+import time
+import os
+from typing import Any
+import tkinter as tk
+from tkinter import filedialog
 
 # Reference data for weapons so we can assign them to a faction
-weapons = {
-
+weapons: dict[str, dict[str, str]] = {
     # US Infantry
     'M1A1 THOMPSON': {'side':'Allies','faction':'US','group':'Infantry'},
     'M3 GREASE GUN': {'side':'Allies','faction':'US','group':'Infantry'},
@@ -173,7 +177,6 @@ weapons = {
     'Bedford OYD (Transport)': {'side':'Allies','faction':'GB','group':'Infantry'},
     'Bedford OYD (Supply)': {'side':'Allies','faction':'GB','group':'Infantry'},
     # Jeep Willys is already categorized as US
-    '': {'side':'Allies','faction':'GB','group':'Infantry'},
 
     # GB Artillery
     'QF 25-POUNDER [QF 25-Pounder]': {'side':'Allies','faction':'GB','group':'Artillery'},
@@ -209,29 +212,34 @@ weapons = {
     'HULL BESA 7.92mm [Churchill Mk.VII]': {'side':'Allies','faction':'GB','group':'Armor'}
 }
 
-machineGuns = {
+machine_guns: set[str] = {
     'BROWNING M1919', 'MG34', 'MG42', 'DP-27', 'Lewis Gun'
 }
 
+# Define a type alias for the complex structure returned by parse_stats_file
+StatsResult = dict[str, Any]
+
+# Define a type for the values that can be stored in the results dictionary
+ResultValue = set[str] | StatsResult
+
 # Start a dictionary to store our results in, each log file parsed will be a single entry in results
-results = {
+results: dict[str, ResultValue] = {
     'unknownWeapons': set()
 }
 
-# Function for calculating a KDR
-def calculateKDR(kills, deaths):
-    denom = 1 if int(deaths) == 0 else deaths
-    return format(int(kills) / int(denom), '.2f')
+def calculate_kdr(kills: int, deaths: int) -> str:
+    denominator = 1 if deaths == 0 else deaths
+    return format(kills / denominator, '.2f')
 
-# Function for parsing out a single player's data
-def parsePlayerData(row, armorPlayerOverrides):
+def parse_player_data(row: dict[str, str], armor_player_overrides: set[str]) -> tuple[dict[str, Any], set[str]]:
+    unknown_weapons = set()
 
     player = {
         'SteamID': row['Steam ID'],
         'Name': row['Name'],
         'Kills': int(row['Kills']),
         'Deaths': int(row['Deaths']),
-        'KDR': calculateKDR(row['Kills'],row['Deaths']),
+        'KDR': calculate_kdr(int(row['Kills']), int(row['Deaths'])),
         'CombatEffectiveness': int(row['Combat Effectiveness']),
         'OffensivePoints': int(row['Offensive Points']),
         'DefensivePoints': int(row['Defensive Points']),
@@ -240,56 +248,53 @@ def parsePlayerData(row, armorPlayerOverrides):
         'MachineGunKills': 0
     }
 
-    sideLikelihood = {
-        'Axis' : 0,
-        'Allies' : 0
+    side_likelihood = {
+        'Axis': 0,
+        'Allies': 0
     }
 
-    groupLikelihood = {
-        'Infantry' : 0,
-        'Artillery' : 0,
-        'Armor' : 0
+    group_likelihood = {
+        'Infantry': 0,
+        'Artillery': 0,
+        'Armor': 0
     }
 
     # We look at the weapons used by each player to infer what side they played, and if they played mostly infantry, armor, or artillery
     for weapon, count in json.loads(player['Weapons']).items():
+        count = int(count)
         if weapon in weapons:
             ref = weapons[weapon]
-            sideLikelihood[ref['side']] += count
-            groupLikelihood[ref['group']] += count
+            side_likelihood[ref['side']] += count
+            group_likelihood[ref['group']] += count
         else:
-            results['unknownWeapons'].add(weapon)
-        if weapon in machineGuns:
+            unknown_weapons.add(weapon)
+        if weapon in machine_guns:
             player['MachineGunKills'] += count
 
     # We look at the weapons used against each player as part of inferring what side they played on
     for weapon, count in json.loads(row['Death by Weapons']).items():
+        count = int(count)
         if weapon in weapons:
             ref = weapons[weapon]
-            sideInverse = 'Axis' if ref['side'] == 'Allies' else 'Allies'
-            sideLikelihood[sideInverse] += count
+            side_inverse = 'Axis' if ref['side'] == 'Allies' else 'Allies'
+            side_likelihood[side_inverse] += count
         else:
-            results['unknownWeapons'].add(weapon)
+            unknown_weapons.add(weapon)
 
     # Decide what side and group this player belongs to
-    player['sideLikelihood'] = sideLikelihood
-    player['groupLikelihood'] = groupLikelihood
-    player['Side'] = 'Spectators' if sideLikelihood['Axis'] == 0 and sideLikelihood['Allies'] == 0 else 'Allies' if sideLikelihood['Allies'] > sideLikelihood['Axis'] else 'Axis'
-    groupName = 'Unknown'
-    groupScore = 0
-    for group, score in groupLikelihood.items():
-        if score > groupScore:
-            groupScore = score
-            groupName = group
-    player['Group'] = groupName
+    player['sideLikelihood'] = side_likelihood
+    player['groupLikelihood'] = group_likelihood
+    player['Side'] = 'Spectators' if side_likelihood['Axis'] == 0 and side_likelihood['Allies'] == 0 else 'Allies' if side_likelihood['Allies'] > side_likelihood['Axis'] else 'Axis'
+    group_name = max(group_likelihood, key=lambda k: group_likelihood[k])
+    player['Group'] = group_name
 
     # Potentially override if we know for sure this player is armor
-    if player['SteamID'] in armorPlayerOverrides:
+    if player['SteamID'] in armor_player_overrides:
         player['Group'] = 'Armor'
-        print('Setting ' + player['Name'] + ' to Armor because of override.')
+        print(f"Setting {player['Name']} to Armor because of override.")
 
     # Little tweak to hopefully pull armor spotters out of Unknown, since they almost never have any kills
-    if groupName == 'Unknown' and player['CombatEffectiveness'] > 100:
+    if group_name == 'Unknown' and player['CombatEffectiveness'] > 100:
         player['Group'] = 'Armor'
 
     print(player)
@@ -297,143 +302,85 @@ def parsePlayerData(row, armorPlayerOverrides):
     # Try to find tankers that got no armor weapon kills, got infantry kills; these look like inf players but the combat effectiveness is too high
     if player['Group'] == 'Infantry' and player['CombatEffectiveness'] > 300 and player['groupLikelihood']['Infantry'] < 15:
         response = input('Is this player actually armor? (y/n): ')
-        if response == 'y':
+        if response.lower() == 'y':
             player['Group'] = 'Armor'
             print('OK, setting this person as Armor')
 
-    return player
+    return player, unknown_weapons
 
-# Function for breaking down a stats file into just the parts we care about
-def parseStatsFile(fileName):
-    print(fileName)
+def parse_stats_file(file_name: str) -> StatsResult:    
+    print(file_name)
 
     # Collect basic metadata about the match
-    axisTeamName = input('Axis Team Name: ')
-    alliesTeamName = input('Allies Team Name: ')
-    mapName = input('Map Name: ')
-    matchDate = input('Match Date: ')
+    axis_team_name = input('Axis Team Name: ')
+    allies_team_name = input('Allies Team Name: ')
+    map_name = input('Map Name: ')
+    match_date = input('Match Date: ')
 
     # Sometimes it's not obvious that someone is armor, so we ask the user for any overrides
-    armorPlayerOverrides = set()
+    armor_player_overrides = set()
+    unknown_weapons = set()
     while True:
-        armorPlayerId = input('Enter the Steam ID of an armor player accidentally being categorized as infantry (leave blank if done entering): ')
-        if(armorPlayerId):
-            armorPlayerOverrides.add(armorPlayerId)
-        else:
+        armor_player_id = input('Enter the Steam ID of an armor player accidentally being categorized as infantry (leave blank if done entering): ')
+        if not armor_player_id:
             break
-    
-    with open(fileName, encoding="utf8") as f:
+        armor_player_overrides.add(armor_player_id)
 
-        matchResults = {
-            'Axis' : {
-                'Team Name' : axisTeamName,
-                'Total' : {
-                    'PlayerCount' : 0,
-                    'Kills' : 0,
-                    'Deaths' : 0,
-                    'KDR' : 0.0,
-                    'CombatEffectiveness': 0,
-                    'OffensivePoints': 0,
-                    'DefensivePoints': 0,
-                    'SupportPoints': 0,
-                    'MachineGunKills' : 0
-                },
-                'Infantry' : {
-                    'PlayerCount' : 0,
-                    'Kills' : 0,
-                    'Deaths' : 0,
-                    'KDR' : 0.0,
-                    'CombatEffectiveness': 0,
-                    'OffensivePoints': 0,
-                    'DefensivePoints': 0,
-                    'SupportPoints': 0,
-                    'Players': []
-                },
-                'Artillery' : {
-                    'PlayerCount' : 0,
-                    'Kills' : 0,
-                    'Deaths' : 0,
-                    'KDR' : 0.0,
-                    'CombatEffectiveness': 0,
-                    'OffensivePoints': 0,
-                    'DefensivePoints': 0,
-                    'SupportPoints': 0,
-                    'Players': []
-                },
-                'Armor' : {
-                    'PlayerCount' : 0,
-                    'Kills' : 0,
-                    'Deaths' : 0,
-                    'KDR' : 0.0,
-                    'CombatEffectiveness': 0,
-                    'OffensivePoints': 0,
-                    'DefensivePoints': 0,
-                    'SupportPoints': 0,
-                    'Players': []
-                },
-                'Unknown' : {
-                    'PlayerCount' : 0,
-                    'Kills' : 0,
-                    'Deaths' : 0,
-                    'KDR' : 0.0,
-                    'CombatEffectiveness': 0,
-                    'OffensivePoints': 0,
-                    'DefensivePoints': 0,
-                    'SupportPoints': 0,
-                    'Players': []
-                }
-            },
-            'Allies' : {
-                'Team Name' : alliesTeamName,
-                'Total' : {
-                    'PlayerCount' : 0,
-                    'Kills' : 0,
-                    'Deaths' : 0,
-                    'KDR' : 0.0,
+    
+    
+    with open(file_name, encoding="utf8") as f:
+        match_results = {
+            'Axis': {
+                'Team Name': axis_team_name,
+                'Total': {
+                    'PlayerCount': 0,
+                    'Kills': 0,
+                    'Deaths': 0,
+                    'KDR': 0.0,
                     'CombatEffectiveness': 0,
                     'OffensivePoints': 0,
                     'DefensivePoints': 0,
                     'SupportPoints': 0,
                     'MachineGunKills': 0
                 },
-                'Infantry' : {
-                    'PlayerCount' : 0,
-                    'Kills' : 0,
-                    'Deaths' : 0,
-                    'KDR' : 0.0,
+                'Infantry': {
+                    'PlayerCount': 0,
+                    'Kills': 0,
+                    'Deaths': 0,
+                    'KDR': 0.0,
                     'CombatEffectiveness': 0,
                     'OffensivePoints': 0,
                     'DefensivePoints': 0,
                     'SupportPoints': 0,
                     'Players': []
                 },
-                'Artillery' : {
-                    'PlayerCount' : 0,
-                    'Kills' : 0,
-                    'Deaths' : 0,
-                    'KDR' : 0.0,
+                'Artillery': {
+                    'PlayerCount': 0,
+                    'Kills': 0,
+                    'Deaths': 0,
+                    'KDR': 0.0,
                     'CombatEffectiveness': 0,
                     'OffensivePoints': 0,
                     'DefensivePoints': 0,
                     'SupportPoints': 0,
                     'Players': []
                 },
-                'Armor' : {
-                    'PlayerCount' : 0,
-                    'Kills' : 0,
-                    'Deaths' : 0,
-                    'KDR' : 0.0,
+                'Armor': {
+                    'PlayerCount': 0,
+                    'Kills': 0,
+                    'Deaths': 0,
+                    'KDR': 0.0,
                     'CombatEffectiveness': 0,
                     'OffensivePoints': 0,
                     'DefensivePoints': 0,
                     'SupportPoints': 0,
                     'Players': []
                 },
-                'Unknown' : {
-                    'PlayerCount' : 0,
-                    'Kills' : 0,
-                    'Deaths' : 0,
-                    'KDR' : 0.0,
+                'Unknown': {
+                    'PlayerCount': 0,
+                    'Kills': 0,
+                    'Deaths': 0,
+                    'KDR': 0.0,
                     'CombatEffectiveness': 0,
                     'OffensivePoints': 0,
                     'DefensivePoints': 0,
@@ -441,20 +388,79 @@ def parseStatsFile(fileName):
                     'Players': []
                 }
             },
-            'Spectators' : [],
-            'Map' : mapName,
-            'Match Date': matchDate
+            'Allies': {
+                'Team Name': allies_team_name,
+                'Total': {
+                    'PlayerCount': 0,
+                    'Kills': 0,
+                    'Deaths': 0,
+                    'KDR': 0.0,
+                    'CombatEffectiveness': 0,
+                    'OffensivePoints': 0,
+                    'DefensivePoints': 0,
+                    'SupportPoints': 0,
+                    'MachineGunKills': 0
+                },
+                'Infantry': {
+                    'PlayerCount': 0,
+                    'Kills': 0,
+                    'Deaths': 0,
+                    'KDR': 0.0,
+                    'CombatEffectiveness': 0,
+                    'OffensivePoints': 0,
+                    'DefensivePoints': 0,
+                    'SupportPoints': 0,
+                    'Players': []
+                },
+                'Artillery': {
+                    'PlayerCount': 0,
+                    'Kills': 0,
+                    'Deaths': 0,
+                    'KDR': 0.0,
+                    'CombatEffectiveness': 0,
+                    'OffensivePoints': 0,
+                    'DefensivePoints': 0,
+                    'SupportPoints': 0,
+                    'Players': []
+                },
+                'Armor': {
+                    'PlayerCount': 0,
+                    'Kills': 0,
+                    'Deaths': 0,
+                    'KDR': 0.0,
+                    'CombatEffectiveness': 0,
+                    'OffensivePoints': 0,
+                    'DefensivePoints': 0,
+                    'SupportPoints': 0,
+                    'Players': []
+                },
+                'Unknown': {
+                    'PlayerCount': 0,
+                    'Kills': 0,
+                    'Deaths': 0,
+                    'KDR': 0.0,
+                    'CombatEffectiveness': 0,
+                    'OffensivePoints': 0,
+                    'DefensivePoints': 0,
+                    'SupportPoints': 0,
+                    'Players': []
+                }
+            },
+            'Spectators': [],
+            'Map': map_name,
+            'Match Date': match_date
         }
 
         # get the csv data
         reader = csv.DictReader(f)
         for row in reader:
-            player = parsePlayerData(row, armorPlayerOverrides)
+            player, new_unknown_weapons = parse_player_data(row, armor_player_overrides)
+            unknown_weapons.update(new_unknown_weapons)
             
             if player['Side'] == 'Spectators':
-                matchResults['Spectators'].append(player)
+                match_results['Spectators'].append(player)
             else:
-                side = matchResults[player['Side']]
+                side = match_results[player['Side']]
                 group = side[player['Group']]
                 group['PlayerCount'] += 1
                 group['Kills'] += player['Kills']
@@ -473,43 +479,71 @@ def parseStatsFile(fileName):
                 side['Total']['SupportPoints'] += player['SupportPoints']
                 side['Total']['MachineGunKills'] += player['MachineGunKills']
 
-        # calculate KDRs
-        matchResults['Axis']['Total']['KDR'] = calculateKDR(matchResults['Axis']['Total']['Kills'], matchResults['Axis']['Total']['Deaths'])
-        matchResults['Axis']['Infantry']['KDR'] = calculateKDR(matchResults['Axis']['Infantry']['Kills'], matchResults['Axis']['Infantry']['Deaths'])
-        matchResults['Axis']['Artillery']['KDR'] = calculateKDR(matchResults['Axis']['Artillery']['Kills'], matchResults['Axis']['Artillery']['Deaths'])
-        matchResults['Axis']['Armor']['KDR'] = calculateKDR(matchResults['Axis']['Armor']['Kills'], matchResults['Axis']['Armor']['Deaths'])
-        matchResults['Axis']['Unknown']['KDR'] = calculateKDR(matchResults['Axis']['Unknown']['Kills'], matchResults['Axis']['Unknown']['Deaths'])
-        matchResults['Allies']['Total']['KDR'] = calculateKDR(matchResults['Allies']['Total']['Kills'], matchResults['Allies']['Total']['Deaths'])
-        matchResults['Allies']['Infantry']['KDR'] = calculateKDR(matchResults['Allies']['Infantry']['Kills'], matchResults['Allies']['Infantry']['Deaths'])
-        matchResults['Allies']['Artillery']['KDR'] = calculateKDR(matchResults['Allies']['Artillery']['Kills'], matchResults['Allies']['Artillery']['Deaths'])
-        matchResults['Allies']['Armor']['KDR'] = calculateKDR(matchResults['Allies']['Armor']['Kills'], matchResults['Allies']['Armor']['Deaths'])
-        matchResults['Allies']['Unknown']['KDR'] = calculateKDR(matchResults['Allies']['Unknown']['Kills'], matchResults['Allies']['Unknown']['Deaths'])
+    # calculate KDRs
+    match_results['Axis']['Total']['KDR'] = calculate_kdr(match_results['Axis']['Total']['Kills'], match_results['Axis']['Total']['Deaths'])
+    match_results['Axis']['Infantry']['KDR'] = calculate_kdr(match_results['Axis']['Infantry']['Kills'], match_results['Axis']['Infantry']['Deaths'])
+    match_results['Axis']['Artillery']['KDR'] = calculate_kdr(match_results['Axis']['Artillery']['Kills'], match_results['Axis']['Artillery']['Deaths'])
+    match_results['Axis']['Armor']['KDR'] = calculate_kdr(match_results['Axis']['Armor']['Kills'], match_results['Axis']['Armor']['Deaths'])
+    match_results['Axis']['Unknown']['KDR'] = calculate_kdr(match_results['Axis']['Unknown']['Kills'], match_results['Axis']['Unknown']['Deaths'])
+    match_results['Allies']['Total']['KDR'] = calculate_kdr(match_results['Allies']['Total']['Kills'], match_results['Allies']['Total']['Deaths'])
+    match_results['Allies']['Infantry']['KDR'] = calculate_kdr(match_results['Allies']['Infantry']['Kills'], match_results['Allies']['Infantry']['Deaths'])
+    match_results['Allies']['Artillery']['KDR'] = calculate_kdr(match_results['Allies']['Artillery']['Kills'], match_results['Allies']['Artillery']['Deaths'])
+    match_results['Allies']['Armor']['KDR'] = calculate_kdr(match_results['Allies']['Armor']['Kills'], match_results['Allies']['Armor']['Deaths'])
+    match_results['Allies']['Unknown']['KDR'] = calculate_kdr(match_results['Allies']['Unknown']['Kills'], match_results['Allies']['Unknown']['Deaths'])
 
-        # return results
-        return matchResults
+    # return results
+    return match_results
 
-# -- Execution Starts Here --
+def open_file_explorer(path):
+    if os.name == 'nt':  # For Windows
+        os.startfile(path)
+    elif os.name == 'posix':  # For macOS and Linux
+        subprocess.call(('open', path))
+    else:
+        print(f"Unable to open file explorer for this operating system: {os.name}")
 
-# Iterate through the passed files, parsing each one into a pandas DataFrame
-for filePath in sys.argv[1:]:
-    name = os.path.basename(filePath)
-    print('file:',filePath)
-    print(name)
+def main():
+    print("Welcome to the Hell Let Loose Stats Parser!")
+    print("This script will parse CSV files produced by CRCON after a Hell Let Loose match.")
+
+    root = tk.Tk()
+    root.withdraw()  # Hide the main window
+
+    print("\nPlease select the CSV file you want to parse.")
+    file_path = filedialog.askopenfilename(
+        title="Select CSV file to parse",
+        filetypes=[("CSV files", "*.csv"), ("All files", "*.*")]
+    )
+    
+    if not file_path:  # User cancelled the file dialog
+        print("No file selected. Exiting.")
+        return
+
+    file_name = os.path.basename(file_path)
+    directory = os.path.dirname(file_path)
+    print(f"\nParsing file: {file_path}")
+    
     try:
-        results[name] = parseStatsFile(filePath)
-    except Exception as e:
-        print(type(e).__name__, "–", e)
-        os.system('pause')
-        pass
+        parsed_results = parse_stats_file(file_path)
+        print(f"Successfully parsed {file_name}")
 
-# Write the detailed results to a json file
-with open(f'matchAnalysisResults_{time.time()}.json', 'w') as f:
-    try:
-        results['unknownWeapons'] = list(results['unknownWeapons']) # convert set to list because set can't be JSON serialized
-        json.dump(results, f)
+        # Write the detailed results to a JSON file in the same directory
+        output_file = os.path.join(directory, f'matchAnalysisResults_{int(time.time())}.json')
+        with open(output_file, 'w') as f:
+            json.dump(parsed_results, f, indent=2)
+        print(f"\nResults have been saved to {output_file}")
+
+        # Open file explorer to the directory of the parsed file
+        open_file_explorer(directory)
+
     except Exception as e:
-        print(type(e).__name__, "–", e)
-        os.system('pause')
-        pass
-        
-os.system('pause')
+        print(f"Error parsing {file_name}: {type(e).__name__} - {e}")
+
+    print("\nThank you for using the Hell Let Loose Stats Parser!")
+    print("The file explorer has been opened to the location of the parsed file.")
+    print("The program will now close.")
+
+if __name__ == "__main__":
+    main()
+
+
