@@ -1,31 +1,35 @@
-import time
 import matplotlib.pyplot as plt
 import numpy as np
 import os
+import time
 
 def create_comprehensive_comparison(data, directory):
     categories: list[str] = ['Total', 'Infantry', 'Armor', 'Artillery']
     metrics: list[str] = ['Kills', 'Deaths', 'CombatEffectiveness', 'OffensivePoints', 'DefensivePoints', 'SupportPoints']
 
+    # Extract team names
+    team1_name = data['Axis']['Team Name']
+    team2_name = data['Allies']['Team Name']
+
     fig, axs = plt.subplots(2, 2, figsize=(20, 20))
-    fig.suptitle('Axis vs Allies Comprehensive Comparison', fontsize=16)
+    fig.suptitle(f'{team1_name} vs {team2_name} Comprehensive Comparison', fontsize=16)
 
     for idx, category in enumerate(categories):
-        row = idx // 2
-        col = idx % 2
-        ax = axs[row, col] # type: ignore
+        row: int = idx // 2
+        col: int = idx % 2
+        ax = axs[row, col]  # type: ignore
         
-        axis_data = data['Axis'][category]
-        allies_data = data['Allies'][category]
+        team1_data = data['Axis'][category]
+        team2_data = data['Allies'][category]
 
-        axis_values = [axis_data[metric] for metric in metrics]
-        allies_values = [allies_data[metric] for metric in metrics]
+        team1_values = [team1_data[metric] for metric in metrics]
+        team2_values = [team2_data[metric] for metric in metrics]
 
         x = np.arange(len(metrics))
         width = 0.35
 
-        rects1 = ax.bar(x - width/2, axis_values, width, label='Axis', color='red', alpha=0.7)
-        rects2 = ax.bar(x + width/2, allies_values, width, label='Allies', color='blue', alpha=0.7)
+        rects1 = ax.bar(x - width/2, team1_values, width, label=team1_name, color='red', alpha=0.7)
+        rects2 = ax.bar(x + width/2, team2_values, width, label=team2_name, color='blue', alpha=0.7)
 
         ax.set_ylabel('Values')
         ax.set_title(f'{category} Comparison')
@@ -46,7 +50,7 @@ def create_comprehensive_comparison(data, directory):
         autolabel(rects2)
 
     plt.tight_layout()
-    output_file: str = os.path.join(directory, f'axis_vs_allies_comprehensive_comparison_{int(time.time())}.png')
+    output_file: str = os.path.join(directory, f'{team1_name}_vs_{team2_name}_comparison_{int(time.time())}.png')
     plt.savefig(output_file, dpi=300)
     plt.close()
     
