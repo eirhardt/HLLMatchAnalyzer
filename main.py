@@ -49,7 +49,7 @@ def main() -> None:
 
         output_file: str = os.path.join(directory, f'matchAnalysisResults_{int(time.time())}.json')
         with open(output_file, 'w', encoding='utf-8') as f:
-            json.dump(parsed_results, f, cls=UnicodeJsonEncoder, ensure_ascii=False, indent=2)
+            json.dump(parsed_results, f, cls=UnicodeJsonEncoder, ensure_ascii=False, indent=4)
 
         print(f"\nResults have been saved to {output_file}")
 
