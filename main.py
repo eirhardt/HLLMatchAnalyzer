@@ -3,6 +3,7 @@ import tkinter as tk
 import os
 import json
 import time
+from generate_comparison_graph import create_comprehensive_comparison
 from player_data import PlayerData
 from stats_parser import StatsParser
 from typing import Any
@@ -52,6 +53,9 @@ def main() -> None:
             json.dump(parsed_results, f, cls=UnicodeJsonEncoder, ensure_ascii=False, indent=4)
 
         print(f"\nResults have been saved to {output_file}")
+        
+        graph_file = create_comprehensive_comparison(parsed_results, directory)
+        print(f"Comprehensive comparison graph has been saved as '{os.path.basename(graph_file)}'")
 
         open_file_explorer(directory)
 
