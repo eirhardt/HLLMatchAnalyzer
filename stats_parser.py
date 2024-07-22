@@ -46,10 +46,7 @@ class StatsParser:
                         print(f"Setting {player.name} to Armor because of override.")
 
                     if player.group == 'Infantry' and player.combat_effectiveness > 300 and player.group_likelihood['Infantry'] < 15:
-                        response = input(f'Is {player.name} actually armor? (y/n): ')
-                        if response.lower() == 'y':
-                            player.group = 'Armor'
-                            print('OK, setting this person as Armor')
+                        StatsParser._prompt_for_armor_classification(player)
 
                     match_results.add_player(player)
                 except Exception as e:
@@ -69,3 +66,24 @@ class StatsParser:
                 break
             armor_player_overrides.add(armor_player_id)
         return armor_player_overrides
+
+    @staticmethod
+    def _prompt_for_armor_classification(player: PlayerData) -> None:
+        print(f"\nPotential armor player detected: {player.name}")
+        print(f"Combat Effectiveness: {player.combat_effectiveness}")
+        print(f"Kills: {player.kills}")
+        print(f"Deaths: {player.deaths}")
+        print(f"K/D Ratio: {player.kdr}")
+        print(f"Offensive Points: {player.offensive_points}")
+        print(f"Defensive Points: {player.defensive_points}")
+        print(f"Support Points: {player.support_points}")
+        print("Top weapons:")
+        for weapon, count in sorted(player.weapons.items(), key=lambda x: x[1], reverse=True)[:5]:
+            print(f"  - {weapon}: {count}")
+        
+        response: str = input(f'Based on this information, is {player.name} actually armor? (y/n): ')
+        if response.lower() == 'y':
+            player.group = 'Armor'
+            print('OK, setting this player as Armor')
+        else:
+            print('Keeping this player as Infantry')
