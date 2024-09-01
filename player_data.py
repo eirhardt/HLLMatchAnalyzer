@@ -5,7 +5,7 @@ from weapon_data import WeaponData
 
 class PlayerData:
     def __init__(self, row: list[str], column_indices: dict[str, int]) -> None:
-        self.steam_id: str = row[column_indices['Steam ID']]
+        self.steam_id: str = row[column_indices['Player ID']]
         self.name: str = row[column_indices['Name']]  # Use the name as-is, without decoding
         self.kills = int(row[column_indices['Kills']])
         self.deaths = int(row[column_indices['Deaths']])

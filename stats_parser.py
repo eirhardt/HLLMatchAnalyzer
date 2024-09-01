@@ -26,7 +26,7 @@ class StatsParser:
             column_indices: dict[str, int] = {column: index for index, column in enumerate(headers)}
 
             # Check if required columns are present
-            required_columns: list[str] = ['Steam ID', 'Name', 'Kills', 'Deaths', 'Combat Effectiveness', 
+            required_columns: list[str] = ['Player ID', 'Name', 'Kills', 'Deaths', 'Combat Effectiveness', 
                                 'Offensive Points', 'Defensive Points', 'Support Points', 'Weapons', 'Death by Weapons']
             for column in required_columns:
                 if column not in column_indices:
@@ -61,7 +61,7 @@ class StatsParser:
     def _get_armor_overrides() -> set[str]:
         armor_player_overrides = set()
         while True:
-            armor_player_id: str = input('Enter the Steam ID of an armor player accidentally being categorized as infantry (leave blank if done entering): ')
+            armor_player_id: str = input('Enter the Player ID of an armor player accidentally being categorized as infantry (leave blank if done entering): ')
             if not armor_player_id:
                 break
             armor_player_overrides.add(armor_player_id)
