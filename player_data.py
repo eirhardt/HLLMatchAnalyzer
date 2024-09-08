@@ -5,7 +5,7 @@ from weapon_data import WeaponData
 
 class PlayerData:
     def __init__(self, row: list[str], column_indices: dict[str, int]) -> None:
-        self.steam_id: str = row[column_indices['Player ID']]
+        self.player_id: str = self._get_id_from_row(row, column_indices)
         self.name: str = row[column_indices['Name']]  # Use the name as-is, without decoding
         self.kills = int(row[column_indices['Kills']])
         self.deaths = int(row[column_indices['Deaths']])
@@ -23,6 +23,15 @@ class PlayerData:
         self.group = 'Unknown'
 
     
+    def _get_id_from_row(self, row: list[str], column_indices: dict[str, int]) -> str:
+        if 'Player ID' in column_indices:
+            return row[column_indices['Player ID']]
+        elif 'Steam ID' in column_indices:
+            return row[column_indices['Steam ID']]
+        else:
+            raise ValueError("Neither 'Player ID' nor 'Steam ID' found in column indices")
+
+
     @staticmethod
     def parse_json_field(field: str) -> dict[str, int]:
         try:
@@ -76,7 +85,7 @@ class PlayerData:
 
     def to_dict(self) -> dict[str, Any]:
         return {
-            'SteamID': self.steam_id,
+            'PlayerID': self.player_id,  # Changed from 'SteamID' to 'PlayerID'
             'Name': self.name,
             'Kills': self.kills,
             'Deaths': self.deaths,

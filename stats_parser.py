@@ -25,8 +25,11 @@ class StatsParser:
             # Create a dictionary to map column names to indices
             column_indices: dict[str, int] = {column: index for index, column in enumerate(headers)}
 
+            # Determine which ID column is present
+            id_column = StatsParser._determine_id_column(column_indices)
+
             # Check if required columns are present
-            required_columns: list[str] = ['Player ID', 'Name', 'Kills', 'Deaths', 'Combat Effectiveness', 
+            required_columns: list[str] = [id_column, 'Name', 'Kills', 'Deaths', 'Combat Effectiveness', 
                                 'Offensive Points', 'Defensive Points', 'Support Points', 'Weapons', 'Death by Weapons']
             for column in required_columns:
                 if column not in column_indices:
@@ -41,7 +44,7 @@ class StatsParser:
                     unknown_weapons.update(new_unknown_weapons)
                     player.determine_side_and_group()
 
-                    if player.steam_id in armor_player_overrides:
+                    if player.player_id in armor_player_overrides:
                         player.group = 'Armor'
                         print(f"Setting {player.name} to Armor because of override.")
 
@@ -58,10 +61,19 @@ class StatsParser:
         return match_results.to_dict()
 
     @staticmethod
+    def _determine_id_column(column_indices: dict[str, int]) -> str:
+        if 'Steam ID' in column_indices:
+            return 'Steam ID'
+        elif 'Player ID' in column_indices:
+            return 'Player ID'
+        else:
+            raise ValueError("Neither 'Steam ID' nor 'Player ID' found in CSV headers")
+
+    @staticmethod
     def _get_armor_overrides() -> set[str]:
         armor_player_overrides = set()
         while True:
-            armor_player_id: str = input('Enter the Player ID of an armor player accidentally being categorized as infantry (leave blank if done entering): ')
+            armor_player_id: str = input('Enter the Player ID or Steam ID of an armor player accidentally being categorized as infantry (leave blank if done entering): ')
             if not armor_player_id:
                 break
             armor_player_overrides.add(armor_player_id)
