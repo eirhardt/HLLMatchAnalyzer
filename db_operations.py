@@ -129,7 +129,7 @@ def insert_match_performance(conn, result_id, player_data, team_id):
     cursor = conn.cursor()
     cursor.execute('''
         INSERT INTO MatchPerformance (
-            ResultID, PlayerID, TeamID, Side, Group, Kills, Deaths,
+            ResultID, PlayerID, TeamID, Side, PlayerGroup, Kills, Deaths,
             CombatEffectiveness, OffensivePoints, DefensivePoints, SupportPoints
         ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
     ''', (
@@ -137,7 +137,7 @@ def insert_match_performance(conn, result_id, player_data, team_id):
         player_data['PlayerID'],
         team_id,
         player_data['Side'],
-        player_data['Group'],
+        player_data['Group'],  # This is still 'Group' in the JSON data
         player_data['Kills'],
         player_data['Deaths'],
         player_data['CombatEffectiveness'],
@@ -147,7 +147,7 @@ def insert_match_performance(conn, result_id, player_data, team_id):
     ))
 
 def process_json_file(conn, file_path):
-    with open(file_path, 'r') as f:
+    with open(file_path, 'r', encoding='utf-8') as f:
         data = json.load(f)
     
     file_name = os.path.basename(file_path)
