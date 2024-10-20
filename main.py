@@ -3,6 +3,7 @@ import tkinter as tk
 import os
 import json
 import time
+from pathlib import Path
 from generate_comparison_graph import create_comprehensive_comparison
 from player_data import PlayerData
 from stats_parser import StatsParser
@@ -14,7 +15,6 @@ class UnicodeJsonEncoder(json.JSONEncoder):
         if isinstance(obj, PlayerData):
             return obj.to_dict()
         return super().default(obj)
-    
 
 def open_file_explorer(path):
     if os.name == 'nt':  # For Windows
@@ -23,6 +23,11 @@ def open_file_explorer(path):
         subprocess.call(('open', path))
     else:
         print(f"Unable to open file explorer for this operating system: {os.name}")
+
+def ensure_parsed_csvs_folder(directory: str) -> str:
+    parsed_csvs_folder = Path(directory) / "Parsed_csvs"
+    parsed_csvs_folder.mkdir(exist_ok=True)
+    return str(parsed_csvs_folder)
 
 def main() -> None:
     print(f"Welcome to the Hell Let Loose Stats Parser version {__version__}!")
@@ -43,21 +48,22 @@ def main() -> None:
         return
 
     directory: str = os.path.dirname(file_path)
+    parsed_csvs_folder: str = ensure_parsed_csvs_folder(directory)
     
     try:
         parsed_results: dict[str, Any] = StatsParser.parse_stats_file(file_path)
         print(f"Successfully parsed {os.path.basename(file_path)}")
 
-        output_file: str = os.path.join(directory, f'matchAnalysisResults_{int(time.time())}.json')
+        output_file: str = os.path.join(parsed_csvs_folder, f'matchAnalysisResults_{int(time.time())}.json')
         with open(output_file, 'w', encoding='utf-8') as f:
             json.dump(parsed_results, f, cls=UnicodeJsonEncoder, ensure_ascii=False, indent=4)
 
         print(f"\nResults have been saved to {output_file}")
         
-        graph_file = create_comprehensive_comparison(parsed_results, directory)
+        graph_file = create_comprehensive_comparison(parsed_results, parsed_csvs_folder)
         print(f"Comprehensive comparison graph has been saved as '{os.path.basename(graph_file)}'")
 
-        open_file_explorer(directory)
+        open_file_explorer(parsed_csvs_folder)
 
     except Exception as e:
         print(f"Error parsing {file_path}: {type(e).__name__} - {e}")
