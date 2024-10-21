@@ -89,9 +89,9 @@ def insert_or_update_player(conn, player_data):
         TotalDeaths = TotalDeaths + ?,
         TotalMatches = TotalMatches + 1,
         TotalCombatEffectiveness = TotalCombatEffectiveness + ?,
-        AverageKills = CAST((TotalKills + ?) AS REAL) / (TotalMatches + 1),
-        AverageDeaths = CAST((TotalDeaths + ?) AS REAL) / (TotalMatches + 1),
-        AverageCombatEffectiveness = CAST((TotalCombatEffectiveness + ?) AS REAL) / (TotalMatches + 1)
+        AverageKills = ROUND(CAST((TotalKills + ?) AS REAL) / (TotalMatches + 1), 1),
+        AverageDeaths = ROUND(CAST((TotalDeaths + ?) AS REAL) / (TotalMatches + 1), 1),
+        AverageCombatEffectiveness = ROUND(CAST((TotalCombatEffectiveness + ?) AS REAL) / (TotalMatches + 1), 1)
         WHERE PlayerID = ?
     ''', (
         player_data['Kills'],
