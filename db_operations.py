@@ -5,7 +5,7 @@ from datetime import datetime
 
 # Define paths
 base_folder = os.getcwd()
-parsed_csvs_folder = os.path.join(base_folder, "parsed_csvs")
+parsed_csvs_folder = os.path.join(base_folder, "parsed_jsons")
 db_path = os.path.join(base_folder, "hell_let_loose.db")
 
 def create_tables(conn):
@@ -23,12 +23,12 @@ def create_tables(conn):
             PlayerID TEXT PRIMARY KEY,
             PlayerName TEXT,
             TotalKills INTEGER DEFAULT 0,
+            AverageKills REAL DEFAULT 0,
             TotalDeaths INTEGER DEFAULT 0,
+            AverageDeaths REAL DEFAULT 0,
             TotalMatches INTEGER DEFAULT 0,
             TotalCombatEffectiveness INTEGER DEFAULT 0,
-            TotalOffensivePoints INTEGER DEFAULT 0,
-            TotalDefensivePoints INTEGER DEFAULT 0,
-            TotalSupportPoints INTEGER DEFAULT 0
+            AverageCombatEffectiveness REAL DEFAULT 0
         )
     ''')
     
@@ -55,15 +55,13 @@ def create_tables(conn):
             MatchPerformanceID INTEGER PRIMARY KEY AUTOINCREMENT,
             ResultID INTEGER,
             PlayerID TEXT,
+            PlayerName TEXT,
             TeamID INTEGER,
             Side TEXT,
             PlayerGroup TEXT,
             Kills INTEGER,
             Deaths INTEGER,
             CombatEffectiveness INTEGER,
-            OffensivePoints INTEGER,
-            DefensivePoints INTEGER,
-            SupportPoints INTEGER,
             FOREIGN KEY (ResultID) REFERENCES ParsedResults (ResultID),
             FOREIGN KEY (PlayerID) REFERENCES Players (PlayerID),
             FOREIGN KEY (TeamID) REFERENCES Teams (TeamID)
@@ -81,8 +79,8 @@ def insert_or_update_team(conn, team_name):
 def insert_or_update_player(conn, player_data):
     cursor = conn.cursor()
     cursor.execute('''
-        INSERT OR IGNORE INTO Players (PlayerID, PlayerName)
-        VALUES (?, ?)
+        INSERT OR IGNORE INTO Players (PlayerID, PlayerName, TotalKills, TotalDeaths, TotalMatches, TotalCombatEffectiveness)
+        VALUES (?, ?, 0, 0, 0, 0)
     ''', (player_data['PlayerID'], player_data['Name']))
     
     cursor.execute('''
@@ -91,17 +89,17 @@ def insert_or_update_player(conn, player_data):
         TotalDeaths = TotalDeaths + ?,
         TotalMatches = TotalMatches + 1,
         TotalCombatEffectiveness = TotalCombatEffectiveness + ?,
-        TotalOffensivePoints = TotalOffensivePoints + ?,
-        TotalDefensivePoints = TotalDefensivePoints + ?,
-        TotalSupportPoints = TotalSupportPoints + ?
+        AverageKills = CAST((TotalKills + ?) AS REAL) / (TotalMatches + 1),
+        AverageDeaths = CAST((TotalDeaths + ?) AS REAL) / (TotalMatches + 1),
+        AverageCombatEffectiveness = CAST((TotalCombatEffectiveness + ?) AS REAL) / (TotalMatches + 1)
         WHERE PlayerID = ?
     ''', (
         player_data['Kills'],
         player_data['Deaths'],
         player_data['CombatEffectiveness'],
-        player_data['OffensivePoints'],
-        player_data['DefensivePoints'],
-        player_data['SupportPoints'],
+        player_data['Kills'],
+        player_data['Deaths'],
+        player_data['CombatEffectiveness'],
         player_data['PlayerID']
     ))
 
@@ -129,22 +127,24 @@ def insert_match_performance(conn, result_id, player_data, team_id):
     cursor = conn.cursor()
     cursor.execute('''
         INSERT INTO MatchPerformance (
-            ResultID, PlayerID, TeamID, Side, PlayerGroup, Kills, Deaths,
-            CombatEffectiveness, OffensivePoints, DefensivePoints, SupportPoints
-        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            ResultID, PlayerID, PlayerName, TeamID, Side, PlayerGroup, Kills, Deaths, CombatEffectiveness
+        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
     ''', (
         result_id,
         player_data['PlayerID'],
+        player_data['Name'],
         team_id,
         player_data['Side'],
-        player_data['Group'],  # This is still 'Group' in the JSON data
+        player_data['Group'],
         player_data['Kills'],
         player_data['Deaths'],
-        player_data['CombatEffectiveness'],
-        player_data['OffensivePoints'],
-        player_data['DefensivePoints'],
-        player_data['SupportPoints']
+        player_data['CombatEffectiveness']
     ))
+
+def get_processed_files(conn):
+    cursor = conn.cursor()
+    cursor.execute('SELECT FileName FROM ParsedResults')
+    return set(row[0] for row in cursor.fetchall())
 
 def process_json_file(conn, file_path):
     with open(file_path, 'r', encoding='utf-8') as f:
@@ -169,11 +169,6 @@ def process_json_file(conn, file_path):
     for player_data in data['Spectators']:
         insert_or_update_player(conn, player_data)
         insert_match_performance(conn, result_id, player_data, None)
-
-def get_processed_files(conn):
-    cursor = conn.cursor()
-    cursor.execute('SELECT FileName FROM ParsedResults')
-    return set(row[0] for row in cursor.fetchall())
 
 def process_new_json_files():
     conn = sqlite3.connect(db_path)

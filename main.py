@@ -9,6 +9,7 @@ from player_data import PlayerData
 from stats_parser import StatsParser
 from typing import Any
 from version import __version__
+from db_operations import process_new_json_files  # Import the database operation function
 
 class UnicodeJsonEncoder(json.JSONEncoder):
     def default(self, obj):
@@ -66,6 +67,11 @@ def main() -> None:
         
         graph_file = create_comprehensive_comparison(parsed_results, parsed_jsons_folder)
         print(f"Comprehensive comparison graph has been saved as '{os.path.basename(graph_file)}'")
+
+        # Run database operations
+        print("\nUpdating database with new match data...")
+        process_new_json_files()
+        print("Database update complete.")
 
         open_file_explorer(parsed_jsons_folder)
 
