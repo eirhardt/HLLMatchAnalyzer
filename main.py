@@ -9,7 +9,8 @@ from player_data import PlayerData
 from stats_parser import StatsParser
 from typing import Any
 from version import __version__
-from db_operations import process_new_json_files  # Import the database operation function
+from db_operations import process_new_json_files
+from datetime import datetime
 
 class UnicodeJsonEncoder(json.JSONEncoder):
     def default(self, obj):
@@ -30,6 +31,21 @@ def ensure_parsed_jsons_folder(base_directory: str) -> str:
     parsed_jsons_folder = Path(base_directory) / "parsed_jsons"
     parsed_jsons_folder.mkdir(exist_ok=True)
     return str(parsed_jsons_folder)
+
+def generate_descriptive_filename(parsed_results: dict[str, Any]) -> str:
+    team1_name = parsed_results['Axis']['Team Name']
+    team2_name = parsed_results['Allies']['Team Name']
+    map_name = parsed_results['Map']
+    match_date = parsed_results['Match Date']
+    processed_date = datetime.now().strftime('%Y%m%d_%H%M%S')
+    
+    # Replace any characters that might not be suitable for filenames
+    team1_name = ''.join(c if c.isalnum() else '_' for c in team1_name)
+    team2_name = ''.join(c if c.isalnum() else '_' for c in team2_name)
+    map_name = ''.join(c if c.isalnum() else '_' for c in map_name)
+    match_date = ''.join(c if c.isalnum() else '_' for c in match_date)
+    
+    return f"{team1_name}_vs_{team2_name}_{map_name}_{match_date}_Processed_{processed_date}.json"
 
 def main() -> None:
     print(f"Welcome to the Hell Let Loose Stats Parser version {__version__}!")
@@ -59,7 +75,9 @@ def main() -> None:
         parsed_results: dict[str, Any] = StatsParser.parse_stats_file(file_path)
         print(f"Successfully parsed {os.path.basename(file_path)}")
 
-        output_file: str = os.path.join(parsed_jsons_folder, f'matchAnalysisResults_{int(time.time())}.json')
+        descriptive_filename = generate_descriptive_filename(parsed_results)
+        output_file: str = os.path.join(parsed_jsons_folder, descriptive_filename)
+        
         with open(output_file, 'w', encoding='utf-8') as f:
             json.dump(parsed_results, f, cls=UnicodeJsonEncoder, ensure_ascii=False, indent=4)
 
