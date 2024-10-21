@@ -110,3 +110,7 @@ dist/
 # IDE settings
 .vscode/
 .idea/
+
+# Ignore all .png and .db files
+*.png
+*.db
