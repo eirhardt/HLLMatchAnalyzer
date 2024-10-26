@@ -67,7 +67,7 @@ def create_tables(conn):
             FOREIGN KEY (TeamID) REFERENCES Teams (TeamID)
         )
     ''')
-    
+
     cursor.execute('''
         CREATE TABLE IF NOT EXISTS PlayerTeamAffiliations (
             AffiliationID INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -82,7 +82,18 @@ def create_tables(conn):
         )
     ''')
     
-    # Create indexes for better performance
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS PlayerNameHistory (
+            NameHistoryID INTEGER PRIMARY KEY AUTOINCREMENT,
+            PlayerID TEXT,
+            PlayerName TEXT,
+            FirstSeen TEXT,
+            LastSeen TEXT,
+            FOREIGN KEY (PlayerID) REFERENCES Players (PlayerID)
+        )
+    ''')
+    
+    # Create indexes
     cursor.execute('''
         CREATE INDEX IF NOT EXISTS idx_player_team_affiliation 
         ON PlayerTeamAffiliations (PlayerID, TeamID)
@@ -93,6 +104,80 @@ def create_tables(conn):
         ON PlayerTeamAffiliations (TeamID)
     ''')
     
+    cursor.execute('''
+        CREATE INDEX IF NOT EXISTS idx_name_history_player 
+        ON PlayerNameHistory (PlayerID)
+    ''')
+    
+    # Create views
+    cursor.execute('''
+        CREATE VIEW IF NOT EXISTS TeamPlayers AS
+        WITH LatestTeam AS (
+            SELECT DISTINCT
+                PlayerID,
+                TeamID,
+                FirstSeen,
+                LastSeen,
+                MatchesPlayed
+            FROM PlayerTeamAffiliations pta
+            WHERE (PlayerID, LastSeen) IN (
+                SELECT PlayerID, MAX(LastSeen)
+                FROM PlayerTeamAffiliations
+                GROUP BY PlayerID
+            )
+        ),
+        LatestName AS (
+            SELECT DISTINCT
+                PlayerID,
+                PlayerName
+            FROM PlayerNameHistory pnh
+            WHERE (PlayerID, LastSeen) IN (
+                SELECT PlayerID, MAX(LastSeen)
+                FROM PlayerNameHistory
+                GROUP BY PlayerID
+            )
+        )
+        SELECT DISTINCT
+            p.PlayerID,
+            ln.PlayerName as CurrentName,
+            t.TeamName,
+            p.TotalMatches,
+            p.TotalKills,
+            p.TotalDeaths,
+            p.AverageKills,
+            p.AverageDeaths,
+            p.AverageCombatEffectiveness,
+            lt.FirstSeen as JoinedTeam,
+            lt.LastSeen as LastPlayed,
+            lt.MatchesPlayed as MatchesWithTeam
+        FROM Players p
+        JOIN LatestTeam lt ON p.PlayerID = lt.PlayerID
+        JOIN Teams t ON lt.TeamID = t.TeamID
+        JOIN LatestName ln ON p.PlayerID = ln.PlayerID
+        GROUP BY p.PlayerID
+    ''')
+    
+    cursor.execute('''
+        CREATE VIEW IF NOT EXISTS PlayerHistory AS
+        SELECT 
+            pnh.PlayerName,
+            p.PlayerID,
+            t.TeamName,
+            pta.FirstSeen as JoinedTeam,
+            pta.LastSeen as LastPlayed,
+            pta.MatchesPlayed
+        FROM PlayerTeamAffiliations pta
+        JOIN Teams t ON pta.TeamID = t.TeamID
+        JOIN Players p ON pta.PlayerID = p.PlayerID
+        JOIN PlayerNameHistory pnh ON p.PlayerID = pnh.PlayerID
+        WHERE (pnh.PlayerID, pnh.LastSeen) IN (
+            SELECT PlayerID, MAX(LastSeen)
+            FROM PlayerNameHistory
+            GROUP BY PlayerID
+        )
+        ORDER BY pta.LastSeen DESC
+    ''')
+    
     conn.commit()
 
 def insert_or_update_team(conn, team_name):
@@ -101,8 +186,47 @@ def insert_or_update_team(conn, team_name):
     cursor.execute('SELECT TeamID FROM Teams WHERE TeamName = ?', (team_name,))
     return cursor.fetchone()[0]
 
-def insert_or_update_player(conn, player_data):
+def update_player_name_history(conn, player_id: str, player_name: str):
+    """Update the player's name history."""
     cursor = conn.cursor()
+    current_date = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+    
+    # Get the player's most recent name
+    cursor.execute('''
+        SELECT PlayerName, NameHistoryID
+        FROM PlayerNameHistory
+        WHERE PlayerID = ?
+        ORDER BY LastSeen DESC
+        LIMIT 1
+    ''', (player_id,))
+    
+    last_record = cursor.fetchone()
+    
+    if last_record is None:
+        # First time we've seen this player
+        cursor.execute('''
+            INSERT INTO PlayerNameHistory (PlayerID, PlayerName, FirstSeen, LastSeen)
+            VALUES (?, ?, ?, ?)
+        ''', (player_id, player_name, current_date, current_date))
+    elif last_record[0] != player_name:
+        # Player has changed their name
+        cursor.execute('''
+            INSERT INTO PlayerNameHistory (PlayerID, PlayerName, FirstSeen, LastSeen)
+            VALUES (?, ?, ?, ?)
+        ''', (player_id, player_name, current_date, current_date))
+    else:
+        # Update LastSeen for the current name
+        cursor.execute('''
+            UPDATE PlayerNameHistory
+            SET LastSeen = ?
+            WHERE NameHistoryID = ?
+        ''', (current_date, last_record[1]))
+
+
+def insert_or_update_player(conn, player_data):
+    """Updated to include name history tracking."""
+    cursor = conn.cursor()
+    
     cursor.execute('''
         INSERT OR IGNORE INTO Players (PlayerID, PlayerName, TotalKills, TotalDeaths, TotalMatches, TotalCombatEffectiveness)
         VALUES (?, ?, 0, 0, 0, 0)
@@ -127,6 +251,10 @@ def insert_or_update_player(conn, player_data):
         player_data['CombatEffectiveness'],
         player_data['PlayerID']
     ))
+    
+    # Update name history
+    update_player_name_history(conn, player_data['PlayerID'], player_data['Name'])
+
 
 def insert_parsed_result(conn, file_name, map_name, match_date):
     cursor = conn.cursor()
