@@ -113,4 +113,3 @@ dist/
 
 # Ignore all .png and .db files
 *.png
-*.db

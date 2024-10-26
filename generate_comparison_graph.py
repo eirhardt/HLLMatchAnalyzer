@@ -4,6 +4,13 @@ import os
 import time
 from matplotlib.ticker import MaxNLocator, FuncFormatter
 
+def sanitize_filename(text: str) -> str:
+    # Replace any characters that might cause issues in filenames
+    invalid_chars = '<>:"/\\|?*'
+    for char in invalid_chars:
+        text = text.replace(char, '_')
+    return text.strip()
+
 def create_comprehensive_comparison(data, directory):
     # Set the style to dark background
     plt.style.use('dark_background')
@@ -12,11 +19,14 @@ def create_comprehensive_comparison(data, directory):
     metrics: list[str] = ['Kills', 'Deaths', 'Cmbt Eff', 'Off Pts', 'Def Pts', 'Supp Pts', 'MG Kills']
     full_metrics: list[str] = ['Kills', 'Deaths', 'CombatEffectiveness', 'OffensivePoints', 'DefensivePoints', 'SupportPoints', 'MachineGunKills']
     
-    team1_name = data['Axis']['Team Name']
-    team2_name = data['Allies']['Team Name']
+    # Sanitize team names for the filename while keeping originals for display
+    team1_name_display = data['Axis']['Team Name']
+    team2_name_display = data['Allies']['Team Name']
+    team1_name_safe = sanitize_filename(team1_name_display)
+    team2_name_safe = sanitize_filename(team2_name_display)
     
     fig, axs = plt.subplots(2, 2, figsize=(20, 20))
-    fig.suptitle(f'{team1_name} vs {team2_name} Comparison', fontsize=24, color='white')
+    fig.suptitle(f'{team1_name_display} vs {team2_name_display} Comparison', fontsize=24, color='white')
     
     colors = ['#ff9999', '#66b3ff']  # Light red and light blue for better visibility
     
@@ -37,8 +47,8 @@ def create_comprehensive_comparison(data, directory):
         x = np.arange(len(metrics))
         width = 0.35
         
-        rects1 = ax.bar(x - width/2, team1_values, width, label=team1_name, color=colors[0])
-        rects2 = ax.bar(x + width/2, team2_values, width, label=team2_name, color=colors[1])
+        rects1 = ax.bar(x - width/2, team1_values, width, label=team1_name_display, color=colors[0])
+        rects2 = ax.bar(x + width/2, team2_values, width, label=team2_name_display, color=colors[1])
         
         ax.set_ylabel('Values', fontsize=14, color='white')
         ax.set_title(f'{category}', fontsize=18, color='white')
@@ -78,7 +88,9 @@ def create_comprehensive_comparison(data, directory):
              ha='center', fontsize=12, color='white', 
              bbox=dict(facecolor='#333333', edgecolor='none', alpha=0.8))
     
-    output_file = os.path.join(directory, f'{team1_name}_vs_{team2_name}_comparison_dark_{int(time.time())}.png')
+    # Create sanitized output filename
+    timestamp = int(time.time())
+    output_file = os.path.join(directory, f'match_comparison_{team1_name_safe}_vs_{team2_name_safe}_{timestamp}.png')
     plt.savefig(output_file, dpi=300, facecolor='#1c1c1c', edgecolor='none')
     plt.close()
     
