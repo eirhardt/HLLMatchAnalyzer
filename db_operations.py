@@ -68,6 +68,31 @@ def create_tables(conn):
         )
     ''')
     
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS PlayerTeamAffiliations (
+            AffiliationID INTEGER PRIMARY KEY AUTOINCREMENT,
+            PlayerID TEXT,
+            TeamID INTEGER,
+            FirstSeen TEXT,
+            LastSeen TEXT,
+            MatchesPlayed INTEGER DEFAULT 1,
+            FOREIGN KEY (PlayerID) REFERENCES Players (PlayerID),
+            FOREIGN KEY (TeamID) REFERENCES Teams (TeamID),
+            UNIQUE(PlayerID, TeamID)
+        )
+    ''')
+    
+    # Create indexes for better performance
+    cursor.execute('''
+        CREATE INDEX IF NOT EXISTS idx_player_team_affiliation 
+        ON PlayerTeamAffiliations (PlayerID, TeamID)
+    ''')
+    
+    cursor.execute('''
+        CREATE INDEX IF NOT EXISTS idx_team_players 
+        ON PlayerTeamAffiliations (TeamID)
+    ''')
+    
     conn.commit()
 
 def insert_or_update_team(conn, team_name):
@@ -125,6 +150,8 @@ def update_map_stats(conn, map_name):
 
 def insert_match_performance(conn, result_id, player_data, team_id):
     cursor = conn.cursor()
+    
+    # First insert the match performance as before
     cursor.execute('''
         INSERT INTO MatchPerformance (
             ResultID, PlayerID, PlayerName, TeamID, Side, PlayerGroup, Kills, Deaths, CombatEffectiveness
@@ -140,11 +167,67 @@ def insert_match_performance(conn, result_id, player_data, team_id):
         player_data['Deaths'],
         player_data['CombatEffectiveness']
     ))
+    
+    # Then update the player team affiliation
+    if team_id is not None:  # Only track affiliations for actual team members (not spectators)
+        current_date = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        
+        # Try to update existing affiliation or create new one
+        cursor.execute('''
+            INSERT INTO PlayerTeamAffiliations (PlayerID, TeamID, FirstSeen, LastSeen, MatchesPlayed)
+            VALUES (?, ?, ?, ?, 1)
+            ON CONFLICT(PlayerID, TeamID) DO UPDATE SET
+                LastSeen = ?,
+                MatchesPlayed = MatchesPlayed + 1
+            WHERE PlayerID = ? AND TeamID = ?
+        ''', (
+            player_data['PlayerID'],
+            team_id,
+            current_date,
+            current_date,
+            current_date,
+            player_data['PlayerID'],
+            team_id
+        ))
 
 def get_processed_files(conn):
     cursor = conn.cursor()
     cursor.execute('SELECT FileName FROM ParsedResults')
     return set(row[0] for row in cursor.fetchall())
+
+def get_player_team_history(conn, player_id):
+    """Get the team history for a specific player."""
+    cursor = conn.cursor()
+    cursor.execute('''
+        SELECT 
+            t.TeamName,
+            pta.FirstSeen,
+            pta.LastSeen,
+            pta.MatchesPlayed
+        FROM PlayerTeamAffiliations pta
+        JOIN Teams t ON pta.TeamID = t.TeamID
+        WHERE pta.PlayerID = ?
+        ORDER BY pta.LastSeen DESC
+    ''', (player_id,))
+    return cursor.fetchall()
+
+def get_team_roster(conn, team_id):
+    """Get the current roster for a specific team."""
+    cursor = conn.cursor()
+    cursor.execute('''
+        SELECT 
+            p.PlayerName,
+            pta.FirstSeen,
+            pta.LastSeen,
+            pta.MatchesPlayed,
+            p.AverageKills,
+            p.AverageCombatEffectiveness
+        FROM PlayerTeamAffiliations pta
+        JOIN Players p ON pta.PlayerID = p.PlayerID
+        WHERE pta.TeamID = ?
+        ORDER BY pta.MatchesPlayed DESC
+    ''', (team_id,))
+    return cursor.fetchall()
 
 def process_json_file(conn, file_path):
     with open(file_path, 'r', encoding='utf-8') as f:
