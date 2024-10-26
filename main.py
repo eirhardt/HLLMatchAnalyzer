@@ -18,15 +18,6 @@ class UnicodeJsonEncoder(json.JSONEncoder):
             return obj.to_dict()
         return super().default(obj)
 
-def open_file_explorer(path):
-    if os.name == 'nt':  # For Windows
-        os.startfile(path)
-    elif os.name == 'posix':  # For macOS and Linux
-        import subprocess
-        subprocess.call(('open', path))
-    else:
-        print(f"Unable to open file explorer for this operating system: {os.name}")
-
 def ensure_parsed_jsons_folder(base_directory: str) -> str:
     parsed_jsons_folder = Path(base_directory) / "parsed_jsons"
     parsed_jsons_folder.mkdir(exist_ok=True)
@@ -47,28 +38,21 @@ def generate_descriptive_filename(parsed_results: dict[str, Any]) -> str:
     
     return f"{team1_name}_vs_{team2_name}_{map_name}_{match_date}_Processed_{processed_date}.json"
 
-def main() -> None:
-    print(f"Welcome to the Hell Let Loose Stats Parser version {__version__}!")
-    print("This project was started by -TL- Grekker and has been updated by -TL- JVCK.")
-    print("This script will parse CSV files produced by CRCON after a Hell Let Loose match.")
-
+def parse_new_match() -> bool:
+    """Parse a new match CSV file into JSON. Returns True if file was parsed successfully."""
     root = tk.Tk()
-    root.withdraw()  # Hide the main window
+    root.withdraw()
 
-    print("\nPlease select the CSV file you want to parse.")
     file_path: str = filedialog.askopenfilename(
         title="Select CSV file to parse",
         filetypes=[("CSV files", "*.csv"), ("All files", "*.*")]
     )
     
-    if not file_path:  # User cancelled the file dialog
-        print("No file selected. Exiting.")
-        return
+    if not file_path:
+        print("No file selected. Skipping CSV parsing.")
+        return False
 
-    # Get the base directory (where the script is located)
     base_directory: str = os.path.dirname(os.path.abspath(__file__))
-    
-    # Ensure the parsed_jsons folder exists
     parsed_jsons_folder: str = ensure_parsed_jsons_folder(base_directory)
     
     try:
@@ -83,22 +67,50 @@ def main() -> None:
 
         print(f"\nResults have been saved to {output_file}")
         
-        graph_file = create_comprehensive_comparison(parsed_results, parsed_jsons_folder)
-        print(f"Comprehensive comparison graph has been saved as '{os.path.basename(graph_file)}'")
+        # Generate comparison graph
+        try:
+            graph_file = create_comprehensive_comparison(parsed_results, parsed_jsons_folder)
+            print(f"Comprehensive comparison graph has been saved as '{os.path.basename(graph_file)}'")
+        except Exception as e:
+            print(f"Warning: Could not generate comparison graph: {type(e).__name__} - {e}")
+            print("Continuing with database operations...")
 
-        # Run database operations
-        print("\nUpdating database with new match data...")
-        process_new_json_files()
-        print("Database update complete.")
-
-        open_file_explorer(parsed_jsons_folder)
+        return True
 
     except Exception as e:
         print(f"Error parsing {file_path}: {type(e).__name__} - {e}")
+        return False
+
+def main() -> None:
+    print(f"Welcome to the Hell Let Loose Stats Parser version {__version__}!")
+    print("This project was started by -TL- Grekker and has been updated by -TL- JVCK.")
+    
+    while True:
+        print("\nPlease select an operation:")
+        print("1. Parse new CSV file")
+        print("2. Update database from all JSON files")
+        print("3. Do both")
+        print("4. Exit")
+        
+        choice = input("Enter your choice (1-4): ").strip()
+        
+        if choice == "1":
+            parse_new_match()
+        elif choice == "2":
+            print("\nUpdating database with all parsed match data...")
+            process_new_json_files()
+            print("Database update complete.")
+        elif choice == "3":
+            if parse_new_match():
+                print("\nUpdating database with all parsed match data...")
+                process_new_json_files()
+                print("Database update complete.")
+        elif choice == "4":
+            break
+        else:
+            print("Invalid choice. Please try again.")
 
     print("\nThank you for using the Hell Let Loose Stats Parser!")
-    print("The file explorer has been opened to the location of the parsed file.")
-    print("The program will now close.")
 
 if __name__ == "__main__":
     main()
