@@ -15,6 +15,11 @@ def sanitize_filename(text: str) -> str:
     return text.strip()
 
 def format_with_commas(x: float, p: Any) -> str:
+    """
+    Format number with commas and appropriate decimal places
+    x: the number to format
+    p: the position (unused, required by matplotlib)
+    """
     if x >= 1000:
         return f"{x:,.0f}"
     elif x >= 100:
@@ -60,12 +65,12 @@ def create_subplot(ax: Any, data: Dict[str, Any], category: str, team1_name: str
     # Configure primary y-axis (low values)
     ax1.set_ylabel('Kills/Deaths/Combat Effectiveness', color='white', fontsize=10)
     ax1.tick_params(axis='y', labelcolor='white')
-    ax1.yaxis.set_major_formatter(FuncFormatter(format_with_commas))
+    ax1.yaxis.set_major_formatter(FuncFormatter(lambda x, p: format_with_commas(x, p)))
     
     # Configure secondary y-axis (high values)
     ax2.set_ylabel('Points', color='white', fontsize=10)
     ax2.tick_params(axis='y', labelcolor='white')
-    ax2.yaxis.set_major_formatter(FuncFormatter(format_with_commas))
+    ax2.yaxis.set_major_formatter(FuncFormatter(lambda x, p: format_with_commas(x, p)))
     
     # Set up x-axis
     ax1.set_xticks(x)
@@ -77,10 +82,13 @@ def create_subplot(ax: Any, data: Dict[str, Any], category: str, team1_name: str
     # Set title and adjust appearance
     ax1.set_title(f'{category}', fontsize=14, color='white', pad=20)
     
-    # Add value labels on bars
+    # Add value labels on bars with proper formatting
+    def label_formatter(value: float) -> str:
+        return format_with_commas(value, None)
+    
     for ax_to_use in [ax1, ax2]:
         for container in ax_to_use.containers:
-            ax_to_use.bar_label(container, padding=3, fmt=format_with_commas,
+            ax_to_use.bar_label(container, padding=3, fmt=label_formatter,
                               fontsize=8, color='white')
 
 def create_comprehensive_comparison(data: Dict[str, Any], directory: str) -> str:
