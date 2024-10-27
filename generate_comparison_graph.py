@@ -48,6 +48,10 @@ def create_subplot(ax: Any, data: Dict[str, Any], category: str, team1_name: str
     ax1 = ax
     ax2 = ax1.twinx()
     
+    # Create empty lists to store bar containers for legend
+    team1_bars = []
+    team2_bars = []
+    
     # Plot bars on appropriate axes
     for i, (metric, t1_val, t2_val) in enumerate(zip(full_metrics, team1_values, team2_values)):
         if metric in high_value_metrics:
@@ -57,10 +61,12 @@ def create_subplot(ax: Any, data: Dict[str, Any], category: str, team1_name: str
             ax_to_use = ax1
             alpha = 1.0  # Solid for low-value bars
             
-        ax_to_use.bar(x[i] - width/2, t1_val, width, color=colors[0], alpha=alpha,
-                     label=f"{team1_name} ({metric})" if i == 0 else "")
-        ax_to_use.bar(x[i] + width/2, t2_val, width, color=colors[1], alpha=alpha,
-                     label=f"{team2_name} ({metric})" if i == 0 else "")
+        t1_bar = ax_to_use.bar(x[i] - width/2, t1_val, width, color=colors[0], alpha=alpha)
+        t2_bar = ax_to_use.bar(x[i] + width/2, t2_val, width, color=colors[1], alpha=alpha)
+        
+        if i == 0:  # Only store one set of bars for the legend
+            team1_bars.append(t1_bar)
+            team2_bars.append(t2_bar)
 
     # Configure primary y-axis (low values)
     ax1.set_ylabel('Kills/Deaths/Combat Effectiveness', color='white', fontsize=10)
@@ -90,6 +96,10 @@ def create_subplot(ax: Any, data: Dict[str, Any], category: str, team1_name: str
         for container in ax_to_use.containers:
             ax_to_use.bar_label(container, padding=3, fmt=label_formatter,
                               fontsize=8, color='white')
+    
+    # Add legend using the first set of bars
+    ax1.legend([team1_bars[0], team2_bars[0]], [team1_name, team2_name],
+               loc='upper right', framealpha=0.8, facecolor='#333333', edgecolor='none')
 
 def create_comprehensive_comparison(data: Dict[str, Any], directory: str) -> str:
     plt.style.use('dark_background')
