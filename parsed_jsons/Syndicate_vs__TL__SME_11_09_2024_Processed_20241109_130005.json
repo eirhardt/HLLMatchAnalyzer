@@ -1,0 +1,3962 @@
+{
+    "Axis": {
+        "Team Name": "Syndicate",
+        "Total": {
+            "PlayerCount": 49,
+            "Kills": 2167,
+            "Deaths": 2197,
+            "KDR": "0.99",
+            "CombatEffectiveness": 23029,
+            "OffensivePoints": 39660,
+            "DefensivePoints": 22700,
+            "SupportPoints": 35815,
+            "MachineGunKills": 193
+        },
+        "Infantry": {
+            "PlayerCount": 39,
+            "Kills": 1791,
+            "Deaths": 2083,
+            "KDR": "0.86",
+            "CombatEffectiveness": 15683,
+            "OffensivePoints": 33220,
+            "DefensivePoints": 13600,
+            "SupportPoints": 33862,
+            "MachineGunKills": 193,
+            "Players": [
+                {
+                    "PlayerID": "76561199375411828",
+                    "Name": "ﾒ PiPi'sWaterPark",
+                    "Kills": 9,
+                    "Deaths": 3,
+                    "KDR": "3.00",
+                    "CombatEffectiveness": 62,
+                    "OffensivePoints": 0,
+                    "DefensivePoints": 1380,
+                    "SupportPoints": 3208,
+                    "Weapons": {
+                        "GEWEHR 43": 1,
+                        "BOMBING RUN": 4,
+                        "STRAFING RUN": 4
+                    },
+                    "DeathByWeapons": {
+                        "M97 TRENCH GUN": 2,
+                        "M1903 SPRINGFIELD": 1
+                    },
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 4,
+                        "Allies": 0
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 1,
+                        "Artillery": 0,
+                        "Armor": 0
+                    },
+                    "Side": "Axis",
+                    "Group": "Infantry"
+                },
+                {
+                    "PlayerID": "76561198061127715",
+                    "Name": "メ Stormin' Mormon",
+                    "Kills": 11,
+                    "Deaths": 46,
+                    "KDR": "0.24",
+                    "CombatEffectiveness": 98,
+                    "OffensivePoints": 520,
+                    "DefensivePoints": 680,
+                    "SupportPoints": 489,
+                    "Weapons": {
+                        "KARABINER 98K": 11
+                    },
+                    "DeathByWeapons": {
+                        "M1 GARAND": 32,
+                        "M1 CARBINE": 3,
+                        "M3 GREASE GUN": 2,
+                        "BROWNING M1919": 2,
+                        "M97 TRENCH GUN": 1,
+                        "155MM HOWITZER [M114]": 4,
+                        "M6 37mm [M8 Greyhound]": 1,
+                        "76MM M1 GUN [Sherman M4A3E2(76)]": 1
+                    },
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 57,
+                        "Allies": 0
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 11,
+                        "Artillery": 0,
+                        "Armor": 0
+                    },
+                    "Side": "Axis",
+                    "Group": "Infantry"
+                },
+                {
+                    "PlayerID": "76561197970517668",
+                    "Name": "ﾒ KillSwitcH",
+                    "Kills": 69,
+                    "Deaths": 68,
+                    "KDR": "1.01",
+                    "CombatEffectiveness": 653,
+                    "OffensivePoints": 980,
+                    "DefensivePoints": 60,
+                    "SupportPoints": 2805,
+                    "Weapons": {
+                        "MP40": 1,
+                        "STG44": 61,
+                        "S-MINE": 1,
+                        "SATCHEL": 2,
+                        "PANZERSCHRECK": 1,
+                        "M43 STIELHANDGRANATE": 3
+                    },
+                    "DeathByWeapons": {
+                        "155MM HOWITZER [M114]": 1,
+                        "M1918A2 BAR": 6,
+                        "M1A1 THOMPSON": 4,
+                        "M1903 SPRINGFIELD": 3,
+                        "HULL M1919 [Sherman M4A3E2(76)]": 1,
+                        "BROWNING M1919": 1,
+                        "BAZOOKA": 3,
+                        "SATCHEL": 2,
+                        "M3 GREASE GUN": 2,
+                        "M1 CARBINE": 2,
+                        "M1 GARAND": 43
+                    },
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 133,
+                        "Allies": 0
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 67,
+                        "Artillery": 0,
+                        "Armor": 0
+                    },
+                    "Side": "Axis",
+                    "Group": "Infantry"
+                },
+                {
+                    "PlayerID": "76561198042624118",
+                    "Name": "メ Richie B.",
+                    "Kills": 66,
+                    "Deaths": 50,
+                    "KDR": "1.32",
+                    "CombatEffectiveness": 530,
+                    "OffensivePoints": 1120,
+                    "DefensivePoints": 220,
+                    "SupportPoints": 1104,
+                    "Weapons": {
+                        "GEWEHR 43": 66
+                    },
+                    "DeathByWeapons": {
+                        "M1918A2 BAR": 4,
+                        "M1A1 THOMPSON": 3,
+                        "COAXIAL M1919 [Sherman M4A3E2(76)]": 1,
+                        "BROWNING M1919": 1,
+                        "76MM M1 GUN [Sherman M4A3E2(76)]": 2,
+                        "BAZOOKA": 1,
+                        "SATCHEL": 1,
+                        "M3 GREASE GUN": 4,
+                        "M1 CARBINE": 2,
+                        "M1 GARAND": 31
+                    },
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 115,
+                        "Allies": 0
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 66,
+                        "Artillery": 0,
+                        "Armor": 0
+                    },
+                    "Side": "Axis",
+                    "Group": "Infantry"
+                },
+                {
+                    "PlayerID": "76561198153882959",
+                    "Name": "ﾒ waterjug",
+                    "Kills": 18,
+                    "Deaths": 33,
+                    "KDR": "0.55",
+                    "CombatEffectiveness": 179,
+                    "OffensivePoints": 360,
+                    "DefensivePoints": 780,
+                    "SupportPoints": 445,
+                    "Weapons": {
+                        "MP40": 11,
+                        "KARABINER 98K": 6,
+                        "50mm KwK 39/1 [Sd.Kfz.234 Puma]": 1
+                    },
+                    "DeathByWeapons": {
+                        "155MM HOWITZER [M114]": 3,
+                        "M1A1 THOMPSON": 2,
+                        "M97 TRENCH GUN": 2,
+                        "MK2 GRENADE": 2,
+                        "75MM CANNON [Sherman M4A3(75)W]": 1,
+                        "M1903 SPRINGFIELD": 1,
+                        "76MM M1 GUN [Sherman M4A3E2(76)]": 3,
+                        "BAZOOKA": 1,
+                        "M1 CARBINE": 2,
+                        "M1 GARAND": 16
+                    },
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 51,
+                        "Allies": 0
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 17,
+                        "Artillery": 0,
+                        "Armor": 1
+                    },
+                    "Side": "Axis",
+                    "Group": "Infantry"
+                },
+                {
+                    "PlayerID": "76561198056892348",
+                    "Name": "ﾒ Twad",
+                    "Kills": 55,
+                    "Deaths": 58,
+                    "KDR": "0.95",
+                    "CombatEffectiveness": 402,
+                    "OffensivePoints": 1080,
+                    "DefensivePoints": 180,
+                    "SupportPoints": 930,
+                    "Weapons": {
+                        "GEWEHR 43": 50,
+                        "KARABINER 98K": 1,
+                        "M43 STIELHANDGRANATE": 4
+                    },
+                    "DeathByWeapons": {
+                        "155MM HOWITZER [M114]": 11,
+                        "M1918A2 BAR": 3,
+                        "M97 TRENCH GUN": 1,
+                        "MK2 GRENADE": 1,
+                        "37MM CANNON [Stuart M5A1]": 1,
+                        "BROWNING M1919": 6,
+                        "76MM M1 GUN [Sherman M4A3E2(76)]": 1,
+                        "BAZOOKA": 2,
+                        "M3 GREASE GUN": 3,
+                        "M1 CARBINE": 2,
+                        "M1 GARAND": 27
+                    },
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 113,
+                        "Allies": 0
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 55,
+                        "Artillery": 0,
+                        "Armor": 0
+                    },
+                    "Side": "Axis",
+                    "Group": "Infantry"
+                },
+                {
+                    "PlayerID": "76561198372011444",
+                    "Name": "ﾒ Thommy",
+                    "Kills": 39,
+                    "Deaths": 80,
+                    "KDR": "0.49",
+                    "CombatEffectiveness": 321,
+                    "OffensivePoints": 980,
+                    "DefensivePoints": 60,
+                    "SupportPoints": 278,
+                    "Weapons": {
+                        "STG44": 2,
+                        "S-MINE": 1,
+                        "KARABINER 98K": 32,
+                        "PANZERSCHRECK": 3,
+                        "M43 STIELHANDGRANATE": 1
+                    },
+                    "DeathByWeapons": {
+                        "155MM HOWITZER [M114]": 14,
+                        "M1918A2 BAR": 2,
+                        "M1A1 THOMPSON": 5,
+                        "M97 TRENCH GUN": 1,
+                        "MK2 GRENADE": 4,
+                        "75MM CANNON [Sherman M4A3(75)W]": 1,
+                        "COAXIAL M1919 [Sherman M4A3E2(76)]": 1,
+                        "M1903 SPRINGFIELD": 1,
+                        "BROWNING M1919": 9,
+                        "BOMBING RUN": 2,
+                        "76MM M1 GUN [Sherman M4A3E2(76)]": 3,
+                        "BAZOOKA": 2,
+                        "M3 GREASE GUN": 4,
+                        "M1 CARBINE": 7,
+                        "M1 GARAND": 24
+                    },
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 117,
+                        "Allies": 0
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 39,
+                        "Artillery": 0,
+                        "Armor": 0
+                    },
+                    "Side": "Axis",
+                    "Group": "Infantry"
+                },
+                {
+                    "PlayerID": "76561198109597387",
+                    "Name": "KRT™Milk",
+                    "Kills": 87,
+                    "Deaths": 60,
+                    "KDR": "1.45",
+                    "CombatEffectiveness": 815,
+                    "OffensivePoints": 1060,
+                    "DefensivePoints": 160,
+                    "SupportPoints": 278,
+                    "Weapons": {
+                        "MG42": 47,
+                        "STG44": 1,
+                        "UNKNOWN": 1,
+                        "GEWEHR 43": 38
+                    },
+                    "DeathByWeapons": {
+                        "BAZOOKA": 1,
+                        "M1 GARAND": 18,
+                        "M3 GREASE GUN": 2,
+                        "BROWNING M1919": 11,
+                        "M1903 SPRINGFIELD": 13,
+                        "155MM HOWITZER [M114]": 12,
+                        "76MM M1 GUN [Sherman M4A3E2(76)]": 1,
+                        "COAXIAL M1919 [Sherman M4A3E2(76)]": 2
+                    },
+                    "MachineGunKills": 47,
+                    "sideLikelihood": {
+                        "Axis": 146,
+                        "Allies": 0
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 86,
+                        "Artillery": 0,
+                        "Armor": 0
+                    },
+                    "Side": "Axis",
+                    "Group": "Infantry"
+                },
+                {
+                    "PlayerID": "76561198087695312",
+                    "Name": "synR | Láska",
+                    "Kills": 64,
+                    "Deaths": 81,
+                    "KDR": "0.79",
+                    "CombatEffectiveness": 530,
+                    "OffensivePoints": 940,
+                    "DefensivePoints": 40,
+                    "SupportPoints": 165,
+                    "Weapons": {
+                        "STG44": 55,
+                        "SATCHEL": 4,
+                        "GEWEHR 43": 3,
+                        "KARABINER 98K": 2
+                    },
+                    "DeathByWeapons": {
+                        "155MM HOWITZER [M114]": 4,
+                        "M1918A2 BAR": 7,
+                        "M1A1 THOMPSON": 6,
+                        "MK2 GRENADE": 1,
+                        "COAXIAL M1919 [M8 Greyhound]": 2,
+                        "BROWNING M1919": 2,
+                        "M2 AP MINE": 1,
+                        "UNKNOWN": 1,
+                        "BOMBING RUN": 1,
+                        "76MM M1 GUN [Sherman M4A3E2(76)]": 1,
+                        "S-MINE": 1,
+                        "BAZOOKA": 2,
+                        "SATCHEL": 1,
+                        "M3 GREASE GUN": 3,
+                        "M1 CARBINE": 3,
+                        "HULL M1919 [Stuart M5A1]": 1,
+                        "M1 GARAND": 44
+                    },
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 137,
+                        "Allies": 1
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 60,
+                        "Artillery": 0,
+                        "Armor": 0
+                    },
+                    "Side": "Axis",
+                    "Group": "Infantry"
+                },
+                {
+                    "PlayerID": "76561197971065507",
+                    "Name": "ﾒ prank",
+                    "Kills": 100,
+                    "Deaths": 58,
+                    "KDR": "1.72",
+                    "CombatEffectiveness": 1146,
+                    "OffensivePoints": 1100,
+                    "DefensivePoints": 120,
+                    "SupportPoints": 0,
+                    "Weapons": {
+                        "MP40": 40,
+                        "STG44": 13,
+                        "S-MINE": 16,
+                        "SATCHEL": 3,
+                        "GEWEHR 43": 1,
+                        "KARABINER 98K": 21,
+                        "PANZERSCHRECK": 5,
+                        "M43 STIELHANDGRANATE": 1
+                    },
+                    "DeathByWeapons": {
+                        "155MM HOWITZER [M114]": 2,
+                        "M1918A2 BAR": 3,
+                        "M1A1 THOMPSON": 3,
+                        "M97 TRENCH GUN": 1,
+                        "MK2 GRENADE": 2,
+                        "37MM CANNON [Stuart M5A1]": 1,
+                        "BROWNING M1919": 2,
+                        "M2 AP MINE": 1,
+                        "SATCHEL": 1,
+                        "M3 GREASE GUN": 3,
+                        "M1 CARBINE": 2,
+                        "HULL M1919 [Stuart M5A1]": 1,
+                        "M1 GARAND": 36
+                    },
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 154,
+                        "Allies": 0
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 97,
+                        "Artillery": 0,
+                        "Armor": 0
+                    },
+                    "Side": "Axis",
+                    "Group": "Infantry"
+                },
+                {
+                    "PlayerID": "76561197974814090",
+                    "Name": "KRT™Neddyveded",
+                    "Kills": 29,
+                    "Deaths": 42,
+                    "KDR": "0.69",
+                    "CombatEffectiveness": 379,
+                    "OffensivePoints": 1120,
+                    "DefensivePoints": 60,
+                    "SupportPoints": 1132,
+                    "Weapons": {
+                        "STG44": 2,
+                        "GEWEHR 43": 5,
+                        "KARABINER 98K": 17,
+                        "PANZERSCHRECK": 5
+                    },
+                    "DeathByWeapons": {
+                        "155MM HOWITZER [M114]": 8,
+                        "M1918A2 BAR": 1,
+                        "M1A1 THOMPSON": 1,
+                        "M1903 SPRINGFIELD": 9,
+                        "BROWNING M1919": 2,
+                        "UNKNOWN": 1,
+                        "76MM M1 GUN [Sherman M4A3E2(76)]": 2,
+                        "TELLERMINE 43": 1,
+                        "BAZOOKA": 1,
+                        "M1 CARBINE": 1,
+                        "M6 37mm [M8 Greyhound]": 1,
+                        "M1 GARAND": 14
+                    },
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 69,
+                        "Allies": 1
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 29,
+                        "Artillery": 0,
+                        "Armor": 0
+                    },
+                    "Side": "Axis",
+                    "Group": "Infantry"
+                },
+                {
+                    "PlayerID": "76561198993982703",
+                    "Name": "℧ | Jogon",
+                    "Kills": 65,
+                    "Deaths": 94,
+                    "KDR": "0.69",
+                    "CombatEffectiveness": 606,
+                    "OffensivePoints": 860,
+                    "DefensivePoints": 20,
+                    "SupportPoints": 165,
+                    "Weapons": {
+                        "MP40": 3,
+                        "STG44": 31,
+                        "SATCHEL": 8,
+                        "GEWEHR 43": 20,
+                        "KARABINER 98K": 3
+                    },
+                    "DeathByWeapons": {
+                        "155MM HOWITZER [M114]": 20,
+                        "M1918A2 BAR": 4,
+                        "M1A1 THOMPSON": 3,
+                        "M97 TRENCH GUN": 1,
+                        "MK2 GRENADE": 2,
+                        "M1903 SPRINGFIELD": 2,
+                        "BROWNING M1919": 8,
+                        "M2 AP MINE": 1,
+                        "BOMBING RUN": 2,
+                        "76MM M1 GUN [Sherman M4A3E2(76)]": 5,
+                        "BAZOOKA": 1,
+                        "SATCHEL": 1,
+                        "M3 GREASE GUN": 5,
+                        "M1 CARBINE": 7,
+                        "STRAFING RUN": 1,
+                        "M1 GARAND": 31
+                    },
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 147,
+                        "Allies": 0
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 57,
+                        "Artillery": 0,
+                        "Armor": 0
+                    },
+                    "Side": "Axis",
+                    "Group": "Infantry"
+                },
+                {
+                    "PlayerID": "76561198002687806",
+                    "Name": "ﾒ robo",
+                    "Kills": 80,
+                    "Deaths": 35,
+                    "KDR": "2.29",
+                    "CombatEffectiveness": 573,
+                    "OffensivePoints": 960,
+                    "DefensivePoints": 340,
+                    "SupportPoints": 140,
+                    "Weapons": {
+                        "MG42": 79,
+                        "MP40": 1
+                    },
+                    "DeathByWeapons": {
+                        "SATCHEL": 1,
+                        "M1 GARAND": 23,
+                        "M1 CARBINE": 1,
+                        "M1A1 THOMPSON": 1,
+                        "M3 GREASE GUN": 1,
+                        "BROWNING M1919": 4,
+                        "M97 TRENCH GUN": 1,
+                        "155MM HOWITZER [M114]": 3
+                    },
+                    "MachineGunKills": 79,
+                    "sideLikelihood": {
+                        "Axis": 114,
+                        "Allies": 0
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 80,
+                        "Artillery": 0,
+                        "Armor": 0
+                    },
+                    "Side": "Axis",
+                    "Group": "Infantry"
+                },
+                {
+                    "PlayerID": "76561198151996265",
+                    "Name": "ﾒ Bama",
+                    "Kills": 26,
+                    "Deaths": 21,
+                    "KDR": "1.24",
+                    "CombatEffectiveness": 292,
+                    "OffensivePoints": 140,
+                    "DefensivePoints": 1200,
+                    "SupportPoints": 2990,
+                    "Weapons": {
+                        "MG42": 20,
+                        "STG44": 6
+                    },
+                    "DeathByWeapons": {
+                        "SATCHEL": 1,
+                        "M1 GARAND": 16,
+                        "M3 GREASE GUN": 2,
+                        "BROWNING M1919": 1,
+                        "155MM HOWITZER [M114]": 1
+                    },
+                    "MachineGunKills": 20,
+                    "sideLikelihood": {
+                        "Axis": 46,
+                        "Allies": 0
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 26,
+                        "Artillery": 0,
+                        "Armor": 0
+                    },
+                    "Side": "Axis",
+                    "Group": "Infantry"
+                },
+                {
+                    "PlayerID": "76561197962132162",
+                    "Name": "ﾒ LuCid",
+                    "Kills": 67,
+                    "Deaths": 65,
+                    "KDR": "1.03",
+                    "CombatEffectiveness": 482,
+                    "OffensivePoints": 820,
+                    "DefensivePoints": 380,
+                    "SupportPoints": 1010,
+                    "Weapons": {
+                        "GEWEHR 43": 67
+                    },
+                    "DeathByWeapons": {
+                        "155MM HOWITZER [M114]": 2,
+                        "M1918A2 BAR": 1,
+                        "M1A1 THOMPSON": 1,
+                        "M97 TRENCH GUN": 1,
+                        "MK2 GRENADE": 1,
+                        "75MM CANNON [Sherman M4A3(75)W]": 1,
+                        "COAXIAL M1919 [Sherman M4A3E2(76)]": 1,
+                        "M2 AP MINE": 1,
+                        "M3 GREASE GUN": 6,
+                        "M1 CARBINE": 2,
+                        "M1 GARAND": 48
+                    },
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 132,
+                        "Allies": 0
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 67,
+                        "Artillery": 0,
+                        "Armor": 0
+                    },
+                    "Side": "Axis",
+                    "Group": "Infantry"
+                },
+                {
+                    "PlayerID": "76561197989250991",
+                    "Name": "KRT™dp",
+                    "Kills": 61,
+                    "Deaths": 36,
+                    "KDR": "1.69",
+                    "CombatEffectiveness": 527,
+                    "OffensivePoints": 1200,
+                    "DefensivePoints": 80,
+                    "SupportPoints": 325,
+                    "Weapons": {
+                        "STG44": 8,
+                        "GEWEHR 43": 34,
+                        "KARABINER 98K": 19
+                    },
+                    "DeathByWeapons": {
+                        "155MM HOWITZER [M114]": 11,
+                        "M1918A2 BAR": 1,
+                        "MK2 GRENADE": 1,
+                        "M1903 SPRINGFIELD": 5,
+                        "BROWNING M1919": 2,
+                        "76MM M1 GUN [Sherman M4A3E2(76)]": 2,
+                        "TELLERMINE 43": 1,
+                        "57MM CANNON [M1 57mm]": 1,
+                        "M1 CARBINE": 2,
+                        "M6 37mm [M8 Greyhound]": 1,
+                        "M1 GARAND": 8,
+                        "M2 FLAMETHROWER": 1
+                    },
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 96,
+                        "Allies": 1
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 61,
+                        "Artillery": 0,
+                        "Armor": 0
+                    },
+                    "Side": "Axis",
+                    "Group": "Infantry"
+                },
+                {
+                    "PlayerID": "76561199025382131",
+                    "Name": "ﾒ Daddy",
+                    "Kills": 32,
+                    "Deaths": 33,
+                    "KDR": "0.97",
+                    "CombatEffectiveness": 286,
+                    "OffensivePoints": 940,
+                    "DefensivePoints": 500,
+                    "SupportPoints": 1536,
+                    "Weapons": {
+                        "GEWEHR 43": 31,
+                        "BOMBING RUN": 1
+                    },
+                    "DeathByWeapons": {
+                        "M1 GARAND": 22,
+                        "M1918A2 BAR": 1,
+                        "M1A1 THOMPSON": 2,
+                        "M3 GREASE GUN": 6,
+                        "M1903 SPRINGFIELD": 2
+                    },
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 64,
+                        "Allies": 0
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 31,
+                        "Artillery": 0,
+                        "Armor": 0
+                    },
+                    "Side": "Axis",
+                    "Group": "Infantry"
+                },
+                {
+                    "PlayerID": "76561198880204546",
+                    "Name": "ﾒ Viking",
+                    "Kills": 21,
+                    "Deaths": 22,
+                    "KDR": "0.95",
+                    "CombatEffectiveness": 214,
+                    "OffensivePoints": 380,
+                    "DefensivePoints": 1140,
+                    "SupportPoints": 523,
+                    "Weapons": {
+                        "GEWEHR 43": 21
+                    },
+                    "DeathByWeapons": {
+                        "M1 GARAND": 18,
+                        "M2 AP MINE": 1,
+                        "M1A1 THOMPSON": 1,
+                        "M1903 SPRINGFIELD": 1,
+                        "155MM HOWITZER [M114]": 1
+                    },
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 43,
+                        "Allies": 0
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 21,
+                        "Artillery": 0,
+                        "Armor": 0
+                    },
+                    "Side": "Axis",
+                    "Group": "Infantry"
+                },
+                {
+                    "PlayerID": "76561199049187518",
+                    "Name": "メkoala",
+                    "Kills": 32,
+                    "Deaths": 61,
+                    "KDR": "0.52",
+                    "CombatEffectiveness": 314,
+                    "OffensivePoints": 1040,
+                    "DefensivePoints": 20,
+                    "SupportPoints": 340,
+                    "Weapons": {
+                        "MG42": 3,
+                        "STG44": 12,
+                        "GEWEHR 43": 2,
+                        "KARABINER 98K": 3,
+                        "PANZERSCHRECK": 3,
+                        "M43 STIELHANDGRANATE": 9
+                    },
+                    "DeathByWeapons": {
+                        "155MM HOWITZER [M114]": 20,
+                        "M1918A2 BAR": 4,
+                        "M1A1 THOMPSON": 3,
+                        "M97 TRENCH GUN": 2,
+                        "MK2 GRENADE": 1,
+                        "75MM CANNON [Sherman M4A3(75)W]": 1,
+                        "COAXIAL M1919 [M8 Greyhound]": 1,
+                        "M1903 SPRINGFIELD": 3,
+                        "BROWNING M1919": 3,
+                        "BOMBING RUN": 2,
+                        "76MM M1 GUN [Sherman M4A3E2(76)]": 4,
+                        "BAZOOKA": 2,
+                        "SATCHEL": 1,
+                        "M3 GREASE GUN": 2,
+                        "57MM CANNON [M1 57mm]": 2,
+                        "M1 CARBINE": 3,
+                        "M1 GARAND": 7
+                    },
+                    "MachineGunKills": 3,
+                    "sideLikelihood": {
+                        "Axis": 90,
+                        "Allies": 0
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 32,
+                        "Artillery": 0,
+                        "Armor": 0
+                    },
+                    "Side": "Axis",
+                    "Group": "Infantry"
+                },
+                {
+                    "PlayerID": "76561199014645768",
+                    "Name": "ﾒNova",
+                    "Kills": 52,
+                    "Deaths": 67,
+                    "KDR": "0.78",
+                    "CombatEffectiveness": 377,
+                    "OffensivePoints": 1020,
+                    "DefensivePoints": 100,
+                    "SupportPoints": 1840,
+                    "Weapons": {
+                        "GEWEHR 43": 49,
+                        "M43 STIELHANDGRANATE": 3
+                    },
+                    "DeathByWeapons": {
+                        "155MM HOWITZER [M114]": 14,
+                        "M1918A2 BAR": 3,
+                        "M1A1 THOMPSON": 3,
+                        "MK2 GRENADE": 1,
+                        "37MM CANNON [Stuart M5A1]": 1,
+                        "BROWNING M1919": 3,
+                        "BOMBING RUN": 2,
+                        "BAZOOKA": 1,
+                        "SATCHEL": 1,
+                        "M3 GREASE GUN": 3,
+                        "M1 CARBINE": 5,
+                        "M1 GARAND": 30
+                    },
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 116,
+                        "Allies": 0
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 52,
+                        "Artillery": 0,
+                        "Armor": 0
+                    },
+                    "Side": "Axis",
+                    "Group": "Infantry"
+                },
+                {
+                    "PlayerID": "76561197968256472",
+                    "Name": "synR | Bobothemonk",
+                    "Kills": 34,
+                    "Deaths": 83,
+                    "KDR": "0.41",
+                    "CombatEffectiveness": 263,
+                    "OffensivePoints": 740,
+                    "DefensivePoints": 200,
+                    "SupportPoints": 390,
+                    "Weapons": {
+                        "MP40": 6,
+                        "STG44": 1,
+                        "SATCHEL": 3,
+                        "GEWEHR 43": 20,
+                        "KARABINER 98K": 3,
+                        "M43 STIELHANDGRANATE": 1
+                    },
+                    "DeathByWeapons": {
+                        "155MM HOWITZER [M114]": 6,
+                        "M1918A2 BAR": 6,
+                        "M1A1 THOMPSON": 3,
+                        "M97 TRENCH GUN": 4,
+                        "MK2 GRENADE": 1,
+                        "BROWNING M1919": 3,
+                        "Sherman M4A3E2(76)": 1,
+                        "M3 GREASE GUN": 8,
+                        "M6 37mm [M8 Greyhound]": 1,
+                        "M1 GARAND": 50
+                    },
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 114,
+                        "Allies": 0
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 31,
+                        "Artillery": 0,
+                        "Armor": 0
+                    },
+                    "Side": "Axis",
+                    "Group": "Infantry"
+                },
+                {
+                    "PlayerID": "76561198836527047",
+                    "Name": "℧ | Blackshooter",
+                    "Kills": 58,
+                    "Deaths": 65,
+                    "KDR": "0.89",
+                    "CombatEffectiveness": 444,
+                    "OffensivePoints": 800,
+                    "DefensivePoints": 400,
+                    "SupportPoints": 1071,
+                    "Weapons": {
+                        "GEWEHR 43": 49,
+                        "KARABINER 98K": 3,
+                        "M43 STIELHANDGRANATE": 4,
+                        "75MM CANNON [Sd.Kfz.161 Panzer IV]": 1,
+                        "COAXIAL MG34 [Sd.Kfz.161 Panzer IV]": 1
+                    },
+                    "DeathByWeapons": {
+                        "155MM HOWITZER [M114]": 14,
+                        "M1918A2 BAR": 2,
+                        "M97 TRENCH GUN": 1,
+                        "75MM CANNON [Sherman M4A3(75)W]": 1,
+                        "M1903 SPRINGFIELD": 4,
+                        "BROWNING M1919": 9,
+                        "BOMBING RUN": 3,
+                        "76MM M1 GUN [Sherman M4A3E2(76)]": 2,
+                        "BAZOOKA": 1,
+                        "M3 GREASE GUN": 2,
+                        "M1 CARBINE": 1,
+                        "M1 GARAND": 25
+                    },
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 120,
+                        "Allies": 0
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 56,
+                        "Artillery": 0,
+                        "Armor": 2
+                    },
+                    "Side": "Axis",
+                    "Group": "Infantry"
+                },
+                {
+                    "PlayerID": "76561197972368774",
+                    "Name": "KRT™Devli",
+                    "Kills": 41,
+                    "Deaths": 52,
+                    "KDR": "0.79",
+                    "CombatEffectiveness": 313,
+                    "OffensivePoints": 1140,
+                    "DefensivePoints": 120,
+                    "SupportPoints": 1171,
+                    "Weapons": {
+                        "MG42": 4,
+                        "MP40": 2,
+                        "GEWEHR 43": 35
+                    },
+                    "DeathByWeapons": {
+                        "155MM HOWITZER [M114]": 8,
+                        "M1918A2 BAR": 1,
+                        "M1A1 THOMPSON": 2,
+                        "M97 TRENCH GUN": 2,
+                        "COAXIAL M1919 [Sherman M4A3E2(76)]": 4,
+                        "M1903 SPRINGFIELD": 7,
+                        "BROWNING M1919": 2,
+                        "BOMBING RUN": 1,
+                        "76MM M1 GUN [Sherman M4A3E2(76)]": 2,
+                        "TELLERMINE 43": 1,
+                        "BAZOOKA": 1,
+                        "M3 GREASE GUN": 1,
+                        "M1 CARBINE": 1,
+                        "M6 37mm [M8 Greyhound]": 1,
+                        "M1 GARAND": 18
+                    },
+                    "MachineGunKills": 4,
+                    "sideLikelihood": {
+                        "Axis": 91,
+                        "Allies": 1
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 41,
+                        "Artillery": 0,
+                        "Armor": 0
+                    },
+                    "Side": "Axis",
+                    "Group": "Infantry"
+                },
+                {
+                    "PlayerID": "76561198188183541",
+                    "Name": "synR | EGGS",
+                    "Kills": 61,
+                    "Deaths": 69,
+                    "KDR": "0.88",
+                    "CombatEffectiveness": 531,
+                    "OffensivePoints": 880,
+                    "DefensivePoints": 160,
+                    "SupportPoints": 425,
+                    "Weapons": {
+                        "MP40": 16,
+                        "STG44": 33,
+                        "S-MINE": 3,
+                        "KARABINER 98K": 8,
+                        "PANZERSCHRECK": 1
+                    },
+                    "DeathByWeapons": {
+                        "155MM HOWITZER [M114]": 2,
+                        "M1918A2 BAR": 4,
+                        "M1A1 THOMPSON": 3,
+                        "M97 TRENCH GUN": 2,
+                        "BROWNING M1919": 2,
+                        "76MM M1 GUN [Sherman M4A3E2(76)]": 3,
+                        "BAZOOKA": 1,
+                        "SATCHEL": 1,
+                        "M3 GREASE GUN": 4,
+                        "M6 37mm [M8 Greyhound]": 1,
+                        "M1 GARAND": 45,
+                        "M2 FLAMETHROWER": 1
+                    },
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 129,
+                        "Allies": 0
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 61,
+                        "Artillery": 0,
+                        "Armor": 0
+                    },
+                    "Side": "Axis",
+                    "Group": "Infantry"
+                },
+                {
+                    "PlayerID": "76561198233793628",
+                    "Name": "ﾒ Shen",
+                    "Kills": 16,
+                    "Deaths": 20,
+                    "KDR": "0.80",
+                    "CombatEffectiveness": 139,
+                    "OffensivePoints": 460,
+                    "DefensivePoints": 980,
+                    "SupportPoints": 714,
+                    "Weapons": {
+                        "GEWEHR 43": 16
+                    },
+                    "DeathByWeapons": {
+                        "M1 GARAND": 15,
+                        "MK2 GRENADE": 1,
+                        "M1A1 THOMPSON": 1,
+                        "M3 GREASE GUN": 1,
+                        "M97 TRENCH GUN": 1,
+                        "M1903 SPRINGFIELD": 1
+                    },
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 36,
+                        "Allies": 0
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 16,
+                        "Artillery": 0,
+                        "Armor": 0
+                    },
+                    "Side": "Axis",
+                    "Group": "Infantry"
+                },
+                {
+                    "PlayerID": "76561197960816464",
+                    "Name": "℧ | mystiC 3>",
+                    "Kills": 70,
+                    "Deaths": 83,
+                    "KDR": "0.84",
+                    "CombatEffectiveness": 485,
+                    "OffensivePoints": 1020,
+                    "DefensivePoints": 20,
+                    "SupportPoints": 80,
+                    "Weapons": {
+                        "STG44": 13,
+                        "SATCHEL": 4,
+                        "GEWEHR 43": 51,
+                        "M43 STIELHANDGRANATE": 2
+                    },
+                    "DeathByWeapons": {
+                        "155MM HOWITZER [M114]": 16,
+                        "M1918A2 BAR": 2,
+                        "M1A1 THOMPSON": 1,
+                        "MK2 GRENADE": 2,
+                        "M1903 SPRINGFIELD": 1,
+                        "BROWNING M1919": 7,
+                        "BOMBING RUN": 1,
+                        "76MM M1 GUN [Sherman M4A3E2(76)]": 5,
+                        "M3 GREASE GUN": 5,
+                        "M1 CARBINE": 5,
+                        "M1 GARAND": 38
+                    },
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 148,
+                        "Allies": 0
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 66,
+                        "Artillery": 0,
+                        "Armor": 0
+                    },
+                    "Side": "Axis",
+                    "Group": "Infantry"
+                },
+                {
+                    "PlayerID": "76561198404380544",
+                    "Name": "ﾒ smiLk",
+                    "Kills": 44,
+                    "Deaths": 60,
+                    "KDR": "0.73",
+                    "CombatEffectiveness": 577,
+                    "OffensivePoints": 940,
+                    "DefensivePoints": 140,
+                    "SupportPoints": 2970,
+                    "Weapons": {
+                        "MP40": 5,
+                        "STG44": 24,
+                        "S-MINE": 3,
+                        "SATCHEL": 3,
+                        "KARABINER 98K": 6,
+                        "75MM CANNON [PAK 40]": 3
+                    },
+                    "DeathByWeapons": {
+                        "155MM HOWITZER [M114]": 2,
+                        "M1918A2 BAR": 1,
+                        "M97 TRENCH GUN": 2,
+                        "MK2 GRENADE": 1,
+                        "37MM CANNON [Stuart M5A1]": 1,
+                        "BROWNING M1919": 3,
+                        "M2 AP MINE": 1,
+                        "76MM M1 GUN [Sherman M4A3E2(76)]": 1,
+                        "M3 GREASE GUN": 4,
+                        "M1 CARBINE": 4,
+                        "M1 GARAND": 40
+                    },
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 101,
+                        "Allies": 0
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 41,
+                        "Artillery": 0,
+                        "Armor": 0
+                    },
+                    "Side": "Axis",
+                    "Group": "Infantry"
+                },
+                {
+                    "PlayerID": "76561198257750361",
+                    "Name": "Ж︎ | =Ikea=",
+                    "Kills": 84,
+                    "Deaths": 88,
+                    "KDR": "0.95",
+                    "CombatEffectiveness": 657,
+                    "OffensivePoints": 960,
+                    "DefensivePoints": 40,
+                    "SupportPoints": 220,
+                    "Weapons": {
+                        "MP40": 1,
+                        "GEWEHR 43": 81,
+                        "KARABINER 98K": 2
+                    },
+                    "DeathByWeapons": {
+                        "155MM HOWITZER [M114]": 16,
+                        "M1918A2 BAR": 1,
+                        "M1A1 THOMPSON": 3,
+                        "M97 TRENCH GUN": 4,
+                        "MK2 GRENADE": 4,
+                        "M1903 SPRINGFIELD": 2,
+                        "BROWNING M1919": 9,
+                        "76MM M1 GUN [Sherman M4A3E2(76)]": 4,
+                        "COAXIAL M1919 [Sherman M4A3(75)W]": 1,
+                        "M3 GREASE GUN": 3,
+                        "M1 CARBINE": 4,
+                        "M6 37mm [M8 Greyhound]": 1,
+                        "M1 GARAND": 36
+                    },
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 172,
+                        "Allies": 0
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 84,
+                        "Artillery": 0,
+                        "Armor": 0
+                    },
+                    "Side": "Axis",
+                    "Group": "Infantry"
+                },
+                {
+                    "PlayerID": "76561198200219465",
+                    "Name": "ﾒ Bob!",
+                    "Kills": 18,
+                    "Deaths": 53,
+                    "KDR": "0.34",
+                    "CombatEffectiveness": 149,
+                    "OffensivePoints": 960,
+                    "DefensivePoints": 320,
+                    "SupportPoints": 515,
+                    "Weapons": {
+                        "MP40": 1,
+                        "KARABINER 98K": 17
+                    },
+                    "DeathByWeapons": {
+                        "M3 KNIFE": 1,
+                        "M1 GARAND": 39,
+                        "M1 CARBINE": 1,
+                        "M1A1 THOMPSON": 1,
+                        "M3 GREASE GUN": 6,
+                        "BROWNING M1919": 2,
+                        "M97 TRENCH GUN": 2,
+                        "155MM HOWITZER [M114]": 1
+                    },
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 71,
+                        "Allies": 0
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 18,
+                        "Artillery": 0,
+                        "Armor": 0
+                    },
+                    "Side": "Axis",
+                    "Group": "Infantry"
+                },
+                {
+                    "PlayerID": "76561198883830038",
+                    "Name": "ﾒ Fake",
+                    "Kills": 78,
+                    "Deaths": 58,
+                    "KDR": "1.34",
+                    "CombatEffectiveness": 698,
+                    "OffensivePoints": 860,
+                    "DefensivePoints": 360,
+                    "SupportPoints": 0,
+                    "Weapons": {
+                        "STG44": 5,
+                        "S-MINE": 5,
+                        "FG42 x4": 66,
+                        "FELDSPATEN": 2
+                    },
+                    "DeathByWeapons": {
+                        "M1 GARAND": 39,
+                        "M1918A2 BAR": 2,
+                        "M1A1 THOMPSON": 1,
+                        "M3 GREASE GUN": 9,
+                        "BROWNING M1919": 5,
+                        "M97 TRENCH GUN": 1,
+                        "155MM HOWITZER [M114]": 1
+                    },
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 136,
+                        "Allies": 0
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 78,
+                        "Artillery": 0,
+                        "Armor": 0
+                    },
+                    "Side": "Axis",
+                    "Group": "Infantry"
+                },
+                {
+                    "PlayerID": "76561198263824258",
+                    "Name": "ﾒ ..... Did I Ask",
+                    "Kills": 21,
+                    "Deaths": 25,
+                    "KDR": "0.84",
+                    "CombatEffectiveness": 197,
+                    "OffensivePoints": 400,
+                    "DefensivePoints": 900,
+                    "SupportPoints": 905,
+                    "Weapons": {
+                        "MP40": 18,
+                        "50mm KwK 39/1 [Sd.Kfz.234 Puma]": 1,
+                        "88 KWK 36 L/56 [Sd.Kfz.181 Tiger 1]": 2
+                    },
+                    "DeathByWeapons": {
+                        "155MM HOWITZER [M114]": 3,
+                        "M1A1 THOMPSON": 3,
+                        "M97 TRENCH GUN": 1,
+                        "MK2 GRENADE": 1,
+                        "COAXIAL M1919 [Sherman M4A3E2(76)]": 1,
+                        "BROWNING M1919": 1,
+                        "BOMBING RUN": 1,
+                        "76MM M1 GUN [Sherman M4A3E2(76)]": 2,
+                        "M1 CARBINE": 3,
+                        "M1 GARAND": 9
+                    },
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 45,
+                        "Allies": 0
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 18,
+                        "Artillery": 0,
+                        "Armor": 3
+                    },
+                    "Side": "Axis",
+                    "Group": "Infantry"
+                },
+                {
+                    "PlayerID": "76561198027179764",
+                    "Name": "メ gnarwhalsam",
+                    "Kills": 30,
+                    "Deaths": 48,
+                    "KDR": "0.62",
+                    "CombatEffectiveness": 218,
+                    "OffensivePoints": 1060,
+                    "DefensivePoints": 40,
+                    "SupportPoints": 0,
+                    "Weapons": {
+                        "MG42": 29,
+                        "UNKNOWN": 1
+                    },
+                    "DeathByWeapons": {
+                        "155MM HOWITZER [M114]": 3,
+                        "M1918A2 BAR": 1,
+                        "M97 TRENCH GUN": 1,
+                        "37MM CANNON [Stuart M5A1]": 1,
+                        "M2 AP MINE": 1,
+                        "M3 KNIFE": 1,
+                        "76MM M1 GUN [Sherman M4A3E2(76)]": 1,
+                        "M3 GREASE GUN": 3,
+                        "M1 CARBINE": 4,
+                        "M1 GARAND": 32
+                    },
+                    "MachineGunKills": 29,
+                    "sideLikelihood": {
+                        "Axis": 77,
+                        "Allies": 0
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 29,
+                        "Artillery": 0,
+                        "Armor": 0
+                    },
+                    "Side": "Axis",
+                    "Group": "Infantry"
+                },
+                {
+                    "PlayerID": "76561198982187431",
+                    "Name": "//IPoopNaked",
+                    "Kills": 73,
+                    "Deaths": 63,
+                    "KDR": "1.16",
+                    "CombatEffectiveness": 827,
+                    "OffensivePoints": 1100,
+                    "DefensivePoints": 100,
+                    "SupportPoints": 409,
+                    "Weapons": {
+                        "MP40": 42,
+                        "S-MINE": 16,
+                        "SATCHEL": 2,
+                        "KARABINER 98K": 11,
+                        "TELLERMINE 43": 1,
+                        "M43 STIELHANDGRANATE": 1
+                    },
+                    "DeathByWeapons": {
+                        "155MM HOWITZER [M114]": 1,
+                        "M1918A2 BAR": 4,
+                        "M1A1 THOMPSON": 3,
+                        "M97 TRENCH GUN": 1,
+                        "BROWNING M1919": 1,
+                        "M2 AP MINE": 1,
+                        "M3 KNIFE": 1,
+                        "76MM M1 GUN [Sherman M4A3E2(76)]": 1,
+                        "BAZOOKA": 3,
+                        "SATCHEL": 1,
+                        "M3 GREASE GUN": 6,
+                        "M1 CARBINE": 3,
+                        "M6 37mm [M8 Greyhound]": 1,
+                        "M1 GARAND": 36
+                    },
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 133,
+                        "Allies": 0
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 71,
+                        "Artillery": 0,
+                        "Armor": 0
+                    },
+                    "Side": "Axis",
+                    "Group": "Infantry"
+                },
+                {
+                    "PlayerID": "76561198028727148",
+                    "Name": "KRT™Titus",
+                    "Kills": 45,
+                    "Deaths": 47,
+                    "KDR": "0.96",
+                    "CombatEffectiveness": 375,
+                    "OffensivePoints": 1080,
+                    "DefensivePoints": 100,
+                    "SupportPoints": 988,
+                    "Weapons": {
+                        "MG42": 11,
+                        "MP40": 3,
+                        "STG44": 12,
+                        "SATCHEL": 3,
+                        "GEWEHR 43": 11,
+                        "KARABINER 98K": 5
+                    },
+                    "DeathByWeapons": {
+                        "155MM HOWITZER [M114]": 7,
+                        "M97 TRENCH GUN": 1,
+                        "MK2 GRENADE": 1,
+                        "M1903 SPRINGFIELD": 8,
+                        "HULL M1919 [Sherman M4A3E2(76)]": 1,
+                        "BROWNING M1919": 4,
+                        "BAZOOKA": 1,
+                        "SATCHEL": 1,
+                        "M3 GREASE GUN": 1,
+                        "M1 CARBINE": 1,
+                        "M6 37mm [M8 Greyhound]": 1,
+                        "M1 GARAND": 20
+                    },
+                    "MachineGunKills": 11,
+                    "sideLikelihood": {
+                        "Axis": 88,
+                        "Allies": 0
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 42,
+                        "Artillery": 0,
+                        "Armor": 0
+                    },
+                    "Side": "Axis",
+                    "Group": "Infantry"
+                },
+                {
+                    "PlayerID": "76561197980491907",
+                    "Name": "KRT™minicoa",
+                    "Kills": 19,
+                    "Deaths": 68,
+                    "KDR": "0.28",
+                    "CombatEffectiveness": 137,
+                    "OffensivePoints": 1000,
+                    "DefensivePoints": 160,
+                    "SupportPoints": 935,
+                    "Weapons": {
+                        "GEWEHR 43": 17,
+                        "M43 STIELHANDGRANATE": 2
+                    },
+                    "DeathByWeapons": {
+                        "155MM HOWITZER [M114]": 5,
+                        "M1918A2 BAR": 2,
+                        "M1A1 THOMPSON": 1,
+                        "M97 TRENCH GUN": 2,
+                        "MK2 GRENADE": 1,
+                        "M1903 SPRINGFIELD": 5,
+                        "37MM CANNON [Stuart M5A1]": 1,
+                        "BROWNING M1919": 6,
+                        "BOMBING RUN": 1,
+                        "76MM M1 GUN [Sherman M4A3E2(76)]": 2,
+                        "BAZOOKA": 1,
+                        "SATCHEL": 2,
+                        "M3 GREASE GUN": 3,
+                        "M1 CARBINE": 6,
+                        "STRAFING RUN": 1,
+                        "M6 37mm [M8 Greyhound]": 2,
+                        "M1 GARAND": 26,
+                        "M2 FLAMETHROWER": 1
+                    },
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 83,
+                        "Allies": 0
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 19,
+                        "Artillery": 0,
+                        "Armor": 0
+                    },
+                    "Side": "Axis",
+                    "Group": "Infantry"
+                },
+                {
+                    "PlayerID": "76561197960623540",
+                    "Name": "メ SnarkySnacks",
+                    "Kills": 30,
+                    "Deaths": 53,
+                    "KDR": "0.57",
+                    "CombatEffectiveness": 215,
+                    "OffensivePoints": 880,
+                    "DefensivePoints": 380,
+                    "SupportPoints": 1079,
+                    "Weapons": {
+                        "GEWEHR 43": 30
+                    },
+                    "DeathByWeapons": {
+                        "155MM HOWITZER [M114]": 1,
+                        "M1918A2 BAR": 5,
+                        "M1A1 THOMPSON": 2,
+                        "M97 TRENCH GUN": 1,
+                        "MK2 GRENADE": 1,
+                        "BROWNING M1919": 2,
+                        "S-MINE": 1,
+                        "BAZOOKA": 1,
+                        "SATCHEL": 2,
+                        "M3 GREASE GUN": 4,
+                        "M1 CARBINE": 1,
+                        "M6 37mm [M8 Greyhound]": 1,
+                        "M1 GARAND": 31
+                    },
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 80,
+                        "Allies": 1
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 30,
+                        "Artillery": 0,
+                        "Armor": 0
+                    },
+                    "Side": "Axis",
+                    "Group": "Infantry"
+                },
+                {
+                    "PlayerID": "76561198118317255",
+                    "Name": "Original K",
+                    "Kills": 23,
+                    "Deaths": 26,
+                    "KDR": "0.88",
+                    "CombatEffectiveness": 171,
+                    "OffensivePoints": 320,
+                    "DefensivePoints": 1180,
+                    "SupportPoints": 554,
+                    "Weapons": {
+                        "GEWEHR 43": 23
+                    },
+                    "DeathByWeapons": {
+                        "BAZOOKA": 1,
+                        "UNKNOWN": 1,
+                        "M1 GARAND": 20,
+                        "MK2 GRENADE": 2,
+                        "STRAFING RUN": 1,
+                        "BROWNING M1919": 1
+                    },
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 47,
+                        "Allies": 0
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 23,
+                        "Artillery": 0,
+                        "Armor": 0
+                    },
+                    "Side": "Axis",
+                    "Group": "Infantry"
+                },
+                {
+                    "PlayerID": "76561197975109614",
+                    "Name": "KRT™Xi0s",
+                    "Kills": 22,
+                    "Deaths": 64,
+                    "KDR": "0.34",
+                    "CombatEffectiveness": 177,
+                    "OffensivePoints": 1080,
+                    "DefensivePoints": 100,
+                    "SupportPoints": 809,
+                    "Weapons": {
+                        "STG44": 2,
+                        "GEWEHR 43": 20
+                    },
+                    "DeathByWeapons": {
+                        "155MM HOWITZER [M114]": 10,
+                        "M1918A2 BAR": 1,
+                        "M1A1 THOMPSON": 2,
+                        "MK2 GRENADE": 1,
+                        "M1903 SPRINGFIELD": 8,
+                        "BROWNING M1919": 5,
+                        "76MM M1 GUN [Sherman M4A3E2(76)]": 1,
+                        "TELLERMINE 43": 1,
+                        "BAZOOKA": 2,
+                        "M3 GREASE GUN": 3,
+                        "M1 CARBINE": 1,
+                        "M1 GARAND": 29
+                    },
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 85,
+                        "Allies": 1
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 22,
+                        "Artillery": 0,
+                        "Armor": 0
+                    },
+                    "Side": "Axis",
+                    "Group": "Infantry"
+                },
+                {
+                    "PlayerID": "76561198154554982",
+                    "Name": "メ Lord Stratos",
+                    "Kills": 41,
+                    "Deaths": 45,
+                    "KDR": "0.91",
+                    "CombatEffectiveness": 324,
+                    "OffensivePoints": 920,
+                    "DefensivePoints": 380,
+                    "SupportPoints": 924,
+                    "Weapons": {
+                        "GEWEHR 43": 39,
+                        "M43 STIELHANDGRANATE": 2
+                    },
+                    "DeathByWeapons": {
+                        "M1 GARAND": 35,
+                        "M1918A2 BAR": 3,
+                        "MK2 GRENADE": 2,
+                        "M1A1 THOMPSON": 2,
+                        "M97 TRENCH GUN": 1,
+                        "76MM M1 GUN [Sherman M4A3E2(76)]": 2
+                    },
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 86,
+                        "Allies": 0
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 41,
+                        "Artillery": 0,
+                        "Armor": 0
+                    },
+                    "Side": "Axis",
+                    "Group": "Infantry"
+                }
+            ]
+        },
+        "Artillery": {
+            "PlayerCount": 1,
+            "Kills": 249,
+            "Deaths": 0,
+            "KDR": "249.00",
+            "CombatEffectiveness": 2131,
+            "OffensivePoints": 0,
+            "DefensivePoints": 1780,
+            "SupportPoints": 0,
+            "MachineGunKills": 0,
+            "Players": [
+                {
+                    "PlayerID": "76561197960446458",
+                    "Name": "ﾒ chosΞn",
+                    "Kills": 249,
+                    "Deaths": 0,
+                    "KDR": "249.00",
+                    "CombatEffectiveness": 2131,
+                    "OffensivePoints": 0,
+                    "DefensivePoints": 1780,
+                    "SupportPoints": 0,
+                    "Weapons": {
+                        "UNKNOWN": 1,
+                        "M1A1 AT MINE": 1,
+                        "150MM HOWITZER [sFH 18]": 247
+                    },
+                    "DeathByWeapons": {},
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 247,
+                        "Allies": 1
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 1,
+                        "Artillery": 247,
+                        "Armor": 0
+                    },
+                    "Side": "Axis",
+                    "Group": "Artillery"
+                }
+            ]
+        },
+        "Armor": {
+            "PlayerCount": 9,
+            "Kills": 127,
+            "Deaths": 114,
+            "KDR": "1.11",
+            "CombatEffectiveness": 5215,
+            "OffensivePoints": 6440,
+            "DefensivePoints": 7320,
+            "SupportPoints": 1953,
+            "MachineGunKills": 0,
+            "Players": [
+                {
+                    "PlayerID": "76561198871106237",
+                    "Name": "メ Bimpus",
+                    "Kills": 0,
+                    "Deaths": 5,
+                    "KDR": "0.00",
+                    "CombatEffectiveness": 715,
+                    "OffensivePoints": 400,
+                    "DefensivePoints": 1260,
+                    "SupportPoints": 70,
+                    "Weapons": {},
+                    "DeathByWeapons": {
+                        "SATCHEL": 1,
+                        "M3 GREASE GUN": 1,
+                        "76MM M1 GUN [Sherman M4A3E2(76)]": 3
+                    },
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 4,
+                        "Allies": 0
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 0,
+                        "Artillery": 0,
+                        "Armor": 0
+                    },
+                    "Side": "Axis",
+                    "Group": "Armor"
+                },
+                {
+                    "PlayerID": "76561198153412770",
+                    "Name": "ﾒ Lord.Jax",
+                    "Kills": 1,
+                    "Deaths": 14,
+                    "KDR": "0.07",
+                    "CombatEffectiveness": 403,
+                    "OffensivePoints": 920,
+                    "DefensivePoints": 540,
+                    "SupportPoints": 260,
+                    "Weapons": {
+                        "GEWEHR 43": 1
+                    },
+                    "DeathByWeapons": {
+                        "M1 GARAND": 2,
+                        "M3 GREASE GUN": 1,
+                        "M97 TRENCH GUN": 1,
+                        "M1903 SPRINGFIELD": 1,
+                        "155MM HOWITZER [M114]": 2,
+                        "75MM CANNON [Sherman M4A3(75)W]": 2,
+                        "76MM M1 GUN [Sherman M4A3E2(76)]": 4,
+                        "COAXIAL M1919 [Sherman M4A3E2(76)]": 1
+                    },
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 15,
+                        "Allies": 0
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 1,
+                        "Artillery": 0,
+                        "Armor": 0
+                    },
+                    "Side": "Axis",
+                    "Group": "Armor"
+                },
+                {
+                    "PlayerID": "76561198077828464",
+                    "Name": "//bib0",
+                    "Kills": 6,
+                    "Deaths": 22,
+                    "KDR": "0.27",
+                    "CombatEffectiveness": 561,
+                    "OffensivePoints": 860,
+                    "DefensivePoints": 680,
+                    "SupportPoints": 313,
+                    "Weapons": {
+                        "GEWEHR 43": 6
+                    },
+                    "DeathByWeapons": {
+                        "BAZOOKA": 1,
+                        "M1 GARAND": 10,
+                        "MK2 GRENADE": 1,
+                        "M1A1 THOMPSON": 1,
+                        "155MM HOWITZER [M114]": 3,
+                        "75MM CANNON [Sherman M4A3(75)W]": 1,
+                        "76MM M1 GUN [Sherman M4A3E2(76)]": 5
+                    },
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 28,
+                        "Allies": 0
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 6,
+                        "Artillery": 0,
+                        "Armor": 0
+                    },
+                    "Side": "Axis",
+                    "Group": "Armor"
+                },
+                {
+                    "PlayerID": "76561199189233890",
+                    "Name": "Branderino",
+                    "Kills": 0,
+                    "Deaths": 5,
+                    "KDR": "0.00",
+                    "CombatEffectiveness": 715,
+                    "OffensivePoints": 400,
+                    "DefensivePoints": 1260,
+                    "SupportPoints": 90,
+                    "Weapons": {},
+                    "DeathByWeapons": {
+                        "SATCHEL": 1,
+                        "M1 GARAND": 1,
+                        "76MM M1 GUN [Sherman M4A3E2(76)]": 3
+                    },
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 4,
+                        "Allies": 0
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 0,
+                        "Artillery": 0,
+                        "Armor": 0
+                    },
+                    "Side": "Axis",
+                    "Group": "Armor"
+                },
+                {
+                    "PlayerID": "76561198056145361",
+                    "Name": "℧ | LadyBi",
+                    "Kills": 0,
+                    "Deaths": 10,
+                    "KDR": "0.00",
+                    "CombatEffectiveness": 466,
+                    "OffensivePoints": 980,
+                    "DefensivePoints": 500,
+                    "SupportPoints": 560,
+                    "Weapons": {},
+                    "DeathByWeapons": {
+                        "M1 GARAND": 2,
+                        "M1903 SPRINGFIELD": 1,
+                        "155MM HOWITZER [M114]": 2,
+                        "75MM CANNON [Sherman M4A3(75)W]": 2,
+                        "76MM M1 GUN [Sherman M4A3E2(76)]": 3
+                    },
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 10,
+                        "Allies": 0
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 0,
+                        "Artillery": 0,
+                        "Armor": 0
+                    },
+                    "Side": "Axis",
+                    "Group": "Armor"
+                },
+                {
+                    "PlayerID": "76561199250021605",
+                    "Name": "メKX99",
+                    "Kills": 7,
+                    "Deaths": 23,
+                    "KDR": "0.30",
+                    "CombatEffectiveness": 667,
+                    "OffensivePoints": 800,
+                    "DefensivePoints": 600,
+                    "SupportPoints": 220,
+                    "Weapons": {
+                        "STG44": 1,
+                        "KARABINER 98K": 2,
+                        "75MM CANNON [PAK 40]": 3,
+                        "HULL MG34 [Sd.Kfz.181 Tiger 1]": 1
+                    },
+                    "DeathByWeapons": {
+                        "BAZOOKA": 1,
+                        "M1 GARAND": 7,
+                        "M1903 SPRINGFIELD": 2,
+                        "155MM HOWITZER [M114]": 3,
+                        "75MM CANNON [Sherman M4A3(75)W]": 1,
+                        "76MM M1 GUN [Sherman M4A3E2(76)]": 6,
+                        "COAXIAL M1919 [Sherman M4A3(75)W]": 1,
+                        "COAXIAL M1919 [Sherman M4A3E2(76)]": 2
+                    },
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 30,
+                        "Allies": 0
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 6,
+                        "Artillery": 0,
+                        "Armor": 1
+                    },
+                    "Side": "Axis",
+                    "Group": "Armor"
+                },
+                {
+                    "PlayerID": "76561198006179280",
+                    "Name": "ﾒ DocHollyday",
+                    "Kills": 37,
+                    "Deaths": 21,
+                    "KDR": "1.76",
+                    "CombatEffectiveness": 543,
+                    "OffensivePoints": 720,
+                    "DefensivePoints": 700,
+                    "SupportPoints": 60,
+                    "Weapons": {
+                        "STG44": 3,
+                        "20MM KWK 30 [Sd.Kfz.121 Luchs]": 3,
+                        "50mm KwK 39/1 [Sd.Kfz.234 Puma]": 1,
+                        "COAXIAL MG34 [Sd.Kfz.181 Tiger 1]": 7,
+                        "88 KWK 36 L/56 [Sd.Kfz.181 Tiger 1]": 23
+                    },
+                    "DeathByWeapons": {
+                        "BAZOOKA": 2,
+                        "M1 GARAND": 10,
+                        "M1918A2 BAR": 1,
+                        "MK2 GRENADE": 1,
+                        "BROWNING M1919": 1,
+                        "155MM HOWITZER [M114]": 1,
+                        "75MM CANNON [Sherman M4A3(75)W]": 1,
+                        "76MM M1 GUN [Sherman M4A3E2(76)]": 4
+                    },
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 58,
+                        "Allies": 0
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 3,
+                        "Artillery": 0,
+                        "Armor": 34
+                    },
+                    "Side": "Axis",
+                    "Group": "Armor"
+                },
+                {
+                    "PlayerID": "76561199442647458",
+                    "Name": "ﾒ Gloomy Crusty",
+                    "Kills": 39,
+                    "Deaths": 9,
+                    "KDR": "4.33",
+                    "CombatEffectiveness": 430,
+                    "OffensivePoints": 960,
+                    "DefensivePoints": 520,
+                    "SupportPoints": 370,
+                    "Weapons": {
+                        "KARABINER 98K": 1,
+                        "COAXIAL MG34 [Sd.Kfz.181 Tiger 1]": 14,
+                        "75MM CANNON [Sd.Kfz.161 Panzer IV]": 12,
+                        "88 KWK 36 L/56 [Sd.Kfz.181 Tiger 1]": 12
+                    },
+                    "DeathByWeapons": {
+                        "M1 GARAND": 2,
+                        "M1903 SPRINGFIELD": 1,
+                        "75MM CANNON [Sherman M4A3(75)W]": 1,
+                        "HULL M1919 [Sherman M4A3E2(76)]": 1,
+                        "76MM M1 GUN [Sherman M4A3E2(76)]": 4
+                    },
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 48,
+                        "Allies": 0
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 1,
+                        "Artillery": 0,
+                        "Armor": 38
+                    },
+                    "Side": "Axis",
+                    "Group": "Armor"
+                },
+                {
+                    "PlayerID": "76561198039516279",
+                    "Name": "DoMo",
+                    "Kills": 37,
+                    "Deaths": 5,
+                    "KDR": "7.40",
+                    "CombatEffectiveness": 715,
+                    "OffensivePoints": 400,
+                    "DefensivePoints": 1260,
+                    "SupportPoints": 10,
+                    "Weapons": {
+                        "20MM KWK 30 [Sd.Kfz.121 Luchs]": 3,
+                        "COAXIAL MG34 [Sd.Kfz.181 Tiger 1]": 7,
+                        "88 KWK 36 L/56 [Sd.Kfz.181 Tiger 1]": 27
+                    },
+                    "DeathByWeapons": {
+                        "BAZOOKA": 1,
+                        "SATCHEL": 1,
+                        "76MM M1 GUN [Sherman M4A3E2(76)]": 3
+                    },
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 41,
+                        "Allies": 0
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 0,
+                        "Artillery": 0,
+                        "Armor": 37
+                    },
+                    "Side": "Axis",
+                    "Group": "Armor"
+                }
+            ]
+        },
+        "Unknown": {
+            "PlayerCount": 0,
+            "Kills": 0,
+            "Deaths": 0,
+            "KDR": "0.00",
+            "CombatEffectiveness": 0,
+            "OffensivePoints": 0,
+            "DefensivePoints": 0,
+            "SupportPoints": 0,
+            "MachineGunKills": 0,
+            "Players": []
+        }
+    },
+    "Allies": {
+        "Team Name": "-TL-",
+        "Total": {
+            "PlayerCount": 49,
+            "Kills": 2197,
+            "Deaths": 2167,
+            "KDR": "1.01",
+            "CombatEffectiveness": 24436,
+            "OffensivePoints": 2840,
+            "DefensivePoints": 62000,
+            "SupportPoints": 34415,
+            "MachineGunKills": 120
+        },
+        "Infantry": {
+            "PlayerCount": 39,
+            "Kills": 1825,
+            "Deaths": 2126,
+            "KDR": "0.86",
+            "CombatEffectiveness": 15107,
+            "OffensivePoints": 2840,
+            "DefensivePoints": 45020,
+            "SupportPoints": 34020,
+            "MachineGunKills": 120,
+            "Players": [
+                {
+                    "PlayerID": "76561198119808172",
+                    "Name": "'-TL-GIRLCOCKSUPREME",
+                    "Kills": 9,
+                    "Deaths": 69,
+                    "KDR": "0.13",
+                    "CombatEffectiveness": 74,
+                    "OffensivePoints": 0,
+                    "DefensivePoints": 1180,
+                    "SupportPoints": 1399,
+                    "Weapons": {
+                        "M1 GARAND": 8,
+                        "MK2 GRENADE": 1
+                    },
+                    "DeathByWeapons": {
+                        "75MM CANNON [Sd.Kfz.161 Panzer IV]": 1,
+                        "STG44": 8,
+                        "GEWEHR 43": 10,
+                        "PANZERSCHRECK": 1,
+                        "UNKNOWN": 1,
+                        "COAXIAL MG34 [Sd.Kfz.181 Tiger 1]": 2,
+                        "TELLERMINE 43": 1,
+                        "150MM HOWITZER [sFH 18]": 20,
+                        "M43 STIELHANDGRANATE": 2,
+                        "88 KWK 36 L/56 [Sd.Kfz.181 Tiger 1]": 1,
+                        "MG42": 15,
+                        "20MM KWK 30 [Sd.Kfz.121 Luchs]": 1,
+                        "KARABINER 98K": 2,
+                        "FG42 x4": 1,
+                        "MP40": 3
+                    },
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 0,
+                        "Allies": 77
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 9,
+                        "Artillery": 0,
+                        "Armor": 0
+                    },
+                    "Side": "Allies",
+                    "Group": "Infantry"
+                },
+                {
+                    "PlayerID": "2f7af29cde020c87328fcf9ee2b8e1fa",
+                    "Name": "TL NinxDrag",
+                    "Kills": 28,
+                    "Deaths": 54,
+                    "KDR": "0.52",
+                    "CombatEffectiveness": 230,
+                    "OffensivePoints": 0,
+                    "DefensivePoints": 1280,
+                    "SupportPoints": 290,
+                    "Weapons": {
+                        "M1 GARAND": 2,
+                        "M1 CARBINE": 1,
+                        "M1A1 THOMPSON": 1,
+                        "M3 GREASE GUN": 1,
+                        "BROWNING M1919": 23
+                    },
+                    "DeathByWeapons": {
+                        "STG44": 2,
+                        "GEWEHR 43": 20,
+                        "PANZERSCHRECK": 1,
+                        "COAXIAL MG34 [Sd.Kfz.181 Tiger 1]": 4,
+                        "150MM HOWITZER [sFH 18]": 4,
+                        "M43 STIELHANDGRANATE": 1,
+                        "M1A1 AT MINE": 1,
+                        "88 KWK 36 L/56 [Sd.Kfz.181 Tiger 1]": 3,
+                        "MG42": 5,
+                        "KARABINER 98K": 10,
+                        "FG42 x4": 1,
+                        "MP40": 2
+                    },
+                    "MachineGunKills": 23,
+                    "sideLikelihood": {
+                        "Axis": 1,
+                        "Allies": 81
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 28,
+                        "Artillery": 0,
+                        "Armor": 0
+                    },
+                    "Side": "Allies",
+                    "Group": "Infantry"
+                },
+                {
+                    "PlayerID": "76561198389173604",
+                    "Name": "'=KЖ︎Pk=",
+                    "Kills": 20,
+                    "Deaths": 58,
+                    "KDR": "0.34",
+                    "CombatEffectiveness": 194,
+                    "OffensivePoints": 0,
+                    "DefensivePoints": 1140,
+                    "SupportPoints": 335,
+                    "Weapons": {
+                        "M1 CARBINE": 20
+                    },
+                    "DeathByWeapons": {
+                        "MG42": 2,
+                        "MP40": 8,
+                        "STG44": 12,
+                        "S-MINE": 2,
+                        "FG42 x4": 1,
+                        "GEWEHR 43": 24,
+                        "KARABINER 98K": 6,
+                        "150MM HOWITZER [sFH 18]": 3
+                    },
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 0,
+                        "Allies": 78
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 20,
+                        "Artillery": 0,
+                        "Armor": 0
+                    },
+                    "Side": "Allies",
+                    "Group": "Infantry"
+                },
+                {
+                    "PlayerID": "76561198113440028",
+                    "Name": "gibbs",
+                    "Kills": 54,
+                    "Deaths": 67,
+                    "KDR": "0.81",
+                    "CombatEffectiveness": 423,
+                    "OffensivePoints": 40,
+                    "DefensivePoints": 1060,
+                    "SupportPoints": 250,
+                    "Weapons": {
+                        "MK2 GRENADE": 1,
+                        "M3 GREASE GUN": 53
+                    },
+                    "DeathByWeapons": {
+                        "STG44": 14,
+                        "GEWEHR 43": 19,
+                        "S-MINE": 1,
+                        "M43 STIELHANDGRANATE": 1,
+                        "50mm KwK 39/1 [Sd.Kfz.234 Puma]": 2,
+                        "MG42": 6,
+                        "KARABINER 98K": 5,
+                        "FG42 x4": 8,
+                        "MP40": 11
+                    },
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 0,
+                        "Allies": 121
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 54,
+                        "Artillery": 0,
+                        "Armor": 0
+                    },
+                    "Side": "Allies",
+                    "Group": "Infantry"
+                },
+                {
+                    "PlayerID": "76561198065870287",
+                    "Name": "Ж | exel",
+                    "Kills": 50,
+                    "Deaths": 89,
+                    "KDR": "0.56",
+                    "CombatEffectiveness": 372,
+                    "OffensivePoints": 0,
+                    "DefensivePoints": 1000,
+                    "SupportPoints": 335,
+                    "Weapons": {
+                        "BAZOOKA": 8,
+                        "M1 GARAND": 35,
+                        "M3 GREASE GUN": 7
+                    },
+                    "DeathByWeapons": {
+                        "STG44": 6,
+                        "GEWEHR 43": 29,
+                        "PANZERSCHRECK": 2,
+                        "COAXIAL MG34 [Sd.Kfz.181 Tiger 1]": 1,
+                        "150MM HOWITZER [sFH 18]": 27,
+                        "M43 STIELHANDGRANATE": 1,
+                        "SATCHEL": 2,
+                        "88 KWK 36 L/56 [Sd.Kfz.181 Tiger 1]": 1,
+                        "MG42": 6,
+                        "20MM KWK 30 [Sd.Kfz.121 Luchs]": 1,
+                        "KARABINER 98K": 10,
+                        "FG42 x4": 1,
+                        "MP40": 2
+                    },
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 0,
+                        "Allies": 137
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 50,
+                        "Artillery": 0,
+                        "Armor": 0
+                    },
+                    "Side": "Allies",
+                    "Group": "Infantry"
+                },
+                {
+                    "PlayerID": "76561198079470277",
+                    "Name": "GAS",
+                    "Kills": 126,
+                    "Deaths": 62,
+                    "KDR": "2.03",
+                    "CombatEffectiveness": 1059,
+                    "OffensivePoints": 0,
+                    "DefensivePoints": 1180,
+                    "SupportPoints": 460,
+                    "Weapons": {
+                        "SATCHEL": 1,
+                        "M1 GARAND": 116,
+                        "M2 AP MINE": 4,
+                        "MK2 GRENADE": 2,
+                        "M97 TRENCH GUN": 3
+                    },
+                    "DeathByWeapons": {
+                        "75MM CANNON [Sd.Kfz.161 Panzer IV]": 1,
+                        "STG44": 9,
+                        "GEWEHR 43": 24,
+                        "S-MINE": 1,
+                        "150MM HOWITZER [sFH 18]": 1,
+                        "SATCHEL": 3,
+                        "88 KWK 36 L/56 [Sd.Kfz.181 Tiger 1]": 1,
+                        "MG42": 4,
+                        "KARABINER 98K": 6,
+                        "FG42 x4": 3,
+                        "MP40": 9
+                    },
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 0,
+                        "Allies": 184
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 125,
+                        "Artillery": 0,
+                        "Armor": 0
+                    },
+                    "Side": "Allies",
+                    "Group": "Infantry"
+                },
+                {
+                    "PlayerID": "76561198185517603",
+                    "Name": "'-TL- Shane",
+                    "Kills": 68,
+                    "Deaths": 55,
+                    "KDR": "1.24",
+                    "CombatEffectiveness": 523,
+                    "OffensivePoints": 360,
+                    "DefensivePoints": 820,
+                    "SupportPoints": 200,
+                    "Weapons": {
+                        "BAZOOKA": 2,
+                        "UNKNOWN": 1,
+                        "M1 GARAND": 65
+                    },
+                    "DeathByWeapons": {
+                        "MG42": 12,
+                        "MP40": 5,
+                        "STG44": 11,
+                        "S-MINE": 1,
+                        "FG42 x4": 4,
+                        "SATCHEL": 1,
+                        "GEWEHR 43": 17,
+                        "KARABINER 98K": 4
+                    },
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 0,
+                        "Allies": 121
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 67,
+                        "Artillery": 0,
+                        "Armor": 0
+                    },
+                    "Side": "Allies",
+                    "Group": "Infantry"
+                },
+                {
+                    "PlayerID": "76561198091006256",
+                    "Name": "Xan",
+                    "Kills": 41,
+                    "Deaths": 15,
+                    "KDR": "2.73",
+                    "CombatEffectiveness": 375,
+                    "OffensivePoints": 280,
+                    "DefensivePoints": 1300,
+                    "SupportPoints": 3416,
+                    "Weapons": {
+                        "M1 GARAND": 22,
+                        "BOMBING RUN": 16,
+                        "STRAFING RUN": 3
+                    },
+                    "DeathByWeapons": {
+                        "MG42": 2,
+                        "MP40": 3,
+                        "STG44": 4,
+                        "GEWEHR 43": 4,
+                        "KARABINER 98K": 2
+                    },
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 0,
+                        "Allies": 37
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 22,
+                        "Artillery": 0,
+                        "Armor": 0
+                    },
+                    "Side": "Allies",
+                    "Group": "Infantry"
+                },
+                {
+                    "PlayerID": "76561197960277278",
+                    "Name": "Dr Spetz",
+                    "Kills": 59,
+                    "Deaths": 46,
+                    "KDR": "1.28",
+                    "CombatEffectiveness": 463,
+                    "OffensivePoints": 20,
+                    "DefensivePoints": 1260,
+                    "SupportPoints": 797,
+                    "Weapons": {
+                        "S-MINE": 1,
+                        "UNKNOWN": 1,
+                        "M3 KNIFE": 3,
+                        "M1 GARAND": 54
+                    },
+                    "DeathByWeapons": {
+                        "MG42": 4,
+                        "MP40": 7,
+                        "STG44": 10,
+                        "S-MINE": 9,
+                        "FG42 x4": 2,
+                        "GEWEHR 43": 9,
+                        "KARABINER 98K": 4,
+                        "150MM HOWITZER [sFH 18]": 1
+                    },
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 1,
+                        "Allies": 103
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 58,
+                        "Artillery": 0,
+                        "Armor": 0
+                    },
+                    "Side": "Allies",
+                    "Group": "Infantry"
+                },
+                {
+                    "PlayerID": "76561198014903343",
+                    "Name": "'-TL- bic",
+                    "Kills": 42,
+                    "Deaths": 61,
+                    "KDR": "0.69",
+                    "CombatEffectiveness": 340,
+                    "OffensivePoints": 0,
+                    "DefensivePoints": 1240,
+                    "SupportPoints": 259,
+                    "Weapons": {
+                        "BAZOOKA": 1,
+                        "M1 GARAND": 40,
+                        "M97 TRENCH GUN": 1
+                    },
+                    "DeathByWeapons": {
+                        "STG44": 15,
+                        "GEWEHR 43": 21,
+                        "S-MINE": 5,
+                        "150MM HOWITZER [sFH 18]": 1,
+                        "SATCHEL": 1,
+                        "MG42": 3,
+                        "KARABINER 98K": 2,
+                        "FG42 x4": 3,
+                        "MP40": 10
+                    },
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 0,
+                        "Allies": 102
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 42,
+                        "Artillery": 0,
+                        "Armor": 0
+                    },
+                    "Side": "Allies",
+                    "Group": "Infantry"
+                },
+                {
+                    "PlayerID": "76561198107910095",
+                    "Name": "Trump's Right Ear",
+                    "Kills": 29,
+                    "Deaths": 39,
+                    "KDR": "0.74",
+                    "CombatEffectiveness": 448,
+                    "OffensivePoints": 120,
+                    "DefensivePoints": 1140,
+                    "SupportPoints": 539,
+                    "Weapons": {
+                        "M1A1 THOMPSON": 3,
+                        "M97 TRENCH GUN": 4,
+                        "MK2 GRENADE": 1,
+                        "COAXIAL M1919 [M8 Greyhound]": 3,
+                        "SATCHEL": 2,
+                        "M3 GREASE GUN": 1,
+                        "M1 CARBINE": 1,
+                        "M6 37mm [M8 Greyhound]": 8,
+                        "M1 GARAND": 6
+                    },
+                    "DeathByWeapons": {
+                        "75MM CANNON [Sd.Kfz.161 Panzer IV]": 1,
+                        "STG44": 3,
+                        "GEWEHR 43": 9,
+                        "PANZERSCHRECK": 1,
+                        "COAXIAL MG34 [Sd.Kfz.181 Tiger 1]": 4,
+                        "150MM HOWITZER [sFH 18]": 2,
+                        "SATCHEL": 1,
+                        "88 KWK 36 L/56 [Sd.Kfz.181 Tiger 1]": 2,
+                        "MG42": 6,
+                        "KARABINER 98K": 8,
+                        "FG42 x4": 1,
+                        "MP40": 1
+                    },
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 0,
+                        "Allies": 65
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 16,
+                        "Artillery": 0,
+                        "Armor": 11
+                    },
+                    "Side": "Allies",
+                    "Group": "Infantry"
+                },
+                {
+                    "PlayerID": "76561198026245245",
+                    "Name": "MS | Soldaad",
+                    "Kills": 75,
+                    "Deaths": 51,
+                    "KDR": "1.47",
+                    "CombatEffectiveness": 574,
+                    "OffensivePoints": 0,
+                    "DefensivePoints": 1260,
+                    "SupportPoints": 3030,
+                    "Weapons": {
+                        "M1 GARAND": 42,
+                        "MK2 GRENADE": 1,
+                        "BROWNING M1919": 32
+                    },
+                    "DeathByWeapons": {
+                        "MG42": 2,
+                        "MP40": 6,
+                        "STG44": 11,
+                        "GEWEHR 43": 21,
+                        "BOMBING RUN": 1,
+                        "KARABINER 98K": 2,
+                        "150MM HOWITZER [sFH 18]": 6,
+                        "88 KWK 36 L/56 [Sd.Kfz.181 Tiger 1]": 2
+                    },
+                    "MachineGunKills": 32,
+                    "sideLikelihood": {
+                        "Axis": 0,
+                        "Allies": 125
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 75,
+                        "Artillery": 0,
+                        "Armor": 0
+                    },
+                    "Side": "Allies",
+                    "Group": "Infantry"
+                },
+                {
+                    "PlayerID": "76561197981105401",
+                    "Name": "Ж | Sciz",
+                    "Kills": 70,
+                    "Deaths": 29,
+                    "KDR": "2.41",
+                    "CombatEffectiveness": 533,
+                    "OffensivePoints": 60,
+                    "DefensivePoints": 1300,
+                    "SupportPoints": 502,
+                    "Weapons": {
+                        "BAZOOKA": 1,
+                        "M1 GARAND": 9,
+                        "MK2 GRENADE": 3,
+                        "M1A1 THOMPSON": 1,
+                        "BROWNING M1919": 53,
+                        "M97 TRENCH GUN": 3
+                    },
+                    "DeathByWeapons": {
+                        "STG44": 1,
+                        "GEWEHR 43": 12,
+                        "UNKNOWN": 1,
+                        "150MM HOWITZER [sFH 18]": 2,
+                        "M43 STIELHANDGRANATE": 1,
+                        "88 KWK 36 L/56 [Sd.Kfz.181 Tiger 1]": 1,
+                        "MG42": 6,
+                        "KARABINER 98K": 3,
+                        "MP40": 2
+                    },
+                    "MachineGunKills": 53,
+                    "sideLikelihood": {
+                        "Axis": 0,
+                        "Allies": 98
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 70,
+                        "Artillery": 0,
+                        "Armor": 0
+                    },
+                    "Side": "Allies",
+                    "Group": "Infantry"
+                },
+                {
+                    "PlayerID": "76561197963663174",
+                    "Name": "deejayy",
+                    "Kills": 35,
+                    "Deaths": 29,
+                    "KDR": "1.21",
+                    "CombatEffectiveness": 306,
+                    "OffensivePoints": 0,
+                    "DefensivePoints": 1400,
+                    "SupportPoints": 3265,
+                    "Weapons": {
+                        "BAZOOKA": 6,
+                        "SATCHEL": 1,
+                        "M1 GARAND": 19,
+                        "M2 AP MINE": 1,
+                        "MK2 GRENADE": 1,
+                        "M3 GREASE GUN": 4,
+                        "M97 TRENCH GUN": 3
+                    },
+                    "DeathByWeapons": {
+                        "MG42": 3,
+                        "MP40": 4,
+                        "STG44": 8,
+                        "S-MINE": 1,
+                        "FG42 x4": 2,
+                        "GEWEHR 43": 9,
+                        "KARABINER 98K": 2
+                    },
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 0,
+                        "Allies": 63
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 34,
+                        "Artillery": 0,
+                        "Armor": 0
+                    },
+                    "Side": "Allies",
+                    "Group": "Infantry"
+                },
+                {
+                    "PlayerID": "76561198847854875",
+                    "Name": "Ж WIDOW",
+                    "Kills": 53,
+                    "Deaths": 82,
+                    "KDR": "0.65",
+                    "CombatEffectiveness": 392,
+                    "OffensivePoints": 80,
+                    "DefensivePoints": 1020,
+                    "SupportPoints": 625,
+                    "Weapons": {
+                        "M1 CARBINE": 53
+                    },
+                    "DeathByWeapons": {
+                        "STG44": 11,
+                        "GEWEHR 43": 47,
+                        "COAXIAL MG34 [Sd.Kfz.181 Tiger 1]": 3,
+                        "S-MINE": 1,
+                        "M43 STIELHANDGRANATE": 1,
+                        "88 KWK 36 L/56 [Sd.Kfz.181 Tiger 1]": 1,
+                        "MG42": 9,
+                        "KARABINER 98K": 6,
+                        "MP40": 3
+                    },
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 0,
+                        "Allies": 135
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 53,
+                        "Artillery": 0,
+                        "Armor": 0
+                    },
+                    "Side": "Allies",
+                    "Group": "Infantry"
+                },
+                {
+                    "PlayerID": "76561198036450575",
+                    "Name": "'-TL- rwendler613",
+                    "Kills": 20,
+                    "Deaths": 36,
+                    "KDR": "0.56",
+                    "CombatEffectiveness": 150,
+                    "OffensivePoints": 0,
+                    "DefensivePoints": 1300,
+                    "SupportPoints": 962,
+                    "Weapons": {
+                        "M1 GARAND": 19,
+                        "MK2 GRENADE": 1
+                    },
+                    "DeathByWeapons": {
+                        "STG44": 1,
+                        "GEWEHR 43": 16,
+                        "COAXIAL MG34 [Sd.Kfz.181 Tiger 1]": 2,
+                        "S-MINE": 2,
+                        "150MM HOWITZER [sFH 18]": 3,
+                        "88 KWK 36 L/56 [Sd.Kfz.181 Tiger 1]": 3,
+                        "MG42": 1,
+                        "KARABINER 98K": 4,
+                        "MP40": 4
+                    },
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 0,
+                        "Allies": 56
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 20,
+                        "Artillery": 0,
+                        "Armor": 0
+                    },
+                    "Side": "Allies",
+                    "Group": "Infantry"
+                },
+                {
+                    "PlayerID": "76561198164512748",
+                    "Name": "DooperDupinskie",
+                    "Kills": 44,
+                    "Deaths": 55,
+                    "KDR": "0.80",
+                    "CombatEffectiveness": 345,
+                    "OffensivePoints": 0,
+                    "DefensivePoints": 1320,
+                    "SupportPoints": 995,
+                    "Weapons": {
+                        "M1 GARAND": 44
+                    },
+                    "DeathByWeapons": {
+                        "MG42": 10,
+                        "MP40": 1,
+                        "STG44": 3,
+                        "SATCHEL": 1,
+                        "GEWEHR 43": 30,
+                        "KARABINER 98K": 7,
+                        "COAXIAL MG34 [Sd.Kfz.181 Tiger 1]": 3
+                    },
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 0,
+                        "Allies": 98
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 44,
+                        "Artillery": 0,
+                        "Armor": 0
+                    },
+                    "Side": "Allies",
+                    "Group": "Infantry"
+                },
+                {
+                    "PlayerID": "76561198995423048",
+                    "Name": "'-TL- Deic1de",
+                    "Kills": 24,
+                    "Deaths": 54,
+                    "KDR": "0.44",
+                    "CombatEffectiveness": 162,
+                    "OffensivePoints": 0,
+                    "DefensivePoints": 1140,
+                    "SupportPoints": 905,
+                    "Weapons": {
+                        "BAZOOKA": 1,
+                        "M1 GARAND": 8,
+                        "MK2 GRENADE": 2,
+                        "M1A1 THOMPSON": 4,
+                        "M3 GREASE GUN": 2,
+                        "BROWNING M1919": 1,
+                        "M2 FLAMETHROWER": 3,
+                        "57MM CANNON [M1 57mm]": 3
+                    },
+                    "DeathByWeapons": {
+                        "75MM CANNON [Sd.Kfz.161 Panzer IV]": 1,
+                        "STG44": 3,
+                        "GEWEHR 43": 28,
+                        "PANZERSCHRECK": 3,
+                        "COAXIAL MG34 [Sd.Kfz.181 Tiger 1]": 1,
+                        "150MM HOWITZER [sFH 18]": 6,
+                        "M43 STIELHANDGRANATE": 1,
+                        "50mm KwK 39/1 [Sd.Kfz.234 Puma]": 1,
+                        "88 KWK 36 L/56 [Sd.Kfz.181 Tiger 1]": 3,
+                        "MG42": 1,
+                        "KARABINER 98K": 5,
+                        "MP40": 1
+                    },
+                    "MachineGunKills": 1,
+                    "sideLikelihood": {
+                        "Axis": 0,
+                        "Allies": 78
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 24,
+                        "Artillery": 0,
+                        "Armor": 0
+                    },
+                    "Side": "Allies",
+                    "Group": "Infantry"
+                },
+                {
+                    "PlayerID": "76561198057763100",
+                    "Name": "'-TL- tacotastic",
+                    "Kills": 25,
+                    "Deaths": 92,
+                    "KDR": "0.27",
+                    "CombatEffectiveness": 213,
+                    "OffensivePoints": 0,
+                    "DefensivePoints": 880,
+                    "SupportPoints": 190,
+                    "Weapons": {
+                        "SATCHEL": 1,
+                        "M1 GARAND": 2,
+                        "MK2 GRENADE": 2,
+                        "M3 GREASE GUN": 20
+                    },
+                    "DeathByWeapons": {
+                        "STG44": 13,
+                        "GEWEHR 43": 40,
+                        "PANZERSCHRECK": 2,
+                        "BOMBING RUN": 1,
+                        "150MM HOWITZER [sFH 18]": 20,
+                        "M43 STIELHANDGRANATE": 1,
+                        "88 KWK 36 L/56 [Sd.Kfz.181 Tiger 1]": 1,
+                        "STRAFING RUN": 1,
+                        "MG42": 6,
+                        "KARABINER 98K": 6,
+                        "FG42 x4": 1
+                    },
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 0,
+                        "Allies": 114
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 24,
+                        "Artillery": 0,
+                        "Armor": 0
+                    },
+                    "Side": "Allies",
+                    "Group": "Infantry"
+                },
+                {
+                    "PlayerID": "76561198065387445",
+                    "Name": "MrInsaneBunny",
+                    "Kills": 30,
+                    "Deaths": 42,
+                    "KDR": "0.71",
+                    "CombatEffectiveness": 289,
+                    "OffensivePoints": 300,
+                    "DefensivePoints": 1080,
+                    "SupportPoints": 739,
+                    "Weapons": {
+                        "M1 GARAND": 30
+                    },
+                    "DeathByWeapons": {
+                        "STG44": 7,
+                        "GEWEHR 43": 19,
+                        "S-MINE": 4,
+                        "M43 STIELHANDGRANATE": 1,
+                        "STRAFING RUN": 1,
+                        "MG42": 2,
+                        "KARABINER 98K": 2,
+                        "FG42 x4": 1,
+                        "MP40": 5
+                    },
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 0,
+                        "Allies": 71
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 30,
+                        "Artillery": 0,
+                        "Armor": 0
+                    },
+                    "Side": "Allies",
+                    "Group": "Infantry"
+                },
+                {
+                    "PlayerID": "76561199372726194",
+                    "Name": "'-TL- Monster_Corndog",
+                    "Kills": 21,
+                    "Deaths": 37,
+                    "KDR": "0.57",
+                    "CombatEffectiveness": 185,
+                    "OffensivePoints": 0,
+                    "DefensivePoints": 1400,
+                    "SupportPoints": 912,
+                    "Weapons": {
+                        "M1 GARAND": 9,
+                        "M1A1 THOMPSON": 12
+                    },
+                    "DeathByWeapons": {
+                        "STG44": 17,
+                        "GEWEHR 43": 8,
+                        "PANZERSCHRECK": 1,
+                        "S-MINE": 2,
+                        "150MM HOWITZER [sFH 18]": 1,
+                        "M43 STIELHANDGRANATE": 1,
+                        "SATCHEL": 1,
+                        "MG42": 1,
+                        "KARABINER 98K": 1,
+                        "FG42 x4": 2,
+                        "MP40": 2
+                    },
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 0,
+                        "Allies": 57
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 21,
+                        "Artillery": 0,
+                        "Armor": 0
+                    },
+                    "Side": "Allies",
+                    "Group": "Infantry"
+                },
+                {
+                    "PlayerID": "76561198074581560",
+                    "Name": "Galtia",
+                    "Kills": 37,
+                    "Deaths": 65,
+                    "KDR": "0.57",
+                    "CombatEffectiveness": 326,
+                    "OffensivePoints": 0,
+                    "DefensivePoints": 1100,
+                    "SupportPoints": 454,
+                    "Weapons": {
+                        "BAZOOKA": 2,
+                        "M1 GARAND": 22,
+                        "M1 CARBINE": 4,
+                        "M1918A2 BAR": 8,
+                        "M1A1 THOMPSON": 1
+                    },
+                    "DeathByWeapons": {
+                        "STG44": 9,
+                        "GEWEHR 43": 30,
+                        "PANZERSCHRECK": 1,
+                        "COAXIAL MG34 [Sd.Kfz.181 Tiger 1]": 1,
+                        "BOMBING RUN": 1,
+                        "150MM HOWITZER [sFH 18]": 3,
+                        "M43 STIELHANDGRANATE": 2,
+                        "SATCHEL": 1,
+                        "88 KWK 36 L/56 [Sd.Kfz.181 Tiger 1]": 3,
+                        "MG42": 7,
+                        "KARABINER 98K": 7
+                    },
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 0,
+                        "Allies": 100
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 37,
+                        "Artillery": 0,
+                        "Armor": 0
+                    },
+                    "Side": "Allies",
+                    "Group": "Infantry"
+                },
+                {
+                    "PlayerID": "76561198136839181",
+                    "Name": "Reduktorius",
+                    "Kills": 70,
+                    "Deaths": 73,
+                    "KDR": "0.96",
+                    "CombatEffectiveness": 523,
+                    "OffensivePoints": 60,
+                    "DefensivePoints": 1060,
+                    "SupportPoints": 275,
+                    "Weapons": {
+                        "BAZOOKA": 5,
+                        "M1 GARAND": 62,
+                        "MK2 GRENADE": 3
+                    },
+                    "DeathByWeapons": {
+                        "STG44": 14,
+                        "GEWEHR 43": 27,
+                        "COAXIAL MG34 [Sd.Kfz.181 Tiger 1]": 2,
+                        "150MM HOWITZER [sFH 18]": 12,
+                        "SATCHEL": 2,
+                        "88 KWK 36 L/56 [Sd.Kfz.181 Tiger 1]": 3,
+                        "STRAFING RUN": 2,
+                        "MG42": 5,
+                        "KARABINER 98K": 5,
+                        "MP40": 1
+                    },
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 0,
+                        "Allies": 139
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 70,
+                        "Artillery": 0,
+                        "Armor": 0
+                    },
+                    "Side": "Allies",
+                    "Group": "Infantry"
+                },
+                {
+                    "PlayerID": "76561197983139673",
+                    "Name": "'-TL- Brewtish",
+                    "Kills": 30,
+                    "Deaths": 33,
+                    "KDR": "0.91",
+                    "CombatEffectiveness": 219,
+                    "OffensivePoints": 0,
+                    "DefensivePoints": 1420,
+                    "SupportPoints": 493,
+                    "Weapons": {
+                        "M1 GARAND": 28,
+                        "MK2 GRENADE": 2
+                    },
+                    "DeathByWeapons": {
+                        "75MM CANNON [Sd.Kfz.161 Panzer IV]": 1,
+                        "STG44": 3,
+                        "GEWEHR 43": 10,
+                        "150MM HOWITZER [sFH 18]": 9,
+                        "SATCHEL": 1,
+                        "88 KWK 36 L/56 [Sd.Kfz.181 Tiger 1]": 2,
+                        "MG42": 2,
+                        "KARABINER 98K": 4,
+                        "MP40": 1
+                    },
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 0,
+                        "Allies": 62
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 30,
+                        "Artillery": 0,
+                        "Armor": 0
+                    },
+                    "Side": "Allies",
+                    "Group": "Infantry"
+                },
+                {
+                    "PlayerID": "76561198183549211",
+                    "Name": "'-TL- zemo",
+                    "Kills": 94,
+                    "Deaths": 71,
+                    "KDR": "1.32",
+                    "CombatEffectiveness": 772,
+                    "OffensivePoints": 0,
+                    "DefensivePoints": 1040,
+                    "SupportPoints": 250,
+                    "Weapons": {
+                        "SATCHEL": 5,
+                        "M1 GARAND": 59,
+                        "M1918A2 BAR": 16,
+                        "MK2 GRENADE": 4,
+                        "M1A1 THOMPSON": 4,
+                        "M3 GREASE GUN": 6
+                    },
+                    "DeathByWeapons": {
+                        "STG44": 7,
+                        "GEWEHR 43": 23,
+                        "PANZERSCHRECK": 1,
+                        "S-MINE": 1,
+                        "150MM HOWITZER [sFH 18]": 21,
+                        "M43 STIELHANDGRANATE": 2,
+                        "SATCHEL": 2,
+                        "88 KWK 36 L/56 [Sd.Kfz.181 Tiger 1]": 2,
+                        "COAXIAL MG34 [Sd.Kfz.161 Panzer IV]": 1,
+                        "MG42": 3,
+                        "KARABINER 98K": 6,
+                        "MP40": 2
+                    },
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 0,
+                        "Allies": 158
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 89,
+                        "Artillery": 0,
+                        "Armor": 0
+                    },
+                    "Side": "Allies",
+                    "Group": "Infantry"
+                },
+                {
+                    "PlayerID": "76561198068495997",
+                    "Name": "(WTH) HoneyBadger",
+                    "Kills": 38,
+                    "Deaths": 80,
+                    "KDR": "0.47",
+                    "CombatEffectiveness": 327,
+                    "OffensivePoints": 0,
+                    "DefensivePoints": 1000,
+                    "SupportPoints": 2990,
+                    "Weapons": {
+                        "SATCHEL": 5,
+                        "M1918A2 BAR": 3,
+                        "MK2 GRENADE": 1,
+                        "BROWNING M1919": 6,
+                        "M97 TRENCH GUN": 19,
+                        "M6 37mm [M8 Greyhound]": 4
+                    },
+                    "DeathByWeapons": {
+                        "STG44": 8,
+                        "GEWEHR 43": 27,
+                        "PANZERSCHRECK": 1,
+                        "UNKNOWN": 1,
+                        "COAXIAL MG34 [Sd.Kfz.181 Tiger 1]": 1,
+                        "BOMBING RUN": 1,
+                        "150MM HOWITZER [sFH 18]": 26,
+                        "M43 STIELHANDGRANATE": 3,
+                        "SATCHEL": 1,
+                        "88 KWK 36 L/56 [Sd.Kfz.181 Tiger 1]": 4,
+                        "MG42": 1,
+                        "KARABINER 98K": 3,
+                        "FG42 x4": 1,
+                        "MP40": 2
+                    },
+                    "MachineGunKills": 6,
+                    "sideLikelihood": {
+                        "Axis": 0,
+                        "Allies": 110
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 29,
+                        "Artillery": 0,
+                        "Armor": 4
+                    },
+                    "Side": "Allies",
+                    "Group": "Infantry"
+                },
+                {
+                    "PlayerID": "76561198141361405",
+                    "Name": "》Sherby",
+                    "Kills": 56,
+                    "Deaths": 79,
+                    "KDR": "0.71",
+                    "CombatEffectiveness": 443,
+                    "OffensivePoints": 0,
+                    "DefensivePoints": 1140,
+                    "SupportPoints": 1505,
+                    "Weapons": {
+                        "M1 GARAND": 35,
+                        "MK2 GRENADE": 5,
+                        "M1A1 THOMPSON": 16
+                    },
+                    "DeathByWeapons": {
+                        "STG44": 8,
+                        "GEWEHR 43": 24,
+                        "PANZERSCHRECK": 2,
+                        "COAXIAL MG34 [Sd.Kfz.181 Tiger 1]": 1,
+                        "BOMBING RUN": 1,
+                        "150MM HOWITZER [sFH 18]": 28,
+                        "M43 STIELHANDGRANATE": 3,
+                        "SATCHEL": 1,
+                        "88 KWK 36 L/56 [Sd.Kfz.181 Tiger 1]": 1,
+                        "MG42": 3,
+                        "KARABINER 98K": 6,
+                        "FG42 x4": 1
+                    },
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 0,
+                        "Allies": 133
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 56,
+                        "Artillery": 0,
+                        "Armor": 0
+                    },
+                    "Side": "Allies",
+                    "Group": "Infantry"
+                },
+                {
+                    "PlayerID": "76561199085539517",
+                    "Name": "(WTH) Smurf | 我種藍莓",
+                    "Kills": 52,
+                    "Deaths": 60,
+                    "KDR": "0.87",
+                    "CombatEffectiveness": 455,
+                    "OffensivePoints": 40,
+                    "DefensivePoints": 1020,
+                    "SupportPoints": 385,
+                    "Weapons": {
+                        "BAZOOKA": 1,
+                        "SATCHEL": 2,
+                        "M1 GARAND": 18,
+                        "M1918A2 BAR": 23,
+                        "MK2 GRENADE": 1,
+                        "M3 GREASE GUN": 6,
+                        "M97 TRENCH GUN": 1
+                    },
+                    "DeathByWeapons": {
+                        "75MM CANNON [Sd.Kfz.161 Panzer IV]": 1,
+                        "STG44": 5,
+                        "GEWEHR 43": 29,
+                        "S-MINE": 2,
+                        "150MM HOWITZER [sFH 18]": 4,
+                        "M43 STIELHANDGRANATE": 1,
+                        "88 KWK 36 L/56 [Sd.Kfz.181 Tiger 1]": 1,
+                        "MG42": 4,
+                        "KARABINER 98K": 7,
+                        "FG42 x4": 2,
+                        "MP40": 4
+                    },
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 0,
+                        "Allies": 110
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 50,
+                        "Artillery": 0,
+                        "Armor": 0
+                    },
+                    "Side": "Allies",
+                    "Group": "Infantry"
+                },
+                {
+                    "PlayerID": "76561198000900613",
+                    "Name": "'-TL- Crewmaxio",
+                    "Kills": 13,
+                    "Deaths": 40,
+                    "KDR": "0.33",
+                    "CombatEffectiveness": 86,
+                    "OffensivePoints": 0,
+                    "DefensivePoints": 1380,
+                    "SupportPoints": 760,
+                    "Weapons": {
+                        "M1 GARAND": 12,
+                        "M1A1 THOMPSON": 1
+                    },
+                    "DeathByWeapons": {
+                        "STG44": 2,
+                        "GEWEHR 43": 16,
+                        "COAXIAL MG34 [Sd.Kfz.181 Tiger 1]": 1,
+                        "150MM HOWITZER [sFH 18]": 5,
+                        "M43 STIELHANDGRANATE": 2,
+                        "88 KWK 36 L/56 [Sd.Kfz.181 Tiger 1]": 1,
+                        "MG42": 5,
+                        "KARABINER 98K": 7,
+                        "MP40": 1
+                    },
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 0,
+                        "Allies": 53
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 13,
+                        "Artillery": 0,
+                        "Armor": 0
+                    },
+                    "Side": "Allies",
+                    "Group": "Infantry"
+                },
+                {
+                    "PlayerID": "76561198217548335",
+                    "Name": "нѕ | Mongo",
+                    "Kills": 79,
+                    "Deaths": 73,
+                    "KDR": "1.08",
+                    "CombatEffectiveness": 723,
+                    "OffensivePoints": 20,
+                    "DefensivePoints": 1060,
+                    "SupportPoints": 225,
+                    "Weapons": {
+                        "BAZOOKA": 6,
+                        "M1 GARAND": 64,
+                        "M1918A2 BAR": 9
+                    },
+                    "DeathByWeapons": {
+                        "HULL MG34 [Sd.Kfz.181 Tiger 1]": 1,
+                        "STG44": 10,
+                        "GEWEHR 43": 28,
+                        "PANZERSCHRECK": 1,
+                        "S-MINE": 2,
+                        "150MM HOWITZER [sFH 18]": 7,
+                        "M43 STIELHANDGRANATE": 1,
+                        "SATCHEL": 2,
+                        "88 KWK 36 L/56 [Sd.Kfz.181 Tiger 1]": 2,
+                        "MG42": 9,
+                        "KARABINER 98K": 2,
+                        "FG42 x4": 4,
+                        "MP40": 4
+                    },
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 0,
+                        "Allies": 150
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 79,
+                        "Artillery": 0,
+                        "Armor": 0
+                    },
+                    "Side": "Allies",
+                    "Group": "Infantry"
+                },
+                {
+                    "PlayerID": "76561198066104341",
+                    "Name": "нѕ | HAZAH",
+                    "Kills": 54,
+                    "Deaths": 47,
+                    "KDR": "1.15",
+                    "CombatEffectiveness": 432,
+                    "OffensivePoints": 0,
+                    "DefensivePoints": 1360,
+                    "SupportPoints": 1309,
+                    "Weapons": {
+                        "M1 GARAND": 52,
+                        "MK2 GRENADE": 2
+                    },
+                    "DeathByWeapons": {
+                        "STG44": 7,
+                        "GEWEHR 43": 13,
+                        "S-MINE": 2,
+                        "M43 STIELHANDGRANATE": 1,
+                        "SATCHEL": 1,
+                        "MG42": 11,
+                        "20MM KWK 30 [Sd.Kfz.121 Luchs]": 1,
+                        "KARABINER 98K": 2,
+                        "FG42 x4": 1,
+                        "MP40": 8
+                    },
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 0,
+                        "Allies": 100
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 54,
+                        "Artillery": 0,
+                        "Armor": 0
+                    },
+                    "Side": "Allies",
+                    "Group": "Infantry"
+                },
+                {
+                    "PlayerID": "76561198018512527",
+                    "Name": "Palustris",
+                    "Kills": 44,
+                    "Deaths": 43,
+                    "KDR": "1.02",
+                    "CombatEffectiveness": 325,
+                    "OffensivePoints": 0,
+                    "DefensivePoints": 1400,
+                    "SupportPoints": 991,
+                    "Weapons": {
+                        "M1 GARAND": 44
+                    },
+                    "DeathByWeapons": {
+                        "STG44": 7,
+                        "GEWEHR 43": 14,
+                        "PANZERSCHRECK": 1,
+                        "S-MINE": 1,
+                        "SATCHEL": 2,
+                        "MG42": 1,
+                        "KARABINER 98K": 4,
+                        "FG42 x4": 5,
+                        "MP40": 8
+                    },
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 0,
+                        "Allies": 85
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 44,
+                        "Artillery": 0,
+                        "Armor": 0
+                    },
+                    "Side": "Allies",
+                    "Group": "Infantry"
+                },
+                {
+                    "PlayerID": "b70f79383eb821ec28d0d0d05d621c36",
+                    "Name": "Agar312",
+                    "Kills": 11,
+                    "Deaths": 41,
+                    "KDR": "0.27",
+                    "CombatEffectiveness": 83,
+                    "OffensivePoints": 0,
+                    "DefensivePoints": 1100,
+                    "SupportPoints": 470,
+                    "Weapons": {
+                        "M1 GARAND": 6,
+                        "M1A1 THOMPSON": 1,
+                        "BROWNING M1919": 4
+                    },
+                    "DeathByWeapons": {
+                        "STG44": 4,
+                        "GEWEHR 43": 9,
+                        "150MM HOWITZER [sFH 18]": 12,
+                        "M43 STIELHANDGRANATE": 3,
+                        "MG42": 3,
+                        "20MM KWK 30 [Sd.Kfz.121 Luchs]": 2,
+                        "KARABINER 98K": 2,
+                        "FG42 x4": 2,
+                        "MP40": 4
+                    },
+                    "MachineGunKills": 4,
+                    "sideLikelihood": {
+                        "Axis": 0,
+                        "Allies": 52
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 11,
+                        "Artillery": 0,
+                        "Armor": 0
+                    },
+                    "Side": "Allies",
+                    "Group": "Infantry"
+                },
+                {
+                    "PlayerID": "76561198238364594",
+                    "Name": "Bleicher Junge",
+                    "Kills": 50,
+                    "Deaths": 65,
+                    "KDR": "0.77",
+                    "CombatEffectiveness": 491,
+                    "OffensivePoints": 60,
+                    "DefensivePoints": 1080,
+                    "SupportPoints": 390,
+                    "Weapons": {
+                        "M1 GARAND": 14,
+                        "M2 AP MINE": 3,
+                        "M1918A2 BAR": 17,
+                        "M1A1 THOMPSON": 10,
+                        "M3 GREASE GUN": 3,
+                        "M97 TRENCH GUN": 3
+                    },
+                    "DeathByWeapons": {
+                        "STG44": 7,
+                        "GEWEHR 43": 32,
+                        "S-MINE": 4,
+                        "150MM HOWITZER [sFH 18]": 1,
+                        "SATCHEL": 1,
+                        "88 KWK 36 L/56 [Sd.Kfz.181 Tiger 1]": 1,
+                        "MG42": 4,
+                        "KARABINER 98K": 3,
+                        "FG42 x4": 6,
+                        "MP40": 6
+                    },
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 0,
+                        "Allies": 114
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 50,
+                        "Artillery": 0,
+                        "Armor": 0
+                    },
+                    "Side": "Allies",
+                    "Group": "Infantry"
+                },
+                {
+                    "PlayerID": "76561198425330653",
+                    "Name": "GPH-1608",
+                    "Kills": 77,
+                    "Deaths": 54,
+                    "KDR": "1.43",
+                    "CombatEffectiveness": 616,
+                    "OffensivePoints": 180,
+                    "DefensivePoints": 1020,
+                    "SupportPoints": 0,
+                    "Weapons": {
+                        "SATCHEL": 3,
+                        "M1 GARAND": 54,
+                        "M1A1 THOMPSON": 11,
+                        "M3 GREASE GUN": 8,
+                        "BROWNING M1919": 1
+                    },
+                    "DeathByWeapons": {
+                        "STG44": 9,
+                        "GEWEHR 43": 17,
+                        "S-MINE": 2,
+                        "150MM HOWITZER [sFH 18]": 2,
+                        "FELDSPATEN": 1,
+                        "MG42": 7,
+                        "KARABINER 98K": 2,
+                        "FG42 x4": 6,
+                        "MP40": 8
+                    },
+                    "MachineGunKills": 1,
+                    "sideLikelihood": {
+                        "Axis": 0,
+                        "Allies": 128
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 74,
+                        "Artillery": 0,
+                        "Armor": 0
+                    },
+                    "Side": "Allies",
+                    "Group": "Infantry"
+                },
+                {
+                    "PlayerID": "76561198106215341",
+                    "Name": "🅼🅴🅻🅻🅾🆆",
+                    "Kills": 33,
+                    "Deaths": 68,
+                    "KDR": "0.49",
+                    "CombatEffectiveness": 228,
+                    "OffensivePoints": 0,
+                    "DefensivePoints": 1180,
+                    "SupportPoints": 1515,
+                    "Weapons": {
+                        "M1 GARAND": 33
+                    },
+                    "DeathByWeapons": {
+                        "STG44": 7,
+                        "GEWEHR 43": 20,
+                        "150MM HOWITZER [sFH 18]": 16,
+                        "M43 STIELHANDGRANATE": 3,
+                        "SATCHEL": 1,
+                        "88 KWK 36 L/56 [Sd.Kfz.181 Tiger 1]": 5,
+                        "MG42": 5,
+                        "KARABINER 98K": 8,
+                        "FG42 x4": 1,
+                        "MP40": 2
+                    },
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 0,
+                        "Allies": 100
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 33,
+                        "Artillery": 0,
+                        "Armor": 0
+                    },
+                    "Side": "Allies",
+                    "Group": "Infantry"
+                },
+                {
+                    "PlayerID": "76561198031909413",
+                    "Name": "Ж | Whiskey",
+                    "Kills": 50,
+                    "Deaths": 60,
+                    "KDR": "0.83",
+                    "CombatEffectiveness": 451,
+                    "OffensivePoints": 140,
+                    "DefensivePoints": 1120,
+                    "SupportPoints": 25,
+                    "Weapons": {
+                        "M1 GARAND": 44,
+                        "MK2 GRENADE": 2,
+                        "M97 TRENCH GUN": 4
+                    },
+                    "DeathByWeapons": {
+                        "75MM CANNON [Sd.Kfz.161 Panzer IV]": 1,
+                        "STG44": 6,
+                        "GEWEHR 43": 19,
+                        "S-MINE": 2,
+                        "150MM HOWITZER [sFH 18]": 3,
+                        "FELDSPATEN": 1,
+                        "MG42": 10,
+                        "KARABINER 98K": 3,
+                        "FG42 x4": 6,
+                        "MP40": 9
+                    },
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 0,
+                        "Allies": 110
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 50,
+                        "Artillery": 0,
+                        "Armor": 0
+                    },
+                    "Side": "Allies",
+                    "Group": "Infantry"
+                },
+                {
+                    "PlayerID": "76561198067455404",
+                    "Name": "'-TL- hippie",
+                    "Kills": 24,
+                    "Deaths": 20,
+                    "KDR": "1.20",
+                    "CombatEffectiveness": 221,
+                    "OffensivePoints": 960,
+                    "DefensivePoints": 580,
+                    "SupportPoints": 1553,
+                    "Weapons": {
+                        "M1 GARAND": 24
+                    },
+                    "DeathByWeapons": {
+                        "MG42": 5,
+                        "SATCHEL": 1,
+                        "GEWEHR 43": 13,
+                        "KARABINER 98K": 1
+                    },
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 0,
+                        "Allies": 43
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 24,
+                        "Artillery": 0,
+                        "Armor": 0
+                    },
+                    "Side": "Allies",
+                    "Group": "Infantry"
+                },
+                {
+                    "PlayerID": "76561198009498488",
+                    "Name": "Data",
+                    "Kills": 90,
+                    "Deaths": 32,
+                    "KDR": "2.81",
+                    "CombatEffectiveness": 736,
+                    "OffensivePoints": 120,
+                    "DefensivePoints": 1260,
+                    "SupportPoints": 25,
+                    "Weapons": {
+                        "UNKNOWN": 1,
+                        "M1 GARAND": 3,
+                        "M1A1 THOMPSON": 2,
+                        "M3 GREASE GUN": 2,
+                        "M1903 SPRINGFIELD": 82
+                    },
+                    "DeathByWeapons": {
+                        "STG44": 2,
+                        "GEWEHR 43": 18,
+                        "COAXIAL MG34 [Sd.Kfz.181 Tiger 1]": 1,
+                        "M43 STIELHANDGRANATE": 1,
+                        "88 KWK 36 L/56 [Sd.Kfz.181 Tiger 1]": 2,
+                        "MG42": 2,
+                        "20MM KWK 30 [Sd.Kfz.121 Luchs]": 1,
+                        "KARABINER 98K": 4,
+                        "MP40": 1
+                    },
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 0,
+                        "Allies": 121
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 89,
+                        "Artillery": 0,
+                        "Armor": 0
+                    },
+                    "Side": "Allies",
+                    "Group": "Infantry"
+                }
+            ]
+        },
+        "Artillery": {
+            "PlayerCount": 1,
+            "Kills": 240,
+            "Deaths": 0,
+            "KDR": "240.00",
+            "CombatEffectiveness": 2087,
+            "OffensivePoints": 0,
+            "DefensivePoints": 1780,
+            "SupportPoints": 0,
+            "MachineGunKills": 0,
+            "Players": [
+                {
+                    "PlayerID": "76561198280295436",
+                    "Name": "MS | Major WakandaPerhaps",
+                    "Kills": 240,
+                    "Deaths": 0,
+                    "KDR": "240.00",
+                    "CombatEffectiveness": 2087,
+                    "OffensivePoints": 0,
+                    "DefensivePoints": 1780,
+                    "SupportPoints": 0,
+                    "Weapons": {
+                        "S-MINE": 1,
+                        "TELLERMINE 43": 1,
+                        "155MM HOWITZER [M114]": 238
+                    },
+                    "DeathByWeapons": {},
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 2,
+                        "Allies": 238
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 2,
+                        "Artillery": 238,
+                        "Armor": 0
+                    },
+                    "Side": "Allies",
+                    "Group": "Artillery"
+                }
+            ]
+        },
+        "Armor": {
+            "PlayerCount": 9,
+            "Kills": 132,
+            "Deaths": 41,
+            "KDR": "3.22",
+            "CombatEffectiveness": 7242,
+            "OffensivePoints": 0,
+            "DefensivePoints": 15200,
+            "SupportPoints": 395,
+            "MachineGunKills": 0,
+            "Players": [
+                {
+                    "PlayerID": "76561197993304879",
+                    "Name": "'-TL- Sol",
+                    "Kills": 56,
+                    "Deaths": 4,
+                    "KDR": "14.00",
+                    "CombatEffectiveness": 1290,
+                    "OffensivePoints": 0,
+                    "DefensivePoints": 1680,
+                    "SupportPoints": 15,
+                    "Weapons": {
+                        "75MM CANNON [Sherman M4A3(75)W]": 13,
+                        "76MM M1 GUN [Sherman M4A3E2(76)]": 33,
+                        "COAXIAL M1919 [Sherman M4A3(75)W]": 2,
+                        "COAXIAL M1919 [Sherman M4A3E2(76)]": 8
+                    },
+                    "DeathByWeapons": {
+                        "SATCHEL": 1,
+                        "75MM CANNON [PAK 40]": 1,
+                        "88 KWK 36 L/56 [Sd.Kfz.181 Tiger 1]": 2
+                    },
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 0,
+                        "Allies": 59
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 0,
+                        "Artillery": 0,
+                        "Armor": 56
+                    },
+                    "Side": "Allies",
+                    "Group": "Armor"
+                },
+                {
+                    "PlayerID": "76561198041224149",
+                    "Name": "'-TL- JVCK",
+                    "Kills": 0,
+                    "Deaths": 4,
+                    "KDR": "0.00",
+                    "CombatEffectiveness": 1290,
+                    "OffensivePoints": 0,
+                    "DefensivePoints": 1720,
+                    "SupportPoints": 5,
+                    "Weapons": {},
+                    "DeathByWeapons": {
+                        "SATCHEL": 1,
+                        "75MM CANNON [PAK 40]": 1,
+                        "88 KWK 36 L/56 [Sd.Kfz.181 Tiger 1]": 2
+                    },
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 0,
+                        "Allies": 3
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 0,
+                        "Artillery": 0,
+                        "Armor": 0
+                    },
+                    "Side": "Allies",
+                    "Group": "Armor"
+                },
+                {
+                    "PlayerID": "76561197961994890",
+                    "Name": "'-TL- Grekker",
+                    "Kills": 36,
+                    "Deaths": 3,
+                    "KDR": "12.00",
+                    "CombatEffectiveness": 782,
+                    "OffensivePoints": 0,
+                    "DefensivePoints": 1720,
+                    "SupportPoints": 25,
+                    "Weapons": {
+                        "37MM CANNON [Stuart M5A1]": 2,
+                        "76MM M1 GUN [Sherman M4A3E2(76)]": 32,
+                        "COAXIAL M1919 [Sherman M4A3E2(76)]": 2
+                    },
+                    "DeathByWeapons": {
+                        "SATCHEL": 1,
+                        "75MM CANNON [Sd.Kfz.161 Panzer IV]": 1,
+                        "88 KWK 36 L/56 [Sd.Kfz.181 Tiger 1]": 1
+                    },
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 0,
+                        "Allies": 38
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 0,
+                        "Artillery": 0,
+                        "Armor": 36
+                    },
+                    "Side": "Allies",
+                    "Group": "Armor"
+                },
+                {
+                    "PlayerID": "76561198018557431",
+                    "Name": "Ж | Propaganda",
+                    "Kills": 34,
+                    "Deaths": 7,
+                    "KDR": "4.86",
+                    "CombatEffectiveness": 372,
+                    "OffensivePoints": 0,
+                    "DefensivePoints": 1640,
+                    "SupportPoints": 0,
+                    "Weapons": {
+                        "BAZOOKA": 1,
+                        "M1 GARAND": 1,
+                        "MK2 GRENADE": 1,
+                        "TELLERMINE 43": 3,
+                        "37MM CANNON [Stuart M5A1]": 4,
+                        "76MM M1 GUN [Sherman M4A3E2(76)]": 21,
+                        "COAXIAL M1919 [Sherman M4A3E2(76)]": 3
+                    },
+                    "DeathByWeapons": {
+                        "GEWEHR 43": 2,
+                        "75MM CANNON [PAK 40]": 1,
+                        "75MM CANNON [Sd.Kfz.161 Panzer IV]": 1,
+                        "88 KWK 36 L/56 [Sd.Kfz.181 Tiger 1]": 3
+                    },
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 3,
+                        "Allies": 38
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 6,
+                        "Artillery": 0,
+                        "Armor": 28
+                    },
+                    "Side": "Allies",
+                    "Group": "Armor"
+                },
+                {
+                    "PlayerID": "76561197983252948",
+                    "Name": "Ж | yourmomsmother",
+                    "Kills": 4,
+                    "Deaths": 6,
+                    "KDR": "0.67",
+                    "CombatEffectiveness": 330,
+                    "OffensivePoints": 0,
+                    "DefensivePoints": 1660,
+                    "SupportPoints": 105,
+                    "Weapons": {
+                        "HULL M1919 [Stuart M5A1]": 2,
+                        "HULL M1919 [Sherman M4A3E2(76)]": 2
+                    },
+                    "DeathByWeapons": {
+                        "STG44": 1,
+                        "75MM CANNON [PAK 40]": 1,
+                        "75MM CANNON [Sd.Kfz.161 Panzer IV]": 1,
+                        "88 KWK 36 L/56 [Sd.Kfz.181 Tiger 1]": 3
+                    },
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 0,
+                        "Allies": 10
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 0,
+                        "Artillery": 0,
+                        "Armor": 4
+                    },
+                    "Side": "Allies",
+                    "Group": "Armor"
+                },
+                {
+                    "PlayerID": "76561198119381991",
+                    "Name": "'- TL - Alex Von Doom",
+                    "Kills": 1,
+                    "Deaths": 3,
+                    "KDR": "0.33",
+                    "CombatEffectiveness": 782,
+                    "OffensivePoints": 0,
+                    "DefensivePoints": 1700,
+                    "SupportPoints": 40,
+                    "Weapons": {
+                        "Sherman M4A3E2(76)": 1
+                    },
+                    "DeathByWeapons": {
+                        "SATCHEL": 1,
+                        "75MM CANNON [Sd.Kfz.161 Panzer IV]": 1,
+                        "88 KWK 36 L/56 [Sd.Kfz.181 Tiger 1]": 1
+                    },
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 0,
+                        "Allies": 3
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 0,
+                        "Artillery": 0,
+                        "Armor": 1
+                    },
+                    "Side": "Allies",
+                    "Group": "Armor"
+                },
+                {
+                    "PlayerID": "76561199593667557",
+                    "Name": "'-TL- Jerry",
+                    "Kills": 1,
+                    "Deaths": 3,
+                    "KDR": "0.33",
+                    "CombatEffectiveness": 1290,
+                    "OffensivePoints": 0,
+                    "DefensivePoints": 1720,
+                    "SupportPoints": 65,
+                    "Weapons": {
+                        "HULL M1919 [Sherman M4A3E2(76)]": 1
+                    },
+                    "DeathByWeapons": {
+                        "SATCHEL": 1,
+                        "75MM CANNON [PAK 40]": 1,
+                        "88 KWK 36 L/56 [Sd.Kfz.181 Tiger 1]": 1
+                    },
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 0,
+                        "Allies": 3
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 0,
+                        "Artillery": 0,
+                        "Armor": 1
+                    },
+                    "Side": "Allies",
+                    "Group": "Armor"
+                },
+                {
+                    "PlayerID": "76561198025397597",
+                    "Name": "Spamdini",
+                    "Kills": 0,
+                    "Deaths": 3,
+                    "KDR": "0.00",
+                    "CombatEffectiveness": 782,
+                    "OffensivePoints": 0,
+                    "DefensivePoints": 1700,
+                    "SupportPoints": 45,
+                    "Weapons": {},
+                    "DeathByWeapons": {
+                        "SATCHEL": 1,
+                        "75MM CANNON [Sd.Kfz.161 Panzer IV]": 1,
+                        "88 KWK 36 L/56 [Sd.Kfz.181 Tiger 1]": 1
+                    },
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 0,
+                        "Allies": 2
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 0,
+                        "Artillery": 0,
+                        "Armor": 0
+                    },
+                    "Side": "Allies",
+                    "Group": "Armor"
+                },
+                {
+                    "PlayerID": "76561199112808130",
+                    "Name": "WIЖ",
+                    "Kills": 0,
+                    "Deaths": 8,
+                    "KDR": "0.00",
+                    "CombatEffectiveness": 324,
+                    "OffensivePoints": 0,
+                    "DefensivePoints": 1660,
+                    "SupportPoints": 95,
+                    "Weapons": {},
+                    "DeathByWeapons": {
+                        "75MM CANNON [PAK 40]": 1,
+                        "150MM HOWITZER [sFH 18]": 1,
+                        "COAXIAL MG34 [Sd.Kfz.181 Tiger 1]": 1,
+                        "75MM CANNON [Sd.Kfz.161 Panzer IV]": 1,
+                        "88 KWK 36 L/56 [Sd.Kfz.181 Tiger 1]": 4
+                    },
+                    "MachineGunKills": 0,
+                    "sideLikelihood": {
+                        "Axis": 0,
+                        "Allies": 8
+                    },
+                    "groupLikelihood": {
+                        "Infantry": 0,
+                        "Artillery": 0,
+                        "Armor": 0
+                    },
+                    "Side": "Allies",
+                    "Group": "Armor"
+                }
+            ]
+        },
+        "Unknown": {
+            "PlayerCount": 0,
+            "Kills": 0,
+            "Deaths": 0,
+            "KDR": "0.00",
+            "CombatEffectiveness": 0,
+            "OffensivePoints": 0,
+            "DefensivePoints": 0,
+            "SupportPoints": 0,
+            "MachineGunKills": 0,
+            "Players": []
+        }
+    },
+    "Spectators": [],
+    "Map": "SME",
+    "Match Date": "11/09/2024"
+}
